@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using QuizaDjuret.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+var connectionString = builder.Configuration.GetConnectionString("DbConnectionString");
+builder.Services.AddDbContext<AppDbContext>(Options => Options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
