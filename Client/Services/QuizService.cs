@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using QuizaDjuret.Shared;
 using System.Text.Json.Serialization;
 
 namespace QuizaDjuret.Client.Services
@@ -18,8 +19,8 @@ namespace QuizaDjuret.Client.Services
 			if(response.IsSuccessStatusCode)
 			{
 				var json = await response.Content.ReadAsStringAsync();
-				//var quiz = JsonConvert.DeserializeObject<string>(json);
-				return json;
+				var quiz = JsonConvert.DeserializeObject<QuestionModel>(json);
+				return quiz.Text;
 			}
 			return null;
 		}
