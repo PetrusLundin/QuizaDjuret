@@ -25,9 +25,5 @@
     <ProjectReference Include="..\Shared\QuizaDjuret.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 
 </Project>
