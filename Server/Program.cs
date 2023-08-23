@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using QuizaDjuret.Server.Data;
+using QuizaDjuret.Server.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddRazorPages();
 var connectionString = builder.Configuration.GetConnectionString("DbConnectionString");
 builder.Services.AddDbContext<AppDbContext>(Options => Options.UseSqlServer(connectionString));
 
+builder.Services.AddScoped<QuizRepo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
