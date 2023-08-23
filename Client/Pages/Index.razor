@@ -1,6 +1,8 @@
 ﻿@page "/"
 @using QuizaDjuret.Client.Services;
-@inject QuizService Service
+@inject QuizService quizService
+
+@* HTML HÄR *@
 <h1>@text</h1>
 <button @onclick="() => Click()">Play</button>
 
@@ -9,11 +11,14 @@
 
 
 
+
+
+@* REN C# HÄR *@
 @code{
 	private string text = "Hej på dig";
 	public async void Click()
 	{
-		
-		text = await Service.Testget(1);
+		string newText = await quizService.Testget(1);
+		text = newText;
 	}
 }
