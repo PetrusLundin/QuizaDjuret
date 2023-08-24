@@ -5,30 +5,36 @@
 @* HTML HÄR *@
 @*<h1>@text</h1>*@
 
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Almarai&family=Bubblegum+Sans&family=Caveat&family=Cherry+Bomb+One&family=Gochi+Hand&family=Ysabeau+SC:wght@600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
 @if(true)
 @* startsida här *@
 {
+
+    <div class="main-box">
+
+		<h1 style="margin-bottom: 60px; margin-top: 70px;">Välkommen till QuizaDjuret</h1>
+		<h2 style="margin-bottom: 40px;">Hur du spelar Quizet:</h2>
+		<p>🏆 Rätt svar på första försöket ger: 100 poäng</p>
+		<p>🏆 Rätt svar på andra försöket ger: 50 poäng</p>
+		<p>🏆 Rätt svar på tredje försöket ger: 0 poäng</p>
+		<p>🔍 Tryck på knappen "ledtråd" för att få en ledtråd till frågan</p>
+		<p>🔍 Tryck på knappen "börja om" för att börja om quizet från början</p>
+
+
+		<h3 style="margin: 50px;">Lycka till!! 🐛</h3>
 	
-	<div class="background">
-	<div class="main-box-opacity">
-		<div class="main-box-content">
-		<h1>Välkommen till QuizaDjuret</h1>
-		<h2>Hur du spelar Quizet:</h2>
-		<p>・Rätt svar på första försöket ger: 100 poäng</p>
-		<p>・Rätt svar på andra försöket ger: 50 poäng</p>
-		<p>・Rätt svar på tredje försöket ger: 0 poäng</p>
-		<hr />
-		<p>・Tryck på knappen "ledtråd" för att få en ledtråd till frågan</p>
-		<p>・Tryck på knappen "börja om" för att börja om quizet från början</p>
-		<hr />
-		<p>・I slutet kan du skriva in ditt namn för att ha chansen att hamna på din skolas highscorlista</p>
-
-		<h3>Lycka till!!</h3>
-		</div>
-
-		</div>
+	
 	</div>
-	<button @onclick="() => Click()">Starta Quizet</button>
+	<div class="start-btn-div">
+		<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
+   </div>
 }
 else
 @* frågesida här *@
