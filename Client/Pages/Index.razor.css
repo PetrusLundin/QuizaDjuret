@@ -1,5 +1,4 @@
 ﻿
-
 .background {
     background-image: url(../wwwroot/images/djur.jpg);
   /*  width: 100%;
@@ -16,7 +15,7 @@ h1 {
 .main-box-opacity {
     height: 500px;
     width: 500px;
-  /*  background-color: yellowgreen;*/
+    background-color: yellowgreen;
     border: black solid 1px;
     display: grid;
     place-self: center;
