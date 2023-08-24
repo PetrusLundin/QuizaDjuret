@@ -12,14 +12,14 @@ namespace QuizaDjuret.Client.Services
             this.httpClient = httpClient;
         }
 
-        public async Task<string> Testget(int id)
+        public async Task<QuestionModel> Testget(int id)
         {
             var response = await httpClient.GetAsync($"api/quiz/{id}");
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
                 var quiz = JsonConvert.DeserializeObject<QuestionModel>(json);
-                return quiz.Text;
+                return quiz;
             }
             return null;
         }
