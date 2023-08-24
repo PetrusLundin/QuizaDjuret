@@ -1,6 +1,28 @@
-﻿body {
+﻿
+
+.background {
+    background-image: url(../wwwroot/images/djur.jpg);
+  /*  width: 100%;
+    min-height: 100vh;*/
+    margin: 0px;
+    padding: 0px;
+}
 }
 
 h1 {
     color: green;
+}
+
+.main-box-opacity {
+    height: 500px;
+    width: 500px;
+  /*  background-color: yellowgreen;*/
+    border: black solid 1px;
+    display: grid;
+    place-self: center;
+}
+
+.main-box-content {
+    background:green;
+    height: 200px;
 }
