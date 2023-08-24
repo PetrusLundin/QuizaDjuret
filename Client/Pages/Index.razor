@@ -1,10 +1,51 @@
 ﻿@page "/"
+@using QuizaDjuret.Client.Managers;
 @using QuizaDjuret.Client.Services;
 @inject QuizService quizService
 
 @* HTML HÄR *@
-<h1>@text</h1>
-<button @onclick="() => Click()">Play</button>
+
+@if(GameManager.CurrentQuestion == 0)
+{
+     <div class="container d-flex flex-column justify-content-center align-items-center" style="width: 100%; height: 100%; background-image: url('/css/agile-animal.png'); background-position:center; background-size:cover; border-radius: 10px;">
+        <div class="info-container d-flex flex-column align-items-center rounded" style="background-color: rgba(255, 255, 255, 0.5);">
+            <h1>Välkomen till QuizDjuret</h1>
+            <h2>Hur spelar du spelet?</h2>
+            <ul>
+                <li>För varje rätt svar på första försöket får du 100 poäng</li>
+                <li>För varje rätt svar på andra försöket får du 50 poäng</li>
+                <li>För varje rätt svar på tredje försöket får 0 poäng</li>
+                <li>
+                    När som helst under spelets gång kan du trycka på "?" för att få en
+                    ledtråd till frågan
+                </li>
+                <li>
+                    Du kan när som helst börja om spelet genom att trycka på knappen
+                    "börja om" i vänstra hörnet
+                </li>
+                <li>
+                    I slutet kan du skriva in ditt namn för att komma in i
+                    highscorelistan
+                </li>
+            </ul>
+            <div>
+                <button class="btn btn-start" style="font-family: 'bubblegum Sans'; background-color: green; color: black; border-radius: 5px;" @onclick="() => Click()">Starta Quiz</button>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+
+    <div>
+
+        <h1>@text</h1>
+        <input type="checkbox" />
+        <button @onclick="() => Click()">Next Question</button>
+        <h3>@GameManager.CurrentQuestion</h3>
+    </div>
+}
+
 
 
 
@@ -15,10 +56,15 @@
 
 @* REN C# HÄR *@
 @code{
+
+    private bool isStarted = false;
+
 	private string text = "Hej på dig";
-	public async void Click()
+
+	public void Click()
 	{
-		string newText = await quizService.Testget(1);
-		text = newText;
+		// string newText = await quizService.Testget(1);
+		// text = newText;
+		GameManager.NextQuestion();
 	}
 }
