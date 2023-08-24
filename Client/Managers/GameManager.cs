@@ -2,7 +2,7 @@
 {
     public static class GameManager
     {
-        public static int CurrentQuestion { get; set; } = 0;
+        public static int CurrentQuestion { get; set; }
 
         public static bool isRunning { get; set; } = false;
 
@@ -10,10 +10,6 @@
         {
             CurrentQuestion++;
         }
-
-        //public static void StartGame()
-        //{
-
-        //}
+        
     }
 }

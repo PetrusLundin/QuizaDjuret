@@ -38,8 +38,7 @@ else
 {
 
     <div>
-
-        <h1>@text</h1>
+        <h2>4 ben</h2>
         <input type="checkbox" />
         <button @onclick="() => Click()">Next Question</button>
         <h3>@GameManager.CurrentQuestion</h3>
@@ -61,10 +60,10 @@ else
 
 	private string text = "Hej på dig";
 
-	public void Click()
+	public async void Click()
 	{
-		// string newText = await quizService.Testget(1);
-		// text = newText;
+		string newText = await quizService.Testget(1);
+		text = newText;
 		GameManager.NextQuestion();
 	}
 }
