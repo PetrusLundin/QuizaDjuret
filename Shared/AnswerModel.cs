@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuizaDjuret.Shared
 {
@@ -12,8 +7,9 @@ namespace QuizaDjuret.Shared
     {
         [Key]
         public int AnswerId { get; set; }
+        [ForeignKey(nameof(Question))]
         public int QuestionId { get; set; }
-        public QuestionModel Question { get; set; } = new();
+        public QuestionModel Question { get; set; }
         public bool IsCorrect { get; set; }
         public string Text { get; set; } = null!;
 

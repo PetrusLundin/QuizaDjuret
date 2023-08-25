@@ -11,8 +11,8 @@ using QuizaDjuret.Server.Data;
 namespace QuizaDjuret.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230818130153_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230825092903_InitialWithFirstSeed")]
+    partial class InitialWithFirstSeed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,29 @@ namespace QuizaDjuret.Server.Migrations
                     b.HasIndex("QuestionId");
 
                     b.ToTable("Answers");
+
+                    b.HasData(
+                        new
+                        {
+                            AnswerId = 1,
+                            IsCorrect = true,
+                            QuestionId = 1,
+                            Text = "Dermochelys coriacea"
+                        },
+                        new
+                        {
+                            AnswerId = 2,
+                            IsCorrect = false,
+                            QuestionId = 1,
+                            Text = "SkalMan"
+                        },
+                        new
+                        {
+                            AnswerId = 3,
+                            IsCorrect = false,
+                            QuestionId = 1,
+                            Text = "Rafetus Swinhoei"
+                        });
                 });
 
             modelBuilder.Entity("QuizaDjuret.Shared.QuestionModel", b =>
@@ -82,6 +105,18 @@ namespace QuizaDjuret.Server.Migrations
                     b.HasKey("QuestionId");
 
                     b.ToTable("Questions");
+
+                    b.HasData(
+                        new
+                        {
+                            QuestionId = 1,
+                            CorrectAnswerId = 1,
+                            DifficultyLevel = 1,
+                            FunFact = " Denna imponerande sköldpadda kallas för lädersköldpadda och har en kraftig kroppsstruktur som skyddar den mot rovdjur. Den är också känd för att kunna dyka på stora djup och stanna under vattnet i flera timmar innan den måste andas luft.",
+                            Hint = "Denna sköldpadda kan väga upp till 900kilogram och lever i havet.",
+                            ImageURL = "sköldis.jpg",
+                            Text = "Vad är dens största kända arten av sköldpadda?"
+                        });
                 });
 
             modelBuilder.Entity("QuizaDjuret.Shared.UserModel", b =>

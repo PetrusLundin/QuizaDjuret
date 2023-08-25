@@ -2,10 +2,12 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace QuizaDjuret.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialWithFirstSeed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -61,6 +63,21 @@ namespace QuizaDjuret.Server.Migrations
                         principalTable: "Questions",
                         principalColumn: "QuestionId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Questions",
+                columns: new[] { "QuestionId", "CorrectAnswerId", "DifficultyLevel", "FunFact", "Hint", "ImageURL", "Text" },
+                values: new object[] { 1, 1, 1, " Denna imponerande sköldpadda kallas för lädersköldpadda och har en kraftig kroppsstruktur som skyddar den mot rovdjur. Den är också känd för att kunna dyka på stora djup och stanna under vattnet i flera timmar innan den måste andas luft.", "Denna sköldpadda kan väga upp till 900kilogram och lever i havet.", "sköldis.jpg", "Vad är dens största kända arten av sköldpadda?" });
+
+            migrationBuilder.InsertData(
+                table: "Answers",
+                columns: new[] { "AnswerId", "IsCorrect", "QuestionId", "Text" },
+                values: new object[,]
+                {
+                    { 1, true, 1, "Dermochelys coriacea" },
+                    { 2, false, 1, "SkalMan" },
+                    { 3, false, 1, "Rafetus Swinhoei" }
                 });
 
             migrationBuilder.CreateIndex(
