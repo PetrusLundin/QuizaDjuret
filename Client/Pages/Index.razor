@@ -6,14 +6,41 @@
 
 @* HTML HÄR *@
 
+@*<h1>@text</h1>*@
+
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Almarai&family=Bubblegum+Sans&family=Caveat&family=Cherry+Bomb+One&family=Gochi+Hand&family=Ysabeau+SC:wght@600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
 @if(GameManager.CurrentQuestion == 0)
+@* startsida här *@
 {
-    @* Design ska in här *@
-      
-    <button class="btn btn-start" style="font-family: 'bubblegum Sans'; background-color: green; color: black; border-radius: 5px;" @onclick="() => Click()">Starta Quiz</button>
-           
+
+    <div class="main-box">
+
+		<h1 style="margin-bottom: 60px; margin-top: 70px;">Välkommen till QuizaDjuret</h1>
+		<h2 style="margin-bottom: 40px;">Hur du spelar Quizet:</h2>
+		<p>🏆 Rätt svar på första försöket ger: 100 poäng</p>
+		<p>🏆 Rätt svar på andra försöket ger: 50 poäng</p>
+		<p>🏆 Rätt svar på tredje försöket ger: 0 poäng</p>
+		<p>🔍 Tryck på knappen "ledtråd" för att få en ledtråd till frågan</p>
+		<p>🔍 Tryck på knappen "börja om" för att börja om quizet från början</p>
+
+
+		<h3 style="margin: 50px;">Lycka till!! 🐛</h3>
+	
+	
+	</div>
+	<div class="start-btn-div">
+		<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
+   </div>
 }
 else
+@* frågesida här *@
 {
     <div>
         <p>
@@ -24,18 +51,17 @@ else
         <button @onclick="() => Click()">Next Question</button>
         <h3>@GameManager.CurrentQuestion</h3>
     </div>
+	
+	@* om frågan har bild *@
+
+	@* om frågan har halvbild *@
+
+	@* om frågan har ljud *@
+
+	@* om frågan har text *@
+  <button @onclick="() => Restart()">Starta om ditt svin</button>
 }
 
-<br />
-<br />
-<br />
-<button @onclick="() => Restart()">Starta om ditt svin</button>
-
-<h1>@loading</h1>
-
-
-@* REN C# HÄR *@
-@code{
 
     private bool isStarted = false;
 
