@@ -4,8 +4,7 @@ namespace QuizaDjuret.Client.Managers
 {
     public static class GameManager
     {
-        public static QuestionModel Question { get; set; } = new();
-        //public static List<QuestionModel> Questions { get; set; } = new();
+        public static List<QuestionModel> Questions { get; set; } = new();
         public static int CurrentQuestion { get; set; } = 0;
         public static string CurrentQuestionText { get; set; } = "";
 
@@ -13,9 +12,17 @@ namespace QuizaDjuret.Client.Managers
 
         public static void NextQuestion()
         {
-            CurrentQuestion++;
+            if (CurrentQuestion <  Questions.Count - 1)
+            {
+                CurrentQuestion++;
+                CurrentQuestionText = Questions[CurrentQuestion].Text;
+            }
+            else
+            {
+                isRunning = false;
+                CurrentQuestionText = "No more Questions";
+            }
             //TODO plocka rätt fråga ur array
-            CurrentQuestionText = Question.Text;
             //ändra svaren
             //ändra hint
             //ändra bild

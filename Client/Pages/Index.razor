@@ -45,7 +45,8 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        GameManager.Question = await quizService.Testget(1);
+        //GameManager.Question = await quizService.Testget(1);
+        GameManager.Questions = await quizService.GetAll();
     }
 
     public void Click()
