@@ -1,8 +1,11 @@
 ﻿@page "/"
+@using QuizaDjuret.Client.Managers;
 @using QuizaDjuret.Client.Services;
+@using QuizaDjuret.Shared;
 @inject QuizService quizService
 
 @* HTML HÄR *@
+
 @*<h1>@text</h1>*@
 
 <head>
@@ -13,7 +16,7 @@
 
 </head>
 
-@if(true)
+@if(GameManager.CurrentQuestion == 0)
 @* startsida här *@
 {
 
@@ -39,6 +42,15 @@
 else
 @* frågesida här *@
 {
+    <div>
+        <p>
+            @GameManager.CurrentQuestionText
+        </p>
+        @* Svarsknappar ska in här *@
+
+        <button @onclick="() => Click()">Next Question</button>
+        <h3>@GameManager.CurrentQuestion</h3>
+    </div>
 	
 	@* om frågan har bild *@
 
@@ -47,20 +59,29 @@ else
 	@* om frågan har ljud *@
 
 	@* om frågan har text *@
-
+  <button @onclick="() => Restart()">Starta om ditt svin</button>
 }
 
 
+    private bool isStarted = false;
 
+    private string text = "Hej på dig";
 
+    public string loading = "Loading...";
 
+    protected override async Task OnInitializedAsync()
+    {
+        //GameManager.Question = await quizService.Testget(1);
+        GameManager.Questions = await quizService.GetAll();
+    }
 
-@* REN C# HÄR *@
-@code{
-	private string text = "Hej på dig";
-	public async void Click()
-	{
-		string newText = await quizService.Testget(1);
-		text = newText;
-	}
+    public void Click()
+    {
+        GameManager.NextQuestion();
+    }
+
+    public void Restart()
+    {
+        GameManager.ResetQuiz();
+    }
 }

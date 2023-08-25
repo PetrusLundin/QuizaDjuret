@@ -13,9 +13,11 @@ namespace QuizaDjuret.Server.Repository
 			this.context = context;
 		}
 
-		public async Task<QuestionModel> TestGetquestion()
+		public async Task <List<QuestionModel>> GetAllQuestions()
 		{
-			return await context.Questions.FirstOrDefaultAsync();
+			var Quest = await context.Questions.ToListAsync();
+
+			return Quest;
 		}
 	}
 }

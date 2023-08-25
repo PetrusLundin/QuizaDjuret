@@ -18,11 +18,10 @@ namespace QuizaDjuret.Server.Controllers
 			this.repo = repo;
 		}
 
-
-		[HttpGet("{id}")]
-		public async Task<ActionResult<QuestionModel>> Get(int id)
+		[HttpGet]
+		public async Task<ActionResult<List<QuestionModel>>> Get()
 		{
-			return Ok(await repo.TestGetquestion()); ;
+			return Ok(await repo.GetAllQuestions());
 		}
 	}
 }
