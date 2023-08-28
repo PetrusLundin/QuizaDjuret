@@ -15,9 +15,16 @@ namespace QuizaDjuret.Server.Repository
 
 		public async Task <List<QuestionModel>> GetAllQuestions()
 		{
-			var Quest = await context.Questions.ToListAsync();
+			var question = await context.Questions.ToListAsync();
 
-			return Quest;
+			return question;
+		}
+
+		public async Task<List<AnswerModel>> GetAllAnswers()
+		{
+			var answer = await context.Answers.ToListAsync();
+
+			return answer;
 		}
 	}
 }

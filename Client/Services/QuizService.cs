@@ -12,7 +12,7 @@ namespace QuizaDjuret.Client.Services
             this.httpClient = httpClient;
         }
 
-        public async Task<List<QuestionModel>> GetAll()
+        public async Task<List<QuestionModel>> GetAllAsync()
         {
             var response = await httpClient.GetAsync($"api/quiz");
             if (response.IsSuccessStatusCode)
@@ -23,5 +23,19 @@ namespace QuizaDjuret.Client.Services
             }
             return null;
         }
+
+        public async Task<AnswerModel?> GetQuestionWithAnswers(int questionId)
+        {
+            var answerResponse = await httpClient.GetAsync($"api/answers/{questionId}");
+            if (answerResponse.IsSuccessStatusCode)
+            {
+                var answerjson = await answerResponse.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<AnswerModel>(answerjson);
+
+            }
+
+            return null;
+        }
+
     }
 }

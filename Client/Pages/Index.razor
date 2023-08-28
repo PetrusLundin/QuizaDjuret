@@ -58,7 +58,13 @@ else
         <button @onclick="() => Click()">Next Question</button>
         <h3>@GameManager.CurrentQuestion</h3>
     </div>
-	
+    
+    <div class="answer-box">
+        <p class="answer">
+            @GameManager.CurrentAnswer
+        </p>
+    </div>
+
 	@* om frågan har bild *@
 
 	@* om frågan har halvbild *@
@@ -77,10 +83,13 @@ else
 
     public string loading = "Loading...";
 
+    private int questionId = 1;
+
     protected override async Task OnInitializedAsync()
     {
-        //GameManager.Question = await quizService.Testget(1);
-        GameManager.Questions = await quizService.GetAll();
+        // GameManager.Question = await quizService.Testget(1);
+        GameManager.Questions = await quizService.GetAllAsync();
+        GameManager.Answers = await quizService.GetQuestionWithAnswers(questionId);
     }
 
     public void Click()
