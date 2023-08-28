@@ -1,12 +1,31 @@
-﻿
+﻿html {
+   
+}
 
+
+body {
+    padding: 0px;
+    margin: 0px;
+    /*height: 100vh;
+    width: 100vw;*/
+    background-size: cover;
+
+}
+
+/*.background-box {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vW;
+ 
+}*/
 h1 {
     color: #124520;
     font-size: 100px;
     display: flex;
     justify-content: center;
     font-family: 'Cherry Bomb One', cursive;
-    
 }
 
 h2 {
@@ -56,7 +75,7 @@ button {
     background: #CBDF50;
     border-radius: 20px;
     padding: 5px;
-    border-radius: 10px;
+  
     box-shadow: 0 0 15px rgba(0,0,0, 0.5);
     border: none;
     font-family: 'Bubblegum Sans', cursive;
@@ -69,7 +88,7 @@ button {
 .start-btn {
     height: 100px;
     width: 550px;
-    display:felx;
+    
     justify-content: center;
     margin: 20px;
     font-size: 40px;

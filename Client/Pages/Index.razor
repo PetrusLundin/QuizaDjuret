@@ -16,8 +16,18 @@
 @if(true)
 @* startsida här *@
 {
+	<style>
+		body{
+			background-image: url('../images/djur.jpg');
+			background-size: cover;
+		}
+	</style>
+	@*<body style="background-image: url('../images/djur.jpg');">
+	</body>*@
+	@*<div style="background-image: url('../images/djur.jpg');" class="background-box">*@
 
-    <div class="main-box">
+
+		<div class="main-box">
 
 		<h1 style="margin-bottom: 60px; margin-top: 70px;">Välkommen till QuizaDjuret</h1>
 		<h2 style="margin-bottom: 40px;">Hur du spelar Quizet:</h2>
@@ -34,11 +44,13 @@
 	</div>
 	<div class="start-btn-div">
 		<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
-   </div>
+        </div>
+    @*</div>*@
 }
 else
 @* frågesida här *@
 {
+
 	
 	@* om frågan har bild *@
 
