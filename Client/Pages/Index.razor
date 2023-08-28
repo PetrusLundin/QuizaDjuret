@@ -89,7 +89,7 @@ else
     {
         // GameManager.Question = await quizService.Testget(1);
         GameManager.Questions = await quizService.GetAllAsync();
-        GameManager.Answers = await quizService.GetQuestionWithAnswers(questionId);
+        GameManager.Answers = await quizService.GetAnswers(questionId);
     }
 
     public void Click()

@@ -24,13 +24,14 @@ namespace QuizaDjuret.Client.Services
             return null;
         }
 
-        public async Task<AnswerModel?> GetQuestionWithAnswers(int questionId)
+        public async Task<List<AnswerModel>> GetAnswers(int questionId)
         {
-            var answerResponse = await httpClient.GetAsync($"api/answers/{questionId}");
+            var answerResponse = await httpClient.GetAsync($"api/answer/{questionId}");
             if (answerResponse.IsSuccessStatusCode)
             {
                 var answerjson = await answerResponse.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<AnswerModel>(answerjson);
+                var answer = JsonConvert.DeserializeObject<List<AnswerModel>>(answerjson);
+                return answer;
 
             }
 

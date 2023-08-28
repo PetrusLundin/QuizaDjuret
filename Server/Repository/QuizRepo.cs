@@ -20,11 +20,18 @@ namespace QuizaDjuret.Server.Repository
 			return question;
 		}
 
-		public async Task<List<AnswerModel>> GetAllAnswers()
+		//public async Task<List<AnswerModel>> GetAllAnswers()
+		//{
+		//	var answer = await context.Answers.ToListAsync();
+
+		//	return answer;
+		//}
+
+		public async Task<List<AnswerModel?>> GetQuestionWithAnswers(int questionId)
 		{
 			var answer = await context.Answers.ToListAsync();
 
-			return answer;
-		}
+            return answer;
+        }
 	}
 }
