@@ -6,30 +6,24 @@
 body {
     padding: 0px;
     margin: 0px;
-    /*height: 100vh;
-    width: 100vw;*/
+    height: 100vh;
+    width: 100vw;
     background-size: cover;
 
 }
 
-/*.background-box {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: 100vh;
-    width: 100vW;
- 
-}*/
+
 h1 {
     color: #124520;
-    font-size: 100px;
+    font-size: 80px;
     display: flex;
     justify-content: center;
     font-family: 'Cherry Bomb One', cursive;
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 45px;
     display: flex;
     justify-content: center;
     font-family: 'Cherry Bomb One', cursive;
@@ -37,16 +31,14 @@ h2 {
 }
 
 h3 {
-    font-size: 50px;
+    font-size: 35px;
     display: flex;
     justify-content: center;
     font-family: 'Caveat', cursive;
-    
-    
 }
 
 p {
-    font-size: 35px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     font-family: 'Almarai', sans-serif;
@@ -58,10 +50,9 @@ p {
 }
 
 .main-box {
-    height: 900px;
-    width: 1500px;
+    height: 680px;
+    width: 1100px;
     background: rgb(255, 255, 255, 0.95);
-    /* border: black solid 1px;*/
     border-radius: 30px;
     padding: 30px;
     display: grid;
@@ -75,7 +66,6 @@ button {
     background: #CBDF50;
     border-radius: 20px;
     padding: 5px;
-  
     box-shadow: 0 0 15px rgba(0,0,0, 0.5);
     border: none;
     font-family: 'Bubblegum Sans', cursive;
@@ -88,7 +78,6 @@ button {
 .start-btn {
     height: 100px;
     width: 550px;
-    
     justify-content: center;
     margin: 20px;
     font-size: 40px;
