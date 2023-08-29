@@ -37,6 +37,5 @@ namespace QuizaDjuret.Client.Services
 
             return null;
         }
-
     }
 }

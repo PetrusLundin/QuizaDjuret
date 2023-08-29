@@ -27,7 +27,7 @@ namespace QuizaDjuret.Server.Controllers
 		//[HttpGet("{questionId}")]
 		//public async Task<ActionResult<AnswerModel?>> Get(int questionId)
 		//{
-  //          return Ok(await repo.GetQuestionWithAnswers(questionId));
-  //      }
+		//	return Ok(await repo.GetQuestionWithAnswers(questionId));
+		//}
 	}
 }

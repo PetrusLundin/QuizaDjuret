@@ -13,7 +13,7 @@ namespace QuizaDjuret.Client.Managers
         public static string CurrentQuestionHint { get; set; } = "";
         public static string CurrentQuestionImage { get; set; } = "";
         public static string CurrentQuestionFunFact { get; set; } = "";
-        public static string CurrentAnswer { get; set; } = "hej";
+        public static string CurrentAnswer { get; set; } = "";
 
         public static bool isRunning { get; set; } = false;
 
@@ -35,11 +35,11 @@ namespace QuizaDjuret.Client.Managers
                 CurrentQuestionText = "No more Questions";
             }
         }
-
-
         public static void ResetQuiz()
         {
             CurrentQuestion = 0;
         }
+
+
     }
 }
