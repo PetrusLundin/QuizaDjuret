@@ -15,7 +15,6 @@ namespace QuizaDjuret.Server.Repository
 
 		public async Task<List<QuestionModel>> GetAllQuestions()
 		{
-			//var question = await context.Questions.ToListAsync();
 			var questions = await context.Questions.Include(r => r.Answers).Select(q => new QuestionModel
 			{
 				QuestionId = q.QuestionId,
@@ -31,19 +30,5 @@ namespace QuizaDjuret.Server.Repository
 
 			return questions;
 		}
-
-		//public async Task<List<AnswerModel>> GetAllAnswers()
-		//{
-		//	var answer = await context.Answers.ToListAsync();
-
-		//	return answer;
-		//}
-
-		//public async Task<List<AnswerModel?>> GetQuestionWithAnswers(int questionId)
-		//{
-		//	var answer = await context.Answers.ToListAsync();
-
-		//	return answer;
-		//}
 	}
 }
