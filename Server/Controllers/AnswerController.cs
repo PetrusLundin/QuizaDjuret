@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QuizaDjuret.Server.Repository;
-using QuizaDjuret.Shared;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,26 +7,19 @@ namespace QuizaDjuret.Server.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-
-	public class QuizController : ControllerBase
+	public class AnswerController : ControllerBase
 	{
-		private readonly QuizRepo repo;
+		private readonly QuizRepo quizRepo;
 
-		public QuizController(QuizRepo repo)
+		public AnswerController(QuizRepo quizRepo)
 		{
-			this.repo = repo;
-		}
-
-		[HttpGet]
-		public async Task<ActionResult<List<QuestionModel>>> Get()
-		{
-			return Ok(await repo.GetAllQuestions());
+			this.quizRepo = quizRepo;
 		}
 
 		//[HttpGet("{questionId}")]
 		//public async Task<ActionResult<AnswerModel?>> Get(int questionId)
 		//{
-		//	return Ok(await repo.GetQuestionWithAnswers(questionId));
+		//    return Ok(await quizRepo.GetQuestionWithAnswers(questionId));
 		//}
 	}
 }
