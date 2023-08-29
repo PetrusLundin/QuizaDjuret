@@ -103,10 +103,19 @@ button {
   
 }
 
-.fråge-box{
+.fråge-box {
     display: grid;
- 
-    
+
+}
+
+.fråga {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.fråga:hover{
+    background-color: lightcoral;
 }
 
 svarsalternativ-box{
