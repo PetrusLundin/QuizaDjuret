@@ -23,19 +23,5 @@ namespace QuizaDjuret.Client.Services
 			}
 			return null;
 		}
-
-		//public async Task<List<AnswerModel>> GetAnswers(int questionId)
-		//{
-		//    var answerResponse = await httpClient.GetAsync($"api/answer/{questionId}");
-		//    if (answerResponse.IsSuccessStatusCode)
-		//    {
-		//        var answerjson = await answerResponse.Content.ReadAsStringAsync();
-		//        var answer = JsonConvert.DeserializeObject<List<AnswerModel>>(answerjson);
-		//        return answer;
-
-		//    }
-
-		//    return null;
-		//}
 	}
 }
