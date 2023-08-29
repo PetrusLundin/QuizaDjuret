@@ -13,9 +13,9 @@
 
 </head>
 
-@if(true)
+@*@if(true)*@
 @* startsida här *@
-{
+@*{
 	<style>
 		body{
 			background-image: url('../images/djur.jpg');
@@ -43,12 +43,47 @@
 	<div class="start-btn-div">
 		<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
         </div>
-    @*</div>*@
+  
 }
-else
+else*@
 @* frågesida här *@
-{
+@*{*@
+	<style>
+		body {
+			background-image: url('../images/92.jpg');
+			background-size: cover;
+		}
+	</style>
 
+
+
+	<div class="main-box-frågor">
+		<div class="rubrik-box">
+        <h1 style="margin-bottom: 20px; margin-top: 20px;">Gissa Djuret</h1>
+		</div>
+
+
+		<div class="fråge-box">
+			<div class="test-box-btn">
+				<button class="test-btn">Hej</button>
+			</div>
+			<div class="">
+            <p>Apa</p>
+            <p>Elefant</p>
+            <p>Lodjur</p>
+			</div>
+        </div>
+
+
+        <div class="nästafråga-btn-div">
+            <button class="start-btn" @onclick="() => Click()">Nästa </button>
+        </div>
+		
+	
+	</div>
+	
+	
+	
 	
 	@* om frågan har bild *@
 
@@ -58,7 +93,7 @@ else
 
 	@* om frågan har text *@
 
-}
+@*}*@
 
 
 

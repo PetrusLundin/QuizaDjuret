@@ -83,3 +83,37 @@ button {
     font-size: 40px;
     margin-top: 40px;
 }
+
+.main-box-frågor {
+    height: 580px;
+    width: 900px;
+    background: rgb(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 30px;
+    display: grid;
+    align-items: start;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    margin: 0px;
+}
+
+.test-btn {
+    height: 300px;
+    width: 300px;
+  
+}
+
+.fråge-box{
+    display: grid;
+ 
+    
+}
+
+svarsalternativ-box{
+
+}
+
+.nästafråga-btn-div {
+    display: flex;
+    justify-content: end;
+}
