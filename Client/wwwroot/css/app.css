@@ -2,15 +2,11 @@
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: blue;
-    background-image: url(../images/djur.jpg);
-    background-size: cover;
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-
-    
+   
 }
 
 h1:focus {

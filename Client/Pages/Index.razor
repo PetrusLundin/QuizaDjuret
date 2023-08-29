@@ -17,13 +17,20 @@
 </head>
 
 @if(GameManager.CurrentQuestion == 0)
-@* startsida här *@
 {
+	<style>
+		body{
+			background-image: url('../images/djur.jpg');
+			background-size: cover;
+		}
+	</style>
 
-    <div class="main-box">
 
-		<h1 style="margin-bottom: 60px; margin-top: 70px;">Välkommen till QuizaDjuret</h1>
-		<h2 style="margin-bottom: 40px;">Hur du spelar Quizet:</h2>
+
+		<div class="main-box">
+
+		<h1 style="margin-bottom: 40px; margin-top: 30px;">Välkommen till QuizaDjuret</h1>
+		<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
 		<p>🏆 Rätt svar på första försöket ger: 100 poäng</p>
 		<p>🏆 Rätt svar på andra försöket ger: 50 poäng</p>
 		<p>🏆 Rätt svar på tredje försöket ger: 0 poäng</p>
@@ -31,49 +38,56 @@
 		<p>🔍 Tryck på knappen "börja om" för att börja om quizet från början</p>
 
 
-		<h3 style="margin: 50px;">Lycka till!! 🐛</h3>
+		<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
 	
 	
 	</div>
 	<div class="start-btn-div">
 		<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
-   </div>
+        </div>
+  
 }
 else
-@* frågesida här *@
+
 {
-    <div>
-        <p>
-            Current question:
-            @GameManager.CurrentQuestionText
-            <br>
-            @GameManager.CurrentQuestionHint
-            <br>
-            @GameManager.CurrentQuestionImage
-            <br>
-            @GameManager.CurrentQuestionFunFact
-        </p>
-        @* Svarsknappar ska in här *@
+	<style>
+		body {
+			background-image: url('../images/92.jpg');
+			background-size: cover;
+		}
+	</style>
 
-        <button @onclick="() => Click()">Next Question</button>
-        <h3>@GameManager.CurrentQuestion</h3>
-    </div>
-    
-    <div class="answer-box">
-        <p class="answer">
-            @GameManager.CurrentAnswer
-        </p>
-    </div>
 
-	@* om frågan har bild *@
 
-	@* om frågan har halvbild *@
+	<div class="main-box-frågor">
+		<div class="rubrik-box">
+        <h1 style="margin-bottom: 20px; margin-top: 20px;">@GameManager.CurrentQuestionText</h1>
+		</div>
 
-	@* om frågan har ljud *@
 
-	@* om frågan har text *@
+		<div class="fråge-box">
+			<div class="test-box-btn">
+				<button class="test-btn">bilden</button>
+			</div>
+			<div class="">
+            <p>Apa</p>
+            <p>Elefant</p>
+            <p>Lodjur</p>
+			</div>
+        </div>
+
+
+        <div class="nästafråga-btn-div">
+            <button class="start-btn" @onclick="() => Click()">Nästa </button>
+        </div>
+		
+	
+	</div>
+
   <button @onclick="() => Restart()">Starta om ditt svin</button>
 }
+
+
 
 @code
 {
