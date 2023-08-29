@@ -9,10 +9,10 @@ namespace QuizaDjuret.Client.Managers
 		//TODO plocka questionmodel på currentquestion för att tracka i index sen?
 		public static int CurrentQuestionNumber { get; set; } = 0;
 		public static QuestionModel? CurrentQuestion { get; set; }
-
 		public static bool isRunning { get; set; } = false;
+		public static bool isCorrectAnswer { get; set; } = false;
 
-		public static void NextQuestion()
+        public static void NextQuestion()
 		{
 			CurrentQuestionNumber++;
 			CurrentQuestion = Questions[CurrentQuestionNumber - 1];
@@ -21,7 +21,5 @@ namespace QuizaDjuret.Client.Managers
 		{
 			CurrentQuestionNumber = 0;
 		}
-
-
 	}
 }
