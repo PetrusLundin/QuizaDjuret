@@ -35,7 +35,7 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 2,
 					Text = "Vad är detta för djur?",
-					CorrectAnswerId = 2,
+					CorrectAnswerId = 4,
 					Hint = "Har en av de längsta nackarna i djurriket",
 					FunFact = "Giraffer sover bara i korta stunder och står upp",
 					ImageURL = "https://i.imgur.com/HTwzNY0.jpg",
@@ -45,7 +45,7 @@ namespace QuizaDjuret.Server.Data
 	            {
 		            QuestionId = 3,
 		            Text = "Vad är detta för djur?",
-		            CorrectAnswerId = 3,
+		            CorrectAnswerId = 7,
 		            Hint = "Har en karakteristisk pung för att bära sina ungar",
 		            FunFact = "Känguruer kan hoppa mycket långa sträckor och vara väldigt snabba",
 		            ImageURL = "https://i.imgur.com/LRrt7dB.jpg",
@@ -55,7 +55,7 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 4,
 					Text = "Vad är detta för djur?",
-					CorrectAnswerId = 4,
+					CorrectAnswerId = 10,
 					Hint = "Känd för att vara 'kungen av djungeln'",
 					FunFact = "Lejonets rytande kan höras på flera kilometers avstånd",
 					ImageURL = "https://i.imgur.com/3YTx841.jpg",
@@ -65,7 +65,7 @@ namespace QuizaDjuret.Server.Data
 				 {
 					 QuestionId = 5,
 					 Text = "Vad är detta för djur?",
-					 CorrectAnswerId = 5,
+					 CorrectAnswerId = 13,
 					 Hint = "Lever i Kina och äter mest bambu",
 					 FunFact = "Pandor är kända för sin söta och knubbiga utseende",
 					 ImageURL = "https://i.imgur.com/vVxD2Vr.jpg",
@@ -75,7 +75,7 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 6,
 					Text = "Vad är detta för djur?",
-					CorrectAnswerId = 6,
+					CorrectAnswerId = 16,
 					Hint = "Lever i haven och är en utmärkt simmare",
 					FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
 					ImageURL = "https://i.imgur.com/UYNPT5l.jpg",
@@ -85,7 +85,7 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 7,
 					Text = "Vad är detta för djur?",
-					CorrectAnswerId = 7,
+					CorrectAnswerId = 19,
 					Hint = "Symbol för styrka och frihet",
 					FunFact = "Örnar har en utmärkt syn och kan se byten från hög höjd",
 					ImageURL = "https://i.imgur.com/KJdADuA.jpg",
@@ -95,7 +95,7 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 8,
 					Text = "Vad är detta för djur?",
-					CorrectAnswerId = 8,
+					CorrectAnswerId = 22,
 					Hint = "Även om de är kraftiga simmare, är de oftast landbaserade",
 					FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
 					ImageURL = "https://i.imgur.com/Usfrgma.jpg",
@@ -105,7 +105,7 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 9,
 					Text = "Vad är detta för djur?",
-					CorrectAnswerId = 9,
+					CorrectAnswerId = 25,
 					Hint = "Lever på en diet som främst består av eukalyptusblad",
 					FunFact = "Koalor sover upp till 20 timmar om dagen",
 					ImageURL = "https://i.imgur.com/9PzgFus.jpg",
@@ -115,63 +115,102 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 10,
 					Text = "Vad är detta för djur?",
-					CorrectAnswerId = 10,
-					Hint = "Finns i Afrika och är känd för sin långa hals",
-					FunFact = "Strutsar är de största och tyngsta fåglarna på jorden",
+					CorrectAnswerId = 28,
+					Hint = "Känd för sitt arbete att samla mat",
+					FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
 					ImageURL = "https://i.imgur.com/REFAZzh.jpg",
-					DifficultyLevel = 1
+					DifficultyLevel = 2
 				},
 				new QuestionModel
 				{
 					QuestionId = 11,
-					Text = "En liten insekt som ofta arbetar i kolonier",
-					CorrectAnswerId = 33,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 31,
 					Hint = "Känd för sitt arbete att samla mat",
 					FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
-					ImageURL = "Länk till bild här",
-					DifficultyLevel = 1
+					ImageURL = "https://i.imgur.com/qSCH06v.png",
+					DifficultyLevel = 2
 				},
 				new QuestionModel
 				{
 					QuestionId = 12,
-					Text = "Ett marint däggdjur med kraftiga morrhår",
-					CorrectAnswerId = 36,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 34,
 					Hint = "Lever ofta i närheten av kusten och äter fisk",
 					FunFact = "Sälar är skickliga simmare och dykare",
-					ImageURL = "Länk till bild här",
-					DifficultyLevel = 1
+					ImageURL = "https://i.imgur.com/bRlhcaM.jpg",
+					DifficultyLevel = 2
 				},
 				new QuestionModel
 				{
 					QuestionId = 13,
-					Text = "En stor fågel med lång hals och långa ben",
-					CorrectAnswerId = 39,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 37,
 					Hint = "Lever ofta i våtmarker och har ett karakteristiskt trumpetande ljud",
 					FunFact = "Tranor är kända för sina graciösa danser under parningen",
-					ImageURL = "Länk till bild här",
-					DifficultyLevel = 1
+					ImageURL = "https://i.imgur.com/pWr4Xxu.jpg",
+					DifficultyLevel = 2
 				},
 				new QuestionModel
 				{
 					QuestionId = 14,
-					Text = "En liten gnagare som ofta ses i burar som husdjur",
-					CorrectAnswerId = 45,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 40,
 					Hint = "Kan vara hårig eller naken, beroende på ras",
 					FunFact = "Hamstrar har kindpåsar där de kan lagra mat",
-					ImageURL = "Länk till bild här",
-					DifficultyLevel = 1
+					ImageURL = "https://i.imgur.com/tWHofmn.png",
+					DifficultyLevel = 2
 				},
 				new QuestionModel
 				{
 					QuestionId = 15,
-					Text = "En stor kattdjur med fläckig päls och långa ben",
-					CorrectAnswerId = 48,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 43,
 					Hint = "Lever i Afrika och är en skicklig jägare",
 					FunFact = "Geparder är de snabbaste landdjuren på jorden",
-					ImageURL = "Länk till bild här",
-					DifficultyLevel = 1
+					ImageURL = "https://i.imgur.com/X7kpZ0P.jpg",
+					DifficultyLevel = 2
+				},
+				new QuestionModel
+				{
+					QuestionId = 16,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 46,
+					Hint = "Kan vara grå, brun eller svart",
+					FunFact = "Råttor är mycket intelligenta och kan lösa komplexa problem",
+					ImageURL = "https://i.imgur.com/vyesMf1.jpg",
+					DifficultyLevel = 2
+				},
+				new QuestionModel
+				{
+					QuestionId = 17,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 49,
+					Hint = "Kan vara röd, blå, grön eller gul",
+					FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
+					ImageURL = "https://i.imgur.com/nO4aFC3.jpg",
+					DifficultyLevel = 2
+				},
+				new QuestionModel
+				{
+					QuestionId = 18,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 52,
+					Hint = "Gör honung och bor i bikupor",
+					FunFact = "Bin är viktiga pollinatörer för många växter",
+					ImageURL = "https://i.imgur.com/tfhdJ40.jpg",
+					DifficultyLevel = 2
+				},
+				new QuestionModel
+				{
+					QuestionId = 19,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 55,
+					Hint = "Lever i regnskogen och använder verktyg",
+					FunFact = "Orangutanger delar omkring 97 % av sin DNA med människor",
+					ImageURL = "https://i.imgur.com/EPK88mg.jpg",
+					DifficultyLevel = 2
 				}
-
 			);
 
             modelBuilder.Entity<AnswerModel>().HasData(
@@ -207,13 +246,49 @@ namespace QuizaDjuret.Server.Data
 				new AnswerModel { AnswerId = 23, QuestionId = 8, IsCorrect = false, Text = "Havssköldpadda" },
 				new AnswerModel { AnswerId = 24, QuestionId = 8, IsCorrect = false, Text = "Val" },
 
-				new AnswerModel { AnswerId = 22, QuestionId = 9, IsCorrect = true, Text = "Känguru" },
-				new AnswerModel { AnswerId = 23, QuestionId = 9, IsCorrect = false, Text = "Echidna" },
-				new AnswerModel { AnswerId = 24, QuestionId = 9, IsCorrect = false, Text = "Koala" },
+				new AnswerModel { AnswerId = 25, QuestionId = 9, IsCorrect = true, Text = "Känguru" },
+				new AnswerModel { AnswerId = 26, QuestionId = 9, IsCorrect = false, Text = "Echidna" },
+				new AnswerModel { AnswerId = 27, QuestionId = 9, IsCorrect = false, Text = "Koala" },
 
-				new AnswerModel { AnswerId = 25, QuestionId = 10, IsCorrect = true, Text = "Struts" },
-				new AnswerModel { AnswerId = 26, QuestionId = 10, IsCorrect = false, Text = "Emu" },
-				new AnswerModel { AnswerId = 27, QuestionId = 10, IsCorrect = false, Text = "Pelikan" }
+				new AnswerModel { AnswerId = 28, QuestionId = 10, IsCorrect = true, Text = "Struts" },
+				new AnswerModel { AnswerId = 29, QuestionId = 10, IsCorrect = false, Text = "Emu" },
+				new AnswerModel { AnswerId = 30, QuestionId = 10, IsCorrect = false, Text = "Pelikan" },
+				
+				new AnswerModel { AnswerId = 31, QuestionId = 11, IsCorrect = true, Text = "Myra" },
+				new AnswerModel { AnswerId = 32, QuestionId = 11, IsCorrect = false, Text = "Fjäril" },
+				new AnswerModel { AnswerId = 33, QuestionId = 11, IsCorrect = false, Text = "Larv" },
+
+				new AnswerModel { AnswerId = 34, QuestionId = 12, IsCorrect = true, Text = "Säl" },
+				new AnswerModel { AnswerId = 35, QuestionId = 12, IsCorrect = false, Text = "Delfin" },
+				new AnswerModel { AnswerId = 36, QuestionId = 12, IsCorrect = false, Text = "Späckhuggare" },
+
+				new AnswerModel { AnswerId = 37, QuestionId = 13, IsCorrect = true, Text = "Tran" },
+				new AnswerModel { AnswerId = 38, QuestionId = 13, IsCorrect = false, Text = "Stork" },
+				new AnswerModel { AnswerId = 39, QuestionId = 13, IsCorrect = false, Text = "Flamingo" },
+
+				new AnswerModel { AnswerId = 40, QuestionId = 14, IsCorrect = true, Text = "Hamster" },
+				new AnswerModel { AnswerId = 41, QuestionId = 14, IsCorrect = false, Text = "Marsvin" },
+				new AnswerModel { AnswerId = 42, QuestionId = 14, IsCorrect = false, Text = "Kanin" },
+
+				new AnswerModel { AnswerId = 43, QuestionId = 15, IsCorrect = true, Text = "Gepard" },
+				new AnswerModel { AnswerId = 44, QuestionId = 15, IsCorrect = false, Text = "Tiger" },
+				new AnswerModel { AnswerId = 45, QuestionId = 15, IsCorrect = false, Text = "Lejon" },
+
+				new AnswerModel { AnswerId = 46, QuestionId = 16, IsCorrect = true, Text = "Råtta" },
+				new AnswerModel { AnswerId = 47, QuestionId = 16, IsCorrect = false, Text = "Ekorre" },
+				new AnswerModel { AnswerId = 48, QuestionId = 16, IsCorrect = false, Text = "Igelkott" },
+
+				new AnswerModel { AnswerId = 49, QuestionId = 17, IsCorrect = true, Text = "Papegoja" },
+				new AnswerModel { AnswerId = 50, QuestionId = 17, IsCorrect = false, Text = "Kolibri" },
+				new AnswerModel { AnswerId = 51, QuestionId = 17, IsCorrect = false, Text = "Pippifågel" },
+
+				new AnswerModel { AnswerId = 52, QuestionId = 18, IsCorrect = true, Text = "Bi" },
+				new AnswerModel { AnswerId = 53, QuestionId = 18, IsCorrect = false, Text = "Fjäril" },
+				new AnswerModel { AnswerId = 54, QuestionId = 18, IsCorrect = false, Text = "Fluga" },
+
+				new AnswerModel { AnswerId = 55, QuestionId = 19, IsCorrect = true, Text = "Orangutang" },
+				new AnswerModel { AnswerId = 56, QuestionId = 19, IsCorrect = false, Text = "Gorilla" },
+				new AnswerModel { AnswerId = 57, QuestionId = 19, IsCorrect = false, Text = "Schimpans" }
 			);
         }
     }
