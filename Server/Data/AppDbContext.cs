@@ -207,13 +207,13 @@ namespace QuizaDjuret.Server.Data
 				new AnswerModel { AnswerId = 23, QuestionId = 8, IsCorrect = false, Text = "Havssköldpadda" },
 				new AnswerModel { AnswerId = 24, QuestionId = 8, IsCorrect = false, Text = "Val" },
 
-				new AnswerModel { AnswerId = 22, QuestionId = 8, IsCorrect = true, Text = "Känguru" },
-				new AnswerModel { AnswerId = 23, QuestionId = 8, IsCorrect = false, Text = "Echidna" },
-				new AnswerModel { AnswerId = 24, QuestionId = 8, IsCorrect = false, Text = "Koala" },
+				new AnswerModel { AnswerId = 22, QuestionId = 9, IsCorrect = true, Text = "Känguru" },
+				new AnswerModel { AnswerId = 23, QuestionId = 9, IsCorrect = false, Text = "Echidna" },
+				new AnswerModel { AnswerId = 24, QuestionId = 9, IsCorrect = false, Text = "Koala" },
 
-				new AnswerModel { AnswerId = 25, QuestionId = 8, IsCorrect = true, Text = "Struts" },
-				new AnswerModel { AnswerId = 26, QuestionId = 8, IsCorrect = false, Text = "Emu" },
-				new AnswerModel { AnswerId = 27, QuestionId = 8, IsCorrect = false, Text = "Pelikan" }
+				new AnswerModel { AnswerId = 25, QuestionId = 10, IsCorrect = true, Text = "Struts" },
+				new AnswerModel { AnswerId = 26, QuestionId = 10, IsCorrect = false, Text = "Emu" },
+				new AnswerModel { AnswerId = 27, QuestionId = 10, IsCorrect = false, Text = "Pelikan" }
 			);
         }
     }
