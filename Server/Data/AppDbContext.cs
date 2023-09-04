@@ -220,6 +220,46 @@ namespace QuizaDjuret.Server.Data
 					FunFact = "Groddjur genomgår en metamorfos från groda till groda",
 					ImageURL = "https://i.imgur.com/TY9PKPZ.jpg",
 					DifficultyLevel = 2
+				},
+				new QuestionModel
+				{
+					QuestionId = 21,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 61,
+					Hint = "Lever ofta i närheten av kusten och äter fisk",
+					FunFact = "Sälar är skickliga simmare och dykare",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 22,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 72,
+					Hint = "Lever ofta i närheten av kusten och äter fisk",
+					FunFact = "Sälar är skickliga simmare och dykare",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 1
+				},
+				new QuestionModel
+				{
+					QuestionId = 24,
+					Text = "Ett litet, snabbt däggdjur som lever i träd",
+					CorrectAnswerId = 75,
+					Hint = "Har stor svans och stora ögon",
+					FunFact = "Lemurer finns bara på Madagaskar",
+					ImageURL = "Länk till bild här",
+					DifficultyLevel = 1
+				},
+				new QuestionModel
+				{
+					QuestionId = 25,
+					Text = "Ett marint djur med åttavåra armar och suger på byten",
+					CorrectAnswerId = 78,
+					Hint = "Har en ryggrad men inte ben",
+					FunFact = "Bläckfiskar kan ändra färg och textur för att kamouflera sig",
+					ImageURL = "Länk till bild här",
+					DifficultyLevel = 1
 				}
 			);
 
@@ -302,7 +342,11 @@ namespace QuizaDjuret.Server.Data
 
 				new AnswerModel { AnswerId = 58, QuestionId = 20, IsCorrect = true, Text = "Groda" },
 				new AnswerModel { AnswerId = 59, QuestionId = 20, IsCorrect = false, Text = "Ödla" },
-				new AnswerModel { AnswerId = 60, QuestionId = 20, IsCorrect = false, Text = "Salmander" }
+				new AnswerModel { AnswerId = 60, QuestionId = 20, IsCorrect = false, Text = "Salmander" },
+
+				new AnswerModel { AnswerId = 61, QuestionId = 21, IsCorrect = true, Text = "Säl" },
+				new AnswerModel { AnswerId = 62, QuestionId = 21, IsCorrect = false, Text = "Val" },
+				new AnswerModel { AnswerId = 63, QuestionId = 21, IsCorrect = false, Text = "Haj" }
 			);
         }
     }
