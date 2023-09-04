@@ -210,6 +210,16 @@ namespace QuizaDjuret.Server.Data
 					FunFact = "Orangutanger delar omkring 97 % av sin DNA med människor",
 					ImageURL = "https://i.imgur.com/EPK88mg.jpg",
 					DifficultyLevel = 2
+				},
+				new QuestionModel
+				{
+					QuestionId = 20,
+					Text = "Vad är detta för djur?",
+					CorrectAnswerId = 58,
+					Hint = "Har en karakteristisk sång under natten",
+					FunFact = "Groddjur genomgår en metamorfos från groda till groda",
+					ImageURL = "https://i.imgur.com/TY9PKPZ.jpg",
+					DifficultyLevel = 2
 				}
 			);
 
@@ -288,7 +298,11 @@ namespace QuizaDjuret.Server.Data
 
 				new AnswerModel { AnswerId = 55, QuestionId = 19, IsCorrect = true, Text = "Orangutang" },
 				new AnswerModel { AnswerId = 56, QuestionId = 19, IsCorrect = false, Text = "Gorilla" },
-				new AnswerModel { AnswerId = 57, QuestionId = 19, IsCorrect = false, Text = "Schimpans" }
+				new AnswerModel { AnswerId = 57, QuestionId = 19, IsCorrect = false, Text = "Schimpans" },
+
+				new AnswerModel { AnswerId = 58, QuestionId = 20, IsCorrect = true, Text = "Groda" },
+				new AnswerModel { AnswerId = 59, QuestionId = 20, IsCorrect = false, Text = "Ödla" },
+				new AnswerModel { AnswerId = 60, QuestionId = 20, IsCorrect = false, Text = "Salmander" }
 			);
         }
     }
