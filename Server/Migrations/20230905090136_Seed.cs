@@ -7,7 +7,7 @@
 namespace QuizaDjuret.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialWithFirstSeed : Migration
+    public partial class Seed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -11,8 +11,8 @@ using QuizaDjuret.Server.Data;
 namespace QuizaDjuret.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230825092903_InitialWithFirstSeed")]
-    partial class InitialWithFirstSeed
+    [Migration("20230905090136_Seed")]
+    partial class Seed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
