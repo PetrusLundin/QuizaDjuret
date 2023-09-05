@@ -70,7 +70,7 @@ else
 		<div class="main-box-frågor">
             <div class="rubrik-box">
 				<div class="startaOm-div">
-					<button style="font-family: 'Arial'; font-style:italic"  class="startaOm-btn" @onclick="() => Restart()">Starta om Quizet</button>
+					<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">« Starta om Quizet «</button>
                 </div>
 				<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@*@GameManager.CurrentQuestion.Text*@Vad är detta för djur?</h1>
 			</div>
@@ -85,6 +85,7 @@ else
 					<p style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect)">@GameManager.CurrentQuestion.Answers[0].Text</p>
 					<p style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect)">@GameManager.CurrentQuestion.Answers[1].Text</p>
 					<p style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect)">@GameManager.CurrentQuestion.Answers[2].Text</p>
+					<p style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga">★ Ledtråd ★</p>
 				</div>
 			</div>
 			
