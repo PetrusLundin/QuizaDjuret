@@ -23,19 +23,19 @@ namespace QuizaDjuret.Server.Data
                 new QuestionModel
                 {
                     QuestionId = 1,
-                    Text = "Vad är dens största kända arten av sköldpadda?",
+                    Text = "Vad är detta för djur?",
                     CorrectAnswerId = 1,
                     Hint = "Denna sköldpadda kan väga upp till 900kilogram och lever i havet.",
-                    FunFact = " Denna imponerande sköldpadda kallas för lädersköldpadda och har en kraftig kroppsstruktur som skyddar den mot rovdjur. Den är också känd för att kunna dyka på stora djup och stanna under vattnet i flera timmar innan den måste andas luft.",
+                    FunFact = "Sköldpaddan är känd för att kunna dyka på stora djup och stanna under vattnet i flera timmar innan den måste andas luft.",
                     ImageURL = "sköldis.jpg",
                     DifficultyLevel = 1
                 }
             );
 
             modelBuilder.Entity<AnswerModel>().HasData(
-                new AnswerModel { AnswerId = 1, QuestionId = 1, IsCorrect = true, Text = "Dermochelys coriacea" },
-                new AnswerModel { AnswerId = 2, QuestionId = 1, IsCorrect = false, Text = "SkalMan" },
-                new AnswerModel { AnswerId = 3, QuestionId = 1, IsCorrect = false, Text = "Rafetus Swinhoei" }
+                new AnswerModel { AnswerId = 1, QuestionId = 1, IsCorrect = true, Text = "Sköldpadda" },
+                new AnswerModel { AnswerId = 2, QuestionId = 1, IsCorrect = false, Text = "Elefant" },
+                new AnswerModel { AnswerId = 3, QuestionId = 1, IsCorrect = false, Text = "Vildsvin" }
             );
         }
     }
