@@ -119,7 +119,7 @@ namespace QuizaDjuret.Server.Data
 					Hint = "Känd för sitt arbete att samla mat",
 					FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
 					ImageURL = "https://i.imgur.com/REFAZzh.jpg",
-					DifficultyLevel = 2
+					DifficultyLevel = 1
 				},
 				new QuestionModel
 				{
@@ -235,31 +235,191 @@ namespace QuizaDjuret.Server.Data
 				{
 					QuestionId = 22,
 					Text = "Vilket djur gör detta ljud?",
-					CorrectAnswerId = 72,
-					Hint = "Lever ofta i närheten av kusten och äter fisk",
-					FunFact = "Sälar är skickliga simmare och dykare",
+					CorrectAnswerId = 64,
+					Hint = "Känd för att vara 'kungen av djungeln'",
+					FunFact = "Lejonets rytande kan höras på flera kilometers avstånd",
 					ImageURL = "LJUD-FIL.MPG",
-					DifficultyLevel = 1
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 23,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 67,
+					Hint = "Lever i haven och är en utmärkt simmare",
+					FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
 				},
 				new QuestionModel
 				{
 					QuestionId = 24,
-					Text = "Ett litet, snabbt däggdjur som lever i träd",
-					CorrectAnswerId = 75,
-					Hint = "Har stor svans och stora ögon",
-					FunFact = "Lemurer finns bara på Madagaskar",
-					ImageURL = "Länk till bild här",
-					DifficultyLevel = 1
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 70,
+					Hint = "Ofta används för ridning och dragarbete",
+					FunFact = "Hästar har en utmärkt förmåga att kommunicera med kroppsspråk",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
 				},
 				new QuestionModel
 				{
 					QuestionId = 25,
-					Text = "Ett marint djur med åttavåra armar och suger på byten",
-					CorrectAnswerId = 78,
-					Hint = "Har en ryggrad men inte ben",
-					FunFact = "Bläckfiskar kan ändra färg och textur för att kamouflera sig",
-					ImageURL = "Länk till bild här",
-					DifficultyLevel = 1
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 73,
+					Hint = "Vanligt husdjur och bästa vän till människor",
+					FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 26,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 76,
+					Hint = "Är känd för att jaga möss och andra smådjur",
+					FunFact = "Katter kan hoppa flera gånger sin egen kroppslängd i en enda hopp",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 27,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 79,
+					Hint = "Symbol för styrka och frihet",
+					FunFact = "Örnar har en utmärkt syn och kan se byten från hög höjd",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 28,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 82,
+					Hint = "Kan vara röd, blå, grön eller gul",
+					FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 29,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 85,
+					Hint = "",
+					FunFact = "",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 30,
+					Text = "Vilket djur gör detta ljud?",
+					CorrectAnswerId = 88,
+					Hint = "",
+					FunFact = "",
+					ImageURL = "LJUD-FIL.MPG",
+					DifficultyLevel = 3
+				},
+				new QuestionModel
+				{
+					QuestionId = 31,
+					Text = "Ett långhalsat djur med fläckig päls",
+					CorrectAnswerId = 91,
+					Hint = "Har en av de längsta nackarna i djurriket",
+					FunFact = "Giraffer sover bara i korta stunder och står upp",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 32,
+					Text = "Ett pungdjur från Australien som hoppar på sina bakben",
+					CorrectAnswerId = 94,
+					Hint = "Har en karakteristisk pung för att bära sina ungar",
+					FunFact = "Känguruer kan hoppa mycket långa sträckor och vara väldigt snabba",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 33,
+					Text = "En björnart med svartvita markeringar",
+					CorrectAnswerId = 97,
+					Hint = "Lever i Kina och äter mest bambu",
+					FunFact = "Pandor är kända för sin söta och knubbiga utseende",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 34,
+					Text = "Ett stort, tungt djur som lever i vattnet",
+					CorrectAnswerId = 100,
+					Hint = "Även om de är kraftiga simmare, är de oftast landbaserade",
+					FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 35,
+					Text = "En stor gräsätande fågel som inte kan flyga",
+					CorrectAnswerId = 103,
+					Hint = "Finns i Afrika och är känd för sin långa hals",
+					FunFact = "Strutsar är de största och tyngsta fåglarna på jorden",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 36,
+					Text = "En liten insekt som ofta arbetar i kolonier",
+					CorrectAnswerId = 106,
+					Hint = "Känd för sitt arbete att samla mat",
+					FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 37,
+					Text = "Ett marint däggdjur med kraftiga morrhår",
+					CorrectAnswerId = 109,
+					Hint = "Lever ofta i närheten av kusten och äter fisk",
+					FunFact = "Sälar är skickliga simmare och dykare",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 38,
+					Text = "En liten gnagare som ofta ses i burar som husdjur",
+					CorrectAnswerId = 112,
+					Hint = "Kan vara hårig eller naken, beroende på ras",
+					FunFact = "Hamstrar har kindpåsar där de kan lagra mat",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 39,
+					Text = "Ett snabbt och smidigt djur som ofta förekommer i städer",
+					CorrectAnswerId = 115,
+					Hint = "Kan vara grå, brun eller svart",
+					FunFact = "Råttor är mycket intelligenta och kan lösa komplexa problem",
+					ImageURL = "",
+					DifficultyLevel = 4
+				},
+				new QuestionModel
+				{
+					QuestionId = 40,
+					Text = "En färgglad fågel som ofta kan härma mänskliga ljud",
+					CorrectAnswerId = 118,
+					Hint = "Kan vara röd, blå, grön eller gul",
+					FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
+					ImageURL = "",
+					DifficultyLevel = 4
 				}
 			);
 
@@ -345,8 +505,84 @@ namespace QuizaDjuret.Server.Data
 				new AnswerModel { AnswerId = 60, QuestionId = 20, IsCorrect = false, Text = "Salmander" },
 
 				new AnswerModel { AnswerId = 61, QuestionId = 21, IsCorrect = true, Text = "Säl" },
-				new AnswerModel { AnswerId = 62, QuestionId = 21, IsCorrect = false, Text = "Val" },
-				new AnswerModel { AnswerId = 63, QuestionId = 21, IsCorrect = false, Text = "Haj" }
+				new AnswerModel { AnswerId = 62, QuestionId = 21, IsCorrect = false, Text = "Späckhuggare" },
+				new AnswerModel { AnswerId = 63, QuestionId = 21, IsCorrect = false, Text = "Haj" },
+
+				new AnswerModel { AnswerId = 64, QuestionId = 22, IsCorrect = true, Text = "Lejon" },
+				new AnswerModel { AnswerId = 65, QuestionId = 22, IsCorrect = false, Text = "Tiger" },
+				new AnswerModel { AnswerId = 66, QuestionId = 22, IsCorrect = false, Text = "Puma" },
+
+				new AnswerModel { AnswerId = 67, QuestionId = 23, IsCorrect = true, Text = "Delfin" },
+				new AnswerModel { AnswerId = 68, QuestionId = 23, IsCorrect = false, Text = "Val" },
+				new AnswerModel { AnswerId = 69, QuestionId = 23, IsCorrect = false, Text = "Säl" },
+
+				new AnswerModel { AnswerId = 70, QuestionId = 24, IsCorrect = true, Text = "Häst" },
+				new AnswerModel { AnswerId = 71, QuestionId = 24, IsCorrect = false, Text = "Ko" },
+				new AnswerModel { AnswerId = 72, QuestionId = 24, IsCorrect = false, Text = "Gris" },
+
+				new AnswerModel { AnswerId = 73, QuestionId = 25, IsCorrect = true, Text = "Hund" },
+				new AnswerModel { AnswerId = 74, QuestionId = 25, IsCorrect = false, Text = "Katt" },
+				new AnswerModel { AnswerId = 75, QuestionId = 25, IsCorrect = false, Text = "Tiger" },
+
+				new AnswerModel { AnswerId = 76, QuestionId = 26, IsCorrect = true, Text = "Katt" },
+				new AnswerModel { AnswerId = 77, QuestionId = 26, IsCorrect = false, Text = "Leopard" },
+				new AnswerModel { AnswerId = 78, QuestionId = 26, IsCorrect = false, Text = "Puma" },
+
+				new AnswerModel { AnswerId = 79, QuestionId = 27, IsCorrect = true, Text = "Örn" },
+				new AnswerModel { AnswerId = 80, QuestionId = 27, IsCorrect = false, Text = "Falk" },
+				new AnswerModel { AnswerId = 81, QuestionId = 27, IsCorrect = false, Text = "Kondor" },
+
+				new AnswerModel { AnswerId = 82, QuestionId = 28, IsCorrect = true, Text = "Papegoja" },
+				new AnswerModel { AnswerId = 83, QuestionId = 28, IsCorrect = false, Text = "Kolibri" },
+				new AnswerModel { AnswerId = 84, QuestionId = 28, IsCorrect = false, Text = "Pippifågel" },
+
+				new AnswerModel { AnswerId = 85, QuestionId = 29, IsCorrect = true, Text = "" },
+				new AnswerModel { AnswerId = 86, QuestionId = 29, IsCorrect = false, Text = "" },
+				new AnswerModel { AnswerId = 87, QuestionId = 29, IsCorrect = false, Text = "" },
+
+				new AnswerModel { AnswerId = 88, QuestionId = 30, IsCorrect = true, Text = "" },
+				new AnswerModel { AnswerId = 89, QuestionId = 30, IsCorrect = false, Text = "" },
+				new AnswerModel { AnswerId = 90, QuestionId = 30, IsCorrect = false, Text = "" },
+
+				new AnswerModel { AnswerId = 91, QuestionId = 31, IsCorrect = true, Text = "Giraff" },
+				new AnswerModel { AnswerId = 92, QuestionId = 31, IsCorrect = false, Text = "Zebra" },
+				new AnswerModel { AnswerId = 93, QuestionId = 31, IsCorrect = false, Text = "Tiger" },
+
+				new AnswerModel { AnswerId = 94, QuestionId = 32, IsCorrect = true, Text = "Känguru" },
+				new AnswerModel { AnswerId = 95, QuestionId = 32, IsCorrect = false, Text = "Koala" },
+				new AnswerModel { AnswerId = 96, QuestionId = 32, IsCorrect = false, Text = "Hund" },
+
+				new AnswerModel { AnswerId = 97, QuestionId = 33, IsCorrect = true, Text = "Panda" },
+				new AnswerModel { AnswerId = 98, QuestionId = 33, IsCorrect = false, Text = "Koala" },
+				new AnswerModel { AnswerId = 99, QuestionId = 33, IsCorrect = false, Text = "Isbjörn" },
+
+				new AnswerModel { AnswerId = 100, QuestionId = 34, IsCorrect = true, Text = "Flodhäst" },
+				new AnswerModel { AnswerId = 101, QuestionId = 34, IsCorrect = false, Text = "Val" },
+				new AnswerModel { AnswerId = 102, QuestionId = 34, IsCorrect = false, Text = "Havssköldpadda" },
+
+				new AnswerModel { AnswerId = 103, QuestionId = 35, IsCorrect = true, Text = "Struts" },
+				new AnswerModel { AnswerId = 104, QuestionId = 35, IsCorrect = false, Text = "Emu" },
+				new AnswerModel { AnswerId = 105, QuestionId = 35, IsCorrect = false, Text = "Pelikan" },
+
+				new AnswerModel { AnswerId = 106, QuestionId = 36, IsCorrect = true, Text = "Myra" },
+				new AnswerModel { AnswerId = 107, QuestionId = 36, IsCorrect = false, Text = "Fjäril" },
+				new AnswerModel { AnswerId = 108, QuestionId = 36, IsCorrect = false, Text = "Bi" },
+
+				new AnswerModel { AnswerId = 109, QuestionId = 37, IsCorrect = true, Text = "Säl" },
+				new AnswerModel { AnswerId = 110, QuestionId = 37, IsCorrect = false, Text = "Späckhuggare" },
+				new AnswerModel { AnswerId = 111, QuestionId = 37, IsCorrect = false, Text = "Delfin" },
+
+				new AnswerModel { AnswerId = 112, QuestionId = 38, IsCorrect = true, Text = "Hamster" },
+				new AnswerModel { AnswerId = 113, QuestionId = 38, IsCorrect = false, Text = "Kanin" },
+				new AnswerModel { AnswerId = 114, QuestionId = 38, IsCorrect = false, Text = "Marsvin" },
+
+				new AnswerModel { AnswerId = 115, QuestionId = 39, IsCorrect = true, Text = "Råtta" },
+				new AnswerModel { AnswerId = 116, QuestionId = 39, IsCorrect = false, Text = "Igelkott" },
+				new AnswerModel { AnswerId = 117, QuestionId = 39, IsCorrect = false, Text = "Ekorre" },
+
+				new AnswerModel { AnswerId = 118, QuestionId = 40, IsCorrect = true, Text = "Papegoja" },
+				new AnswerModel { AnswerId = 119, QuestionId = 40, IsCorrect = false, Text = "Pippifågel" },
+				new AnswerModel { AnswerId = 120, QuestionId = 40, IsCorrect = false, Text = "Kolibri" }
 			);
         }
     }
