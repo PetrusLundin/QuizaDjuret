@@ -26,7 +26,7 @@ namespace QuizaDjuret.Server.Data
                     QuestionId = 1,
                     Text = "Vad är detta för djur?",
                     CorrectAnswerId = 1,
-                    Hint = "Vanligt husdjur och bästa vän till människor",
+                    Hint = "Vanligt husdjur och männikans bästavän",
                     FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
                     ImageURL = "https://i.imgur.com/nMVJSnF.jpeg",
 					DifficultyLevel = 1
@@ -46,8 +46,8 @@ namespace QuizaDjuret.Server.Data
 		            QuestionId = 3,
 		            Text = "Vad är detta för djur?",
 		            CorrectAnswerId = 7,
-		            Hint = "Har en karakteristisk pung för att bära sina ungar",
-		            FunFact = "Känguruer kan hoppa mycket långa sträckor och vara väldigt snabba",
+		            Hint = "Har en karakteristisk pung för att bära sina ungar i",
+		            FunFact = "Känguruer kan hoppa mycket långa sträckor och är extremt snabba",
 		            ImageURL = "https://i.imgur.com/LRrt7dB.jpg",
 		            DifficultyLevel = 1
 	            },
@@ -57,7 +57,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 10,
 					Hint = "Känd för att vara 'kungen av djungeln'",
-					FunFact = "Lejonets rytande kan höras på flera kilometers avstånd",
+					FunFact = "Lejonets rytande kan hörs på flera kilometers avstånd",
 					ImageURL = "https://i.imgur.com/3YTx841.jpg",
 					DifficultyLevel = 1
 				},
@@ -66,7 +66,7 @@ namespace QuizaDjuret.Server.Data
 					 QuestionId = 5,
 					 Text = "Vad är detta för djur?",
 					 CorrectAnswerId = 13,
-					 Hint = "Lever i Kina och äter mest bambu",
+					 Hint = "Lever i Kina och äter mestadels bambu",
 					 FunFact = "Pandor är kända för sin söta och knubbiga utseende",
 					 ImageURL = "https://i.imgur.com/vVxD2Vr.jpg",
 					 DifficultyLevel = 1
@@ -76,7 +76,7 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 6,
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 16,
-					Hint = "Lever i haven och är en utmärkt simmare",
+					Hint = "Lever i haven och är utmärkta simmare",
 					FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
 					ImageURL = "https://i.imgur.com/UYNPT5l.jpg",
 					DifficultyLevel = 1
@@ -96,7 +96,7 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 8,
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 22,
-					Hint = "Även om de är kraftiga simmare, är de oftast landbaserade",
+					Hint = "Även om de är kraftiga simmare, så lever de mestadels på land",
 					FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
 					ImageURL = "https://i.imgur.com/Usfrgma.jpg",
 					DifficultyLevel = 1
@@ -107,7 +107,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 25,
 					Hint = "Lever på en diet som främst består av eukalyptusblad",
-					FunFact = "Koalor sover upp till 20 timmar om dagen",
+					FunFact = "Koalor sover upp till 20 timmar per dyng",
 					ImageURL = "https://i.imgur.com/9PzgFus.jpg",
 					DifficultyLevel = 1
 				},
@@ -116,9 +116,9 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 10,
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 28,
-					Hint = "Känd för sitt arbete att samla mat",
-					FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
-					ImageURL = "https://i.imgur.com/REFAZzh.jpg",
+                    Hint = "Finns i Afrika och är känd för sin långa hals",
+                    FunFact = "Strutsar är de största och tyngsta fåglarna på jorden",
+                    ImageURL = "https://i.imgur.com/REFAZzh.jpg",
 					DifficultyLevel = 1
 				},
 				new QuestionModel
@@ -147,7 +147,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 37,
 					Hint = "Lever ofta i våtmarker och har ett karakteristiskt trumpetande ljud",
-					FunFact = "Tranor är kända för sina graciösa danser under parningen",
+					FunFact = "Tranor är kända för sina graciösa danser under parningssäsongen",
 					ImageURL = "https://i.imgur.com/pWr4Xxu.jpg",
 					DifficultyLevel = 2
 				},
@@ -157,7 +157,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 40,
 					Hint = "Kan vara hårig eller naken, beroende på ras",
-					FunFact = "Hamstrar har kindpåsar där de kan lagra mat",
+					FunFact = "Hamstrar har kindpåsar där de lagra mat",
 					ImageURL = "https://i.imgur.com/tWHofmn.png",
 					DifficultyLevel = 2
 				},
@@ -206,7 +206,7 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 19,
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 55,
-					Hint = "Lever i regnskogen och använder verktyg",
+					Hint = "Lever i regnskogen och gillar bananer",
 					FunFact = "Orangutanger delar omkring 97 % av sin DNA med människor",
 					ImageURL = "https://i.imgur.com/EPK88mg.jpg",
 					DifficultyLevel = 2
@@ -217,7 +217,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "Vad är detta för djur?",
 					CorrectAnswerId = 58,
 					Hint = "Har en karakteristisk sång under natten",
-					FunFact = "Groddjur genomgår en metamorfos från groda till groda",
+					FunFact = "Groddjur genomgår en förvandling från simmande grodyngel till groda",
 					ImageURL = "https://i.imgur.com/TY9PKPZ.jpg",
 					DifficultyLevel = 2
 				},
@@ -246,7 +246,7 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 23,
 					Text = "Vilket djur gör detta ljud?",
 					CorrectAnswerId = 67,
-					Hint = "Lever i haven och är en utmärkt simmare",
+					Hint = "Lever i havet och är en utmärkt simmare",
 					FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
 					ImageURL = "LJUD-FIL.MPG",
 					DifficultyLevel = 3
@@ -266,7 +266,7 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 25,
 					Text = "Vilket djur gör detta ljud?",
 					CorrectAnswerId = 73,
-					Hint = "Vanligt husdjur och bästa vän till människor",
+					Hint = "Vanligt husdjur och människans bästavän",
 					FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
 					ImageURL = "LJUD-FIL.MPG",
 					DifficultyLevel = 3
@@ -336,8 +336,8 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 32,
 					Text = "Ett pungdjur från Australien som hoppar på sina bakben",
 					CorrectAnswerId = 94,
-					Hint = "Har en karakteristisk pung för att bära sina ungar",
-					FunFact = "Känguruer kan hoppa mycket långa sträckor och vara väldigt snabba",
+					Hint = "Har en karakteristisk pung för att bära sina ungar i",
+					FunFact = "Känguruer kan hoppa mycket långa sträckor och är extremt snabba",
 					ImageURL = "",
 					DifficultyLevel = 4
 				},
@@ -346,7 +346,7 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 33,
 					Text = "En björnart med svartvita markeringar",
 					CorrectAnswerId = 97,
-					Hint = "Lever i Kina och äter mest bambu",
+					Hint = "Lever i Kina och äter mestadels bambu",
 					FunFact = "Pandor är kända för sin söta och knubbiga utseende",
 					ImageURL = "",
 					DifficultyLevel = 4
@@ -356,7 +356,7 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 34,
 					Text = "Ett stort, tungt djur som lever i vattnet",
 					CorrectAnswerId = 100,
-					Hint = "Även om de är kraftiga simmare, är de oftast landbaserade",
+					Hint = "Även om de är kraftiga simmare, befinner de sig oftast på land",
 					FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
 					ImageURL = "",
 					DifficultyLevel = 4
@@ -377,7 +377,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "En liten insekt som ofta arbetar i kolonier",
 					CorrectAnswerId = 106,
 					Hint = "Känd för sitt arbete att samla mat",
-					FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
+					FunFact = "Myror kan lyfta objekt som är mycket tyngre än de själva",
 					ImageURL = "",
 					DifficultyLevel = 4
 				},
@@ -397,7 +397,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "En liten gnagare som ofta ses i burar som husdjur",
 					CorrectAnswerId = 112,
 					Hint = "Kan vara hårig eller naken, beroende på ras",
-					FunFact = "Hamstrar har kindpåsar där de kan lagra mat",
+					FunFact = "Hamstrar har kindpåsar där de lagra mat",
 					ImageURL = "",
 					DifficultyLevel = 4
 				},
