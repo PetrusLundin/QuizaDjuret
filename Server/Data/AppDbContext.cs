@@ -228,7 +228,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 61,
 					Hint = "Lever ofta i närheten av kusten och äter fisk",
 					FunFact = "Sälar är skickliga simmare och dykare",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL =  "Säl.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -238,7 +238,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 64,
 					Hint = "Känd för att vara 'kungen av djungeln'",
 					FunFact = "Lejonets rytande kan höras på flera kilometers avstånd",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Lejon.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -248,7 +248,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 67,
 					Hint = "Lever i havet och är en utmärkt simmare",
 					FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Delfin.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -258,7 +258,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 70,
 					Hint = "Ofta används för ridning och dragarbete",
 					FunFact = "Hästar har en utmärkt förmåga att kommunicera med kroppsspråk",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Häst.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -268,7 +268,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 73,
 					Hint = "Vanligt husdjur och människans bästavän",
 					FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Hund.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -278,7 +278,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 76,
 					Hint = "Är känd för att jaga möss och andra smådjur",
 					FunFact = "Katter kan hoppa flera gånger sin egen kroppslängd i en enda hopp",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Katt.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -288,7 +288,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 79,
 					Hint = "Symbol för styrka och frihet",
 					FunFact = "Örnar har en utmärkt syn och kan se byten från hög höjd",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Örn.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -298,7 +298,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 82,
 					Hint = "Kan vara röd, blå, grön eller gul",
 					FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Papegoja.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -308,7 +308,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 85,
 					Hint = "",
 					FunFact = "",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Trana.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -318,7 +318,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 88,
 					Hint = "",
 					FunFact = "",
-					ImageURL = "LJUD-FIL.MPG",
+					ImageURL = "Hamster.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
