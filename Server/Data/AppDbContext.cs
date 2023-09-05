@@ -306,8 +306,8 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 29,
 					Text = "Vilket djur gör detta ljud?",
 					CorrectAnswerId = 85,
-					Hint = "",
-					FunFact = "",
+					Hint = "Lever ofta i våtmarker och har ett karakteristiskt trumpetande ljud",
+					FunFact = "Tranor är kända för sina graciösa danser under parningssäsongen",
 					ImageURL = "Trana.mp3",
 					DifficultyLevel = 3
 				},
@@ -316,8 +316,8 @@ namespace QuizaDjuret.Server.Data
 					QuestionId = 30,
 					Text = "Vilket djur gör detta ljud?",
 					CorrectAnswerId = 88,
-					Hint = "",
-					FunFact = "",
+					Hint = "Kan vara hårig eller naken, beroende på ras",
+					FunFact = "Hamstrar har kindpåsar där de lagra mat",
 					ImageURL = "Hamster.mp3",
 					DifficultyLevel = 3
 				},
@@ -536,13 +536,13 @@ namespace QuizaDjuret.Server.Data
 				new AnswerModel { AnswerId = 83, QuestionId = 28, IsCorrect = false, Text = "Kolibri" },
 				new AnswerModel { AnswerId = 84, QuestionId = 28, IsCorrect = false, Text = "Pippifågel" },
 
-				new AnswerModel { AnswerId = 85, QuestionId = 29, IsCorrect = true, Text = "" },
-				new AnswerModel { AnswerId = 86, QuestionId = 29, IsCorrect = false, Text = "" },
-				new AnswerModel { AnswerId = 87, QuestionId = 29, IsCorrect = false, Text = "" },
+				new AnswerModel { AnswerId = 85, QuestionId = 29, IsCorrect = true, Text = "Trana" },
+				new AnswerModel { AnswerId = 86, QuestionId = 29, IsCorrect = false, Text = "Flamingo" },
+				new AnswerModel { AnswerId = 87, QuestionId = 29, IsCorrect = false, Text = "Stork" },
 
-				new AnswerModel { AnswerId = 88, QuestionId = 30, IsCorrect = true, Text = "" },
-				new AnswerModel { AnswerId = 89, QuestionId = 30, IsCorrect = false, Text = "" },
-				new AnswerModel { AnswerId = 90, QuestionId = 30, IsCorrect = false, Text = "" },
+				new AnswerModel { AnswerId = 88, QuestionId = 30, IsCorrect = true, Text = "Hamster" },
+				new AnswerModel { AnswerId = 89, QuestionId = 30, IsCorrect = false, Text = "Kanin" },
+				new AnswerModel { AnswerId = 90, QuestionId = 30, IsCorrect = false, Text = "Marsvin" },
 
 				new AnswerModel { AnswerId = 91, QuestionId = 31, IsCorrect = true, Text = "Giraff" },
 				new AnswerModel { AnswerId = 92, QuestionId = 31, IsCorrect = false, Text = "Zebra" },
