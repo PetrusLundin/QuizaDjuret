@@ -73,7 +73,7 @@ else
 				<div class="startaOm-div">
 					<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">« Starta om Quizet «</button>
                 </div>
-				<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@*@GameManager.CurrentQuestion.Text*@Vad är detta för djur?</h1>
+				<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
 
 			</div>
 
@@ -82,7 +82,7 @@ else
 
 				<div class="bild-column">
 					@*<button class="test-btn">bilden</button>*@
-					<img class="djur-img" src="https://100-facts.com/wp-content/uploads/2022/08/interesting-facts-about-turtles-e1542184364624.jpg">
+					<img class="djur-img" src=@GameManager.CurrentQuestion.ImageURL>
 				</div>
 				<div class="fråge-column">
 					<p style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect)">@GameManager.CurrentQuestion.Answers[0].Text</p>
