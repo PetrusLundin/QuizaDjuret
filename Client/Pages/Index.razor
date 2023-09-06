@@ -67,14 +67,16 @@ else
 		<div class="main-box-frågor">
 			<div class="rubrik-box">
 			<h1 style="margin-bottom: 20px; margin-top: 20px;">@GameManager.CurrentQuestion.Text</h1>
+				
 			</div>
 
-
+			
 			<div class="fråge-box">
 				<div class="test-box-btn">
+					<audio controls src="AnimalSounds/Papegoja.mp3"></audio>
 					<button class="test-btn">bilden</button>
 				</div>
-				<div>
+				<div>					
 					<p class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect)">@GameManager.CurrentQuestion.Answers[0].Text</p>
 					<p class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect)">@GameManager.CurrentQuestion.Answers[1].Text</p>
 					<p class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect)">@GameManager.CurrentQuestion.Answers[2].Text</p>
