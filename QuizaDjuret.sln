@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizaDjuret.Client", "Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizaDjuret.Shared", "Shared\QuizaDjuret.Shared.csproj", "{CA08A4F4-F3DE-4754-9A6F-9FE5A2E50D34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizaDjuretTests", "QuizaDjuretTests\QuizaDjuretTests.csproj", "{22F04143-3433-442B-B889-5C82BFB84133}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizaDjuretTests", "QuizaDjuretTests\QuizaDjuretTests.csproj", "{22F04143-3433-442B-B889-5C82BFB84133}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
