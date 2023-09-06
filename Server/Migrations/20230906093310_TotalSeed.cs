@@ -7,7 +7,7 @@
 namespace QuizaDjuret.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class fullseed : Migration
+    public partial class TotalSeed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,7 +36,7 @@ namespace QuizaDjuret.Server.Migrations
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Hint = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FunFact = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MediaURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DifficultyLevel = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -67,7 +67,7 @@ namespace QuizaDjuret.Server.Migrations
 
             migrationBuilder.InsertData(
                 table: "Questions",
-                columns: new[] { "QuestionId", "CorrectAnswerId", "DifficultyLevel", "FunFact", "Hint", "ImageURL", "Text" },
+                columns: new[] { "QuestionId", "CorrectAnswerId", "DifficultyLevel", "FunFact", "Hint", "MediaURL", "Text" },
                 values: new object[,]
                 {
                     { 1, 1, 1, "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten", "Vanligt husdjur och männikans bästavän", "https://i.imgur.com/nMVJSnF.jpeg", "Vad är detta för djur?" },
@@ -75,7 +75,7 @@ namespace QuizaDjuret.Server.Migrations
                     { 3, 7, 1, "Känguruer kan hoppa mycket långa sträckor och är extremt snabba", "Har en karakteristisk pung för att bära sina ungar i", "https://i.imgur.com/LRrt7dB.jpg", "Vad är detta för djur?" },
                     { 4, 10, 1, "Lejonets rytande kan hörs på flera kilometers avstånd", "Känd för att vara 'kungen av djungeln'", "https://i.imgur.com/3YTx841.jpg", "Vad är detta för djur?" },
                     { 5, 13, 1, "Pandor är kända för sin söta och knubbiga utseende", "Lever i Kina och äter mestadels bambu", "https://i.imgur.com/vVxD2Vr.jpg", "Vad är detta för djur?" },
-                    { 6, 16, 1, "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar", "Lever i haven och är utmärkta simmare", "https://i.imgur.com/UYNPT5l.jpg", "Vad är detta för djur?" },
+                    { 6, 16, 1, "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar", "Lever i haven och är utmärkta simmare", "https://i.imgur.com/dihW170.jpg", "Vad är detta för djur?" },
                     { 7, 19, 1, "Örnar har en utmärkt syn och kan se byten från hög höjd", "Symbol för styrka och frihet", "https://i.imgur.com/KJdADuA.jpg", "Vad är detta för djur?" },
                     { 8, 22, 1, "Flodhästar är kända för sina massiva käkar och tänder", "Även om de är kraftiga simmare, så lever de mestadels på land", "https://i.imgur.com/Usfrgma.jpg", "Vad är detta för djur?" },
                     { 9, 25, 1, "Koalor sover upp till 20 timmar per dyng", "Lever på en diet som främst består av eukalyptusblad", "https://i.imgur.com/9PzgFus.jpg", "Vad är detta för djur?" },

@@ -10,7 +10,7 @@ namespace QuizaDjuret.Shared
         public string Text { get; set; } = null!;
         public string Hint { get; set; } = null!;
         public string FunFact { get; set; } = null!;
-        public string ImageURL { get; set; } = null!;
+        public string MediaURL { get; set; } = null!;
         public int DifficultyLevel { get; set; }
         public List<AnswerModel> Answers { get; set; } = new();
     }

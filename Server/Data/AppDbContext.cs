@@ -29,7 +29,7 @@ namespace QuizaDjuret.Server.Data
 
                     Hint = "Vanligt husdjur och männikans bästavän",
                     FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
-                    ImageURL = "https://i.imgur.com/nMVJSnF.jpeg",
+                    MediaURL = "https://i.imgur.com/nMVJSnF.jpeg",
 					DifficultyLevel = 1
                 },
 				new QuestionModel
@@ -39,7 +39,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 4,
 					Hint = "Har en av de längsta nackarna i djurriket",
 					FunFact = "Giraffer sover bara i korta stunder och står upp",
-					ImageURL = "https://i.imgur.com/HTwzNY0.jpg",
+					MediaURL = "https://i.imgur.com/HTwzNY0.jpg",
 					DifficultyLevel = 1
 				},
 	            new QuestionModel
@@ -49,7 +49,7 @@ namespace QuizaDjuret.Server.Data
 		            CorrectAnswerId = 7,
 		            Hint = "Har en karakteristisk pung för att bära sina ungar i",
 		            FunFact = "Känguruer kan hoppa mycket långa sträckor och är extremt snabba",
-		            ImageURL = "https://i.imgur.com/LRrt7dB.jpg",
+		            MediaURL = "https://i.imgur.com/LRrt7dB.jpg",
 		            DifficultyLevel = 1
 	            },
 				new QuestionModel
@@ -59,7 +59,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 10,
 					Hint = "Känd för att vara 'kungen av djungeln'",
 					FunFact = "Lejonets rytande kan hörs på flera kilometers avstånd",
-					ImageURL = "https://i.imgur.com/3YTx841.jpg",
+					MediaURL = "https://i.imgur.com/3YTx841.jpg",
 					DifficultyLevel = 1
 				},
 				 new QuestionModel
@@ -69,7 +69,7 @@ namespace QuizaDjuret.Server.Data
 					 CorrectAnswerId = 13,
 					 Hint = "Lever i Kina och äter mestadels bambu",
 					 FunFact = "Pandor är kända för sin söta och knubbiga utseende",
-					 ImageURL = "https://i.imgur.com/vVxD2Vr.jpg",
+					 MediaURL = "https://i.imgur.com/vVxD2Vr.jpg",
 					 DifficultyLevel = 1
 				 },
 				new QuestionModel
@@ -79,7 +79,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 16,
 					Hint = "Lever i haven och är utmärkta simmare",
 					FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
-					ImageURL = "https://i.imgur.com/UYNPT5l.jpg",
+					MediaURL = "https://i.imgur.com/dihW170.jpg",
 					DifficultyLevel = 1
 				},
 				new QuestionModel
@@ -89,7 +89,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 19,
 					Hint = "Symbol för styrka och frihet",
 					FunFact = "Örnar har en utmärkt syn och kan se byten från hög höjd",
-					ImageURL = "https://i.imgur.com/KJdADuA.jpg",
+					MediaURL = "https://i.imgur.com/KJdADuA.jpg",
 					DifficultyLevel = 1
 				},
 				new QuestionModel
@@ -99,7 +99,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 22,
 					Hint = "Även om de är kraftiga simmare, så lever de mestadels på land",
 					FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
-					ImageURL = "https://i.imgur.com/Usfrgma.jpg",
+					MediaURL = "https://i.imgur.com/Usfrgma.jpg",
 					DifficultyLevel = 1
 				},
 				new QuestionModel
@@ -109,7 +109,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 25,
 					Hint = "Lever på en diet som främst består av eukalyptusblad",
 					FunFact = "Koalor sover upp till 20 timmar per dyng",
-					ImageURL = "https://i.imgur.com/9PzgFus.jpg",
+					MediaURL = "https://i.imgur.com/9PzgFus.jpg",
 					DifficultyLevel = 1
 				},
 				new QuestionModel
@@ -119,7 +119,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 28,
                     Hint = "Finns i Afrika och är känd för sin långa hals",
                     FunFact = "Strutsar är de största och tyngsta fåglarna på jorden",
-                    ImageURL = "https://i.imgur.com/REFAZzh.jpg",
+                    MediaURL = "https://i.imgur.com/REFAZzh.jpg",
 					DifficultyLevel = 1
 				},
 				new QuestionModel
@@ -129,7 +129,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 31,
 					Hint = "Känd för sitt arbete att samla mat",
 					FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
-					ImageURL = "https://i.imgur.com/qSCH06v.png",
+					MediaURL = "https://i.imgur.com/qSCH06v.png",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -139,7 +139,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 34,
 					Hint = "Lever ofta i närheten av kusten och äter fisk",
 					FunFact = "Sälar är skickliga simmare och dykare",
-					ImageURL = "https://i.imgur.com/bRlhcaM.jpg",
+					MediaURL = "https://i.imgur.com/bRlhcaM.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -149,7 +149,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 37,
 					Hint = "Lever ofta i våtmarker och har ett karakteristiskt trumpetande ljud",
 					FunFact = "Tranor är kända för sina graciösa danser under parningssäsongen",
-					ImageURL = "https://i.imgur.com/pWr4Xxu.jpg",
+					MediaURL = "https://i.imgur.com/pWr4Xxu.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -159,7 +159,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 40,
 					Hint = "Kan vara hårig eller naken, beroende på ras",
 					FunFact = "Hamstrar har kindpåsar där de lagra mat",
-					ImageURL = "https://i.imgur.com/tWHofmn.png",
+					MediaURL = "https://i.imgur.com/tWHofmn.png",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -169,7 +169,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 43,
 					Hint = "Lever i Afrika och är en skicklig jägare",
 					FunFact = "Geparder är de snabbaste landdjuren på jorden",
-					ImageURL = "https://i.imgur.com/X7kpZ0P.jpg",
+					MediaURL = "https://i.imgur.com/X7kpZ0P.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -179,7 +179,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 46,
 					Hint = "Kan vara grå, brun eller svart",
 					FunFact = "Råttor är mycket intelligenta och kan lösa komplexa problem",
-					ImageURL = "https://i.imgur.com/vyesMf1.jpg",
+					MediaURL = "https://i.imgur.com/vyesMf1.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -189,7 +189,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 49,
 					Hint = "Kan vara röd, blå, grön eller gul",
 					FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
-					ImageURL = "https://i.imgur.com/nO4aFC3.jpg",
+					MediaURL = "https://i.imgur.com/nO4aFC3.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -199,7 +199,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 52,
 					Hint = "Gör honung och bor i bikupor",
 					FunFact = "Bin är viktiga pollinatörer för många växter",
-					ImageURL = "https://i.imgur.com/tfhdJ40.jpg",
+					MediaURL = "https://i.imgur.com/tfhdJ40.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -209,7 +209,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 55,
 					Hint = "Lever i regnskogen och gillar bananer",
 					FunFact = "Orangutanger delar omkring 97 % av sin DNA med människor",
-					ImageURL = "https://i.imgur.com/EPK88mg.jpg",
+					MediaURL = "https://i.imgur.com/EPK88mg.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -219,7 +219,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 58,
 					Hint = "Har en karakteristisk sång under natten",
 					FunFact = "Groddjur genomgår en förvandling från simmande grodyngel till groda",
-					ImageURL = "https://i.imgur.com/TY9PKPZ.jpg",
+					MediaURL = "https://i.imgur.com/TY9PKPZ.jpg",
 					DifficultyLevel = 2
 				},
 				new QuestionModel
@@ -229,7 +229,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 61,
 					Hint = "Lever ofta i närheten av kusten och äter fisk",
 					FunFact = "Sälar är skickliga simmare och dykare",
-					ImageURL =  "Säl.mp3",
+					MediaURL =  "Säl.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -239,7 +239,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 64,
 					Hint = "Känd för att vara 'kungen av djungeln'",
 					FunFact = "Lejonets rytande kan höras på flera kilometers avstånd",
-					ImageURL = "Lejon.mp3",
+					MediaURL = "Lejon.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -249,7 +249,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 67,
 					Hint = "Lever i havet och är en utmärkt simmare",
 					FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
-					ImageURL = "Delfin.mp3",
+					MediaURL = "Delfin.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -259,7 +259,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 70,
 					Hint = "Ofta används för ridning och dragarbete",
 					FunFact = "Hästar har en utmärkt förmåga att kommunicera med kroppsspråk",
-					ImageURL = "Häst.mp3",
+					MediaURL = "Häst.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -269,7 +269,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 73,
 					Hint = "Vanligt husdjur och människans bästavän",
 					FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
-					ImageURL = "Hund.mp3",
+					MediaURL = "Hund.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -279,7 +279,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 76,
 					Hint = "Är känd för att jaga möss och andra smådjur",
 					FunFact = "Katter kan hoppa flera gånger sin egen kroppslängd i en enda hopp",
-					ImageURL = "Katt.mp3",
+					MediaURL = "Katt.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -289,7 +289,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 79,
 					Hint = "Symbol för styrka och frihet",
 					FunFact = "Örnar har en utmärkt syn och kan se byten från hög höjd",
-					ImageURL = "Örn.mp3",
+					MediaURL = "Örn.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -299,7 +299,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 82,
 					Hint = "Kan vara röd, blå, grön eller gul",
 					FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
-					ImageURL = "Papegoja.mp3",
+					MediaURL = "Papegoja.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -309,7 +309,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 85,
 					Hint = "Lever ofta i våtmarker och har ett karakteristiskt trumpetande ljud",
 					FunFact = "Tranor är kända för sina graciösa danser under parningssäsongen",
-					ImageURL = "Trana.mp3",
+					MediaURL = "Trana.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -319,7 +319,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 88,
 					Hint = "Kan vara hårig eller naken, beroende på ras",
 					FunFact = "Hamstrar har kindpåsar där de lagra mat",
-					ImageURL = "Hamster.mp3",
+					MediaURL = "Hamster.mp3",
 					DifficultyLevel = 3
 				},
 				new QuestionModel
@@ -329,7 +329,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 91,
 					Hint = "Har en av de längsta nackarna i djurriket",
 					FunFact = "Giraffer sover bara i korta stunder och står upp",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -339,7 +339,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 94,
 					Hint = "Har en karakteristisk pung för att bära sina ungar i",
 					FunFact = "Känguruer kan hoppa mycket långa sträckor och är extremt snabba",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -349,7 +349,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 97,
 					Hint = "Lever i Kina och äter mestadels bambu",
 					FunFact = "Pandor är kända för sin söta och knubbiga utseende",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -359,7 +359,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 100,
 					Hint = "Även om de är kraftiga simmare, befinner de sig oftast på land",
 					FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -369,7 +369,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 103,
 					Hint = "Finns i Afrika och är känd för sin långa hals",
 					FunFact = "Strutsar är de största och tyngsta fåglarna på jorden",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -379,7 +379,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 106,
 					Hint = "Känd för sitt arbete att samla mat",
 					FunFact = "Myror kan lyfta objekt som är mycket tyngre än de själva",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -389,7 +389,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 109,
 					Hint = "Lever ofta i närheten av kusten och äter fisk",
 					FunFact = "Sälar är skickliga simmare och dykare",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -399,7 +399,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 112,
 					Hint = "Kan vara hårig eller naken, beroende på ras",
 					FunFact = "Hamstrar har kindpåsar där de lagra mat",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -409,7 +409,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 115,
 					Hint = "Kan vara grå, brun eller svart",
 					FunFact = "Råttor är mycket intelligenta och kan lösa komplexa problem",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				},
 				new QuestionModel
@@ -419,7 +419,7 @@ namespace QuizaDjuret.Server.Data
 					CorrectAnswerId = 118,
 					Hint = "Kan vara röd, blå, grön eller gul",
 					FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
-					ImageURL = "",
+					MediaURL = "",
 					DifficultyLevel = 4
 				}
 			);

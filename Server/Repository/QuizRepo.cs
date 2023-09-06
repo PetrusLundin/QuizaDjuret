@@ -22,7 +22,7 @@ namespace QuizaDjuret.Server.Repository
 				Text = q.Text,
 				Hint = q.Hint,
 				FunFact = q.FunFact,
-				ImageURL = q.ImageURL,
+				MediaURL = q.MediaURL,
 				DifficultyLevel = q.DifficultyLevel,
 				Answers = q.Answers
 			})

@@ -82,7 +82,7 @@ else
 
 				<div class="bild-column">
 					@*<button class="test-btn">bilden</button>*@
-					<img class="djur-img" src=@GameManager.CurrentQuestion.ImageURL>
+					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>
 				</div>
 				<div class="fråge-column">
 					<p style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect)">@GameManager.CurrentQuestion.Answers[0].Text</p>
