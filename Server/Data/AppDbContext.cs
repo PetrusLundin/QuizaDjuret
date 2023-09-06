@@ -26,6 +26,7 @@ namespace QuizaDjuret.Server.Data
                     QuestionId = 1,
                     Text = "Vad är detta för djur?",
                     CorrectAnswerId = 1,
+
                     Hint = "Vanligt husdjur och männikans bästavän",
                     FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
                     ImageURL = "https://i.imgur.com/nMVJSnF.jpeg",
@@ -584,6 +585,7 @@ namespace QuizaDjuret.Server.Data
 				new AnswerModel { AnswerId = 119, QuestionId = 40, IsCorrect = false, Text = "Pippifågel" },
 				new AnswerModel { AnswerId = 120, QuestionId = 40, IsCorrect = false, Text = "Kolibri" }
 			);
+
         }
     }
 }

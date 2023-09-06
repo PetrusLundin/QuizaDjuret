@@ -34,6 +34,8 @@ else
 
 			<div class="main-box">
 
+            
+
 			<h1 style="margin-bottom: 40px; margin-top: 30px;">Välkommen till QuizaDjuret</h1>
 			<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
 			<p>🏆 Rätt svar på första försöket ger: 100 poäng</p>
@@ -59,46 +61,57 @@ else
 			body {
 				background-image: url('../images/92.jpg');
 				background-size: cover;
+				
 			}
 		</style>
 
-
+		
 
 		<div class="main-box-frågor">
-			<div class="rubrik-box">
-			<h1 style="margin-bottom: 20px; margin-top: 20px;">@GameManager.CurrentQuestion.Text</h1>
-				
+
+            <div class="rubrik-box">
+				<div class="startaOm-div">
+					<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">« Starta om Quizet «</button>
+                </div>
+				<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@*@GameManager.CurrentQuestion.Text*@Vad är detta för djur?</h1>
+
 			</div>
 
 			
 			<div class="fråge-box">
-				<div class="test-box-btn">
-					<audio controls src="AnimalSounds/Papegoja.mp3"></audio>
-					<button class="test-btn">bilden</button>
+
+				<div class="bild-column">
+					@*<button class="test-btn">bilden</button>*@
+					<img class="djur-img" src="https://100-facts.com/wp-content/uploads/2022/08/interesting-facts-about-turtles-e1542184364624.jpg">
 				</div>
-				<div>					
-					<p class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect)">@GameManager.CurrentQuestion.Answers[0].Text</p>
-					<p class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect)">@GameManager.CurrentQuestion.Answers[1].Text</p>
-					<p class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect)">@GameManager.CurrentQuestion.Answers[2].Text</p>
+				<div class="fråge-column">
+					<p style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect)">@GameManager.CurrentQuestion.Answers[0].Text</p>
+					<p style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect)">@GameManager.CurrentQuestion.Answers[1].Text</p>
+					<p style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect)">@GameManager.CurrentQuestion.Answers[2].Text</p>
+					<p style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga">★ Ledtråd ★</p>
+
 				</div>
 			</div>
+			
 
 
 		@if (GameManager.isCorrectAnswer)
 		{	
-			<p>
-				@GameManager.CurrentQuestion.FunFact
+			<div class="funfact-div">
+			<p style="font-size: 15px; font-family: Arial; color: saddlebrown;"class="funfact">
+						★ @GameManager.CurrentQuestion.FunFact
 
 			</p>
+			</div>
 			<div class="nästafråga-btn-div">
-				<button class="start-btn" @onclick="() => Click()">Nästa </button>
+				<button class="nästa-btn" @onclick="() => Click()">Nästa fråga </button>
 			</div>
 		}
 
 	
 		</div>
 
-	  <button @onclick="() => Restart()">Starta om ditt svin</button>
+	 
 	}
 }
 
