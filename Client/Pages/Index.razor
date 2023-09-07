@@ -13,8 +13,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Almarai&family=Bubblegum+Sans&family=Caveat&family=Cherry+Bomb+One&family=Gochi+Hand&family=Ysabeau+SC:wght@600;700&display=swap" rel="stylesheet">
 
-
 </head>
+
+
 @if(GameManager.Questions.Count == 0)
 {
 	<h1>LOADING...</h1>
@@ -92,9 +93,16 @@ else
 @* 					<p style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect)">@GameManager.CurrentQuestion.Answers[0].Text</p>
 					<p style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect)">@GameManager.CurrentQuestion.Answers[1].Text</p>
 					<p style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect)">@GameManager.CurrentQuestion.Answers[2].Text</p> *@
-					<p style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga">★ Ledtråd ★</p>
+					
+					<button style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" @onclick="() => ShowHint() ">★ Ledtråd ★</button>
+					
+						
 				</div>
 			</div>
+			@if (IsHintVisible)
+			{
+				<p style="max-width: 840px; overflow-wrap:anywhere; align-content: center; padding: 20px;">@GameManager.CurrentQuestion.Hint</p>
+			}
 			
 
 
@@ -116,6 +124,7 @@ else
 
 	 
 	}
+	
 }
 
 
@@ -131,6 +140,8 @@ else
 
 	private int questionId = 1;
 
+	private bool IsHintVisible = false;
+
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -139,12 +150,14 @@ else
 
 	public void Click()
 	{
+		IsHintVisible = false;
 		GameManager.isCorrectAnswer = false;
 		GameManager.NextQuestion();
 	}
 
 	public void Restart()
 	{
+		IsHintVisible = false;
 		GameManager.ResetQuiz();
 	}
 
@@ -152,7 +165,14 @@ else
 	{
 		if (isCorrect)
 		{
+			IsHintVisible = false;
 			GameManager.isCorrectAnswer = true;
 		}
 	}	
+
+	private void ShowHint()
+	{
+		IsHintVisible = true;
+	}
 }
+
