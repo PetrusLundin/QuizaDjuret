@@ -2,7 +2,7 @@
 @using QuizaDjuret.Client.Managers;
 @using QuizaDjuret.Client.Services;
 @using QuizaDjuret.Shared;
-@inject QuizService quizService
+@inject QuizService quizService;
 @inject IJSRuntime JSRuntime;
 
 @* HTML HÄR *@
@@ -66,7 +66,9 @@ else
 			}
 		</style>
 
-		
+		<div>
+			<h2>@ScoreManager.Score p</h2>
+		</div>
 
 		<div class="main-box-frågor">
 
@@ -152,9 +154,11 @@ else
 		if (isCorrect)
 		{
 			GameManager.isCorrectAnswer = true;
+			ScoreManager.Add();
 		}
 		else
 		{
+			ScoreManager.ReduceCurrentPoints();
 			await JSRuntime.InvokeVoidAsync("quizFunctions.changeButtonText", btnRef);
 		}
 	}	
