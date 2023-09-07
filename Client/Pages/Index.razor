@@ -78,12 +78,22 @@ else
 
 			</div>
 
+			<button class="test-btn" @onclick="() => Hoppalevel()">hoppa till level 3</button>
 			
 			<div class="fråge-box">
 
 				<div class="bild-column">
-					@*<button class="test-btn">bilden</button>*@
-					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>
+
+					@if (GameManager.CurrentQuestion.DifficultyLevel == 3)
+					{
+						<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
+							<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
+						</audio>
+					}
+					else
+					{
+					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>					
+					}
 				</div>
 				<div class="fråge-column">
 					<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
@@ -145,6 +155,11 @@ else
 	public void Restart()
 	{
 		GameManager.ResetQuiz();
+	}
+
+	public void Hoppalevel()
+	{
+		GameManager.SkipToLevelTre();
 	}
 
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
