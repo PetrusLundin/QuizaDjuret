@@ -199,3 +199,7 @@ svarsalternativ-box{
     background-color: white;
     padding: 10px;
 }
+
+.red-text {
+    color: red;
+}
