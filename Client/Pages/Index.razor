@@ -3,6 +3,7 @@
 @using QuizaDjuret.Client.Services;
 @using QuizaDjuret.Shared;
 @inject QuizService quizService;
+@inject ScoreService scoreService;
 @inject IJSRuntime JSRuntime;
 
 @* HTML HÄR *@
@@ -52,8 +53,16 @@ else
 		</div>
 		<div class="start-btn-div">
 			<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
-			</div>
-  
+		</div>
+
+	}
+	else if (GameManager.CurrentQuestionNumber == 3)
+	{
+		@* TODO lägga till scoreboard nu, hämta möget och visa *@
+		<p>Highscore-sidan</p>
+		<input @bind-value="playerName" placeholder="Skriv in ditt namn..."/>
+		<button @onclick="() => SubmitScore()">Kör</button>
+		<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">« Starta om Quizet «</button>
 	}
 	else
 
@@ -125,6 +134,7 @@ else
 	private ElementReference answer2;
 	private ElementReference answer3;
 	private bool isStarted = false;
+	private string playerName = "";
 
 	private string text = "Hej på dig";
 
@@ -163,4 +173,8 @@ else
 			await JSRuntime.InvokeVoidAsync("quizFunctions.changeButtonText", btnRef);
 		}
 	}	
+	private async void SubmitScore()
+	{
+		await scoreService.AddUserScore(playerName);
+	}
 }
