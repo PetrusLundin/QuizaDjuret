@@ -147,6 +147,7 @@ else
 	public void Restart()
 	{
 		GameManager.ResetQuiz();
+		ScoreManager.Score = 0;
 	}
 
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
