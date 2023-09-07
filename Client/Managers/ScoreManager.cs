@@ -24,5 +24,10 @@
 			WinStreak = 0;
 			CurrentPoints /= 2;
 		}
+
+		static public void ResetPoints()
+		{
+			Score = 0;
+		}
 	}
 }
