@@ -200,4 +200,6 @@ svarsalternativ-box{
     padding: 10px;
 }
 
-
+.red-text {
+    color: red;
+}

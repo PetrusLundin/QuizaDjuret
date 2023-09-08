@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components;
 using Microsoft.Identity.Client;
 using QuizaDjuret.Shared;
 
@@ -14,15 +14,17 @@ namespace QuizaDjuret.Client.Managers
 		public static bool isRunning { get; set; } = false;
 		public static bool isCorrectAnswer { get; set; } = false;
 
-        public static void NextQuestion()
+		public static void NextQuestion()
 		{
 			CurrentQuestionNumber++;
 			CurrentQuestion = Questions[CurrentQuestionNumber - 1];
+			var rng = new Random();
+			CurrentQuestion.Answers = CurrentQuestion.Answers.OrderBy(a => rng.Next()).ToList();
+			ScoreManager.RestoreCurrentPoints();
 		}
 		public static void ResetQuiz()
 		{
 			CurrentQuestionNumber = 0;
 		}
-
 	}
 }
