@@ -23,9 +23,6 @@ namespace QuizaDjuret.Client.Managers
 		{
 			CurrentQuestionNumber = 0;
 		}
-		public static void SkipToLevelTre()
-		{
-			CurrentQuestionNumber = 19;
-		}
+	
 	}
 }

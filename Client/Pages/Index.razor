@@ -78,7 +78,7 @@ else
 
 			</div>
 
-			<button class="test-btn" @onclick="() => Hoppalevel()">hoppa till level 3</button>
+			
 			
 			<div class="fråge-box">
 
@@ -156,12 +156,7 @@ else
 	{
 		GameManager.ResetQuiz();
 	}
-
-	public void Hoppalevel()
-	{
-		GameManager.SkipToLevelTre();
-	}
-
+	
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
 	{
 		if (isCorrect)
