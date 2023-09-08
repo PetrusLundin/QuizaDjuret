@@ -95,8 +95,6 @@ else
 					<p style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect)">@GameManager.CurrentQuestion.Answers[2].Text</p> *@
 					
 					<button style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" @onclick="() => ShowHint() ">★ Ledtråd ★</button>
-					
-						
 				</div>
 			</div>
 			@if (IsHintVisible)
