@@ -13,7 +13,7 @@ namespace QuizaDjuret.Server.Repository
 			this.context = context;
 		}
 
-		public async Task<List<QuestionModel>> GetAllQuestions()
+		public async Task<List<QuestionModel>> GetAllQuestionsAsync()
 		{
 			var questions = await context.Questions.Include(r => r.Answers).Select(q => new QuestionModel
 			{
