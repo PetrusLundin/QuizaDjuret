@@ -29,6 +29,12 @@ namespace QuizaDjuret.Server.Controllers
 			return BadRequest();
 		}
 
+		[HttpGet]
+		public async Task<ActionResult<List<UserModel>>> GetAllUsersAsync()
+		{
+			return Ok(await repo.GetAllUsersAsync());
+		}
+
 
 		//// GET: api/<ScoreController>
 		//[HttpGet]

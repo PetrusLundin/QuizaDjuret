@@ -1,4 +1,5 @@
-﻿using QuizaDjuret.Client.Managers;
+﻿using Newtonsoft.Json;
+using QuizaDjuret.Client.Managers;
 using QuizaDjuret.Shared;
 using System.Net.Http.Json;
 
@@ -11,6 +12,18 @@ namespace QuizaDjuret.Client.Services
 		public ScoreService(HttpClient httpClient)
 		{
 			this.httpClient = httpClient;
+		}
+
+		public async Task<List<UserModel>> GetAllUsersAsync()
+		{
+			var response = await httpClient.GetAsync($"api/score");
+			if (response.IsSuccessStatusCode)
+			{
+				var json = await response.Content.ReadAsStringAsync();
+				var scoreboard = JsonConvert.DeserializeObject<List<UserModel>>(json);
+				return scoreboard;
+			}
+			return new List<UserModel>();
 		}
 
 		public async Task<bool> AddUserScore(string playerName)

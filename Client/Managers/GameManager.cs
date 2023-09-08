@@ -6,10 +6,8 @@ namespace QuizaDjuret.Client.Managers
 	{
 		public static List<QuestionModel> Questions { get; set; } = new();
 		public static List<AnswerModel> Answers { get; set; } = new();
-		//TODO plocka questionmodel på currentquestion för att tracka i index sen?
 		public static int CurrentQuestionNumber { get; set; } = 0;
 		public static QuestionModel? CurrentQuestion { get; set; }
-		public static bool isRunning { get; set; } = false;
 		public static bool isCorrectAnswer { get; set; } = false;
 
 		public static void NextQuestion()

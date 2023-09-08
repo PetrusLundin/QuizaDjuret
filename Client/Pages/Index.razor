@@ -23,6 +23,13 @@
 }
 else
 {
+	<div>
+		<p>Scoreboard:</p>
+		@foreach(UserModel user in ScoreManager.ScoreBoard)
+		{
+			<p>@user.Name - @user.Score</p>
+		}
+	</div>
 	@if (GameManager.CurrentQuestionNumber == 0)
 	{
 		<style>
@@ -145,6 +152,7 @@ else
 	protected override async Task OnInitializedAsync()
 	{
 		GameManager.Questions = await quizService.GetAllAsync();
+		ScoreManager.ScoreBoard = await scoreService.GetAllUsersAsync();
 	}
 
 	public async void Click()

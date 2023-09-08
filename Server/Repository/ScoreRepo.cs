@@ -1,4 +1,5 @@
-﻿using QuizaDjuret.Server.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using QuizaDjuret.Server.Data;
 using QuizaDjuret.Shared;
 
 namespace QuizaDjuret.Server.Repository
@@ -18,6 +19,18 @@ namespace QuizaDjuret.Server.Repository
 			await context.SaveChangesAsync();
 
 			return true;
+		}
+
+		public async Task<List<UserModel>> GetAllUsersAsync()
+		{
+			var users = await context.Highscore.Select(u => new UserModel
+			{
+				UserId = u.UserId,
+				Name = u.Name,
+				Score = u.Score
+			}).ToListAsync();
+
+			return users;
 		}
 	}
 }

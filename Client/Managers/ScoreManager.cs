@@ -1,11 +1,13 @@
-﻿namespace QuizaDjuret.Client.Managers
+﻿using QuizaDjuret.Shared;
+
+namespace QuizaDjuret.Client.Managers
 {
 	public static class ScoreManager
 	{
 		static public int Score { get; set; }
 		static public int CurrentPoints { get; set; }
 		static public int WinStreak { get; set; }
-
+		static public List<UserModel> ScoreBoard { get; set; } = new();
 		static public void Add()
 		{
 			WinStreak++;
