@@ -19,15 +19,9 @@ namespace QuizaDjuret.Server.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<List<QuestionModel>>> Get()
+		public async Task<ActionResult<List<QuestionModel>>> GetAllQuestions()
 		{
-			return Ok(await repo.GetAllQuestions());
+			return Ok(await repo.GetAllQuestionsAsync());
 		}
-
-		//[HttpGet("{questionId}")]
-		//public async Task<ActionResult<AnswerModel?>> Get(int questionId)
-		//{
-		//	return Ok(await repo.GetQuestionWithAnswers(questionId));
-		//}
 	}
 }

@@ -5,10 +5,6 @@
 @inject QuizService quizService;
 @inject IJSRuntime JSRuntime;
 
-@* HTML HÄR *@
-
-@*<h1>@text</h1>*@
-
 <head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,7 +98,7 @@ else
 					<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
 					<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
 					<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
-						<button style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" @onclick="() => ShowHint() ">★ Ledtråd ★</button>
+					<button style="padding: 5px; border: none; background-color: transparent; font-size: 20px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" @onclick="() => ShowHint() ">★ Ledtråd ★</button>
 				</div>
 			</div>
 			@if (IsHintVisible)
@@ -140,14 +136,10 @@ else
 	private ElementReference answer1;
 	private ElementReference answer2;
 	private ElementReference answer3;
-	private bool isStarted = false;
-
-	private string text = "Hej på dig";
 
 	public string loading = "Loading...";
 
 	private int questionId = 1;
-
 
 	private bool IsHintVisible = false;
 
