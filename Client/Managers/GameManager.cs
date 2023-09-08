@@ -24,5 +24,6 @@ namespace QuizaDjuret.Client.Managers
 		{
 			CurrentQuestionNumber = 0;
 		}
+	
 	}
 }
