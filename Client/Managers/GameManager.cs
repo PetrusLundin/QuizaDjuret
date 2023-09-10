@@ -17,6 +17,7 @@ namespace QuizaDjuret.Client.Managers
 			var rng = new Random();
 			CurrentQuestion.Answers = CurrentQuestion.Answers.OrderBy(a => rng.Next()).ToList();
 			ScoreManager.RestoreCurrentPoints();
+			ScoreManager.SortScoreboard();
 		}
 		public static void ResetQuiz()
 		{

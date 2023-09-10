@@ -12,6 +12,11 @@ body {
 
 }
 
+.main-layout {
+    display: flex;
+    padding: 50px;
+}
+
 
 h1 {
     color: #124520;
@@ -202,4 +207,12 @@ svarsalternativ-box{
 
 .red-text {
     color: red;
+}
+
+.sb-box {
+    background: white;
+}
+
+.player-row {
+    background-color: green;
 }

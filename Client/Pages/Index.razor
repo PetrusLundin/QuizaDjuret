@@ -6,10 +6,6 @@
 @inject ScoreService scoreService;
 @inject IJSRuntime JSRuntime;
 
-@* HTML HÄR *@
-
-@*<h1>@text</h1>*@
-
 <head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +19,6 @@
 }
 else
 {
-	<div>
-		<p>Scoreboard:</p>
-		@foreach(UserModel user in ScoreManager.ScoreBoard)
-		{
-			<p>@user.Name - @user.Score</p>
-		}
-	</div>
 	@if (GameManager.CurrentQuestionNumber == 0)
 	{
 		<style>
@@ -65,11 +54,42 @@ else
 	}
 	else if (GameManager.CurrentQuestionNumber == 3)
 	{
-		@* TODO lägga till scoreboard nu, hämta möget och visa *@
 		<p>Highscore-sidan</p>
-		<input @bind-value="playerName" placeholder="Skriv in ditt namn..."/>
-		<button @onclick="() => SubmitScore()">Kör</button>
-		<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">« Starta om Quizet «</button>
+		<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..."/>
+		<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
+		<div class="sb-box">
+			<table>
+				<p>Scoreboard:</p>
+				@foreach (UserModel user in ScoreManager.ScoreBoard)
+				{
+					if (user == ScoreManager.CurrentUser)
+					{
+						<tr class="player-row">
+							<th>
+								@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+								@playerName
+							</th>
+							<th>
+								@user.Score
+							</th>
+						</tr>
+					}
+					else
+					{
+						<tr>
+							<th>
+								@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+								@user.Name
+							</th>
+							<th>
+								@user.Score
+							</th>
+						</tr>
+					}
+				}
+			</table>
+		</div>
+		<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
 	}
 	else
 
@@ -83,50 +103,86 @@ else
 		</style>
 
 		<div>
-			<h2>@ScoreManager.Score p</h2>
+			<h2>@ScoreManager.CurrentUser.Score p</h2>
 		</div>
+		<div class="main-layout">
+			
+			<div class="main-box-frågor">
 
-		<div class="main-box-frågor">
+				<div class="rubrik-box">
+					<div class="startaOm-div">
+						<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">» Starta om Quizet «</button>
+					</div>
+					<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
 
-            <div class="rubrik-box">
-				<div class="startaOm-div">
-					<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">« Starta om Quizet «</button>
-                </div>
-				<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
-
-			</div>
+				</div>
 
 			
-			<div class="fråge-box">
+				<div class="fråge-box">
 
-				<div class="bild-column">
-					@*<button class="test-btn">bilden</button>*@
-					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>
+					<div class="bild-column">
+						<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>
+					</div>
+					<div class="fråge-column">
+						<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
+						<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
+						<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
+						<p style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga">★ Ledtråd ★</p>
+					</div>
 				</div>
-				<div class="fråge-column">
-					<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
-					<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
-					<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
-					<p style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga">★ Ledtråd ★</p>
-				</div>
-			</div>
 			
 
+				@if (GameManager.isCorrectAnswer)
+				{	
+					<div class="funfact-div">
+					<p style="font-size: 15px; font-family: Arial; color: saddlebrown;"class="funfact">
+								★ @GameManager.CurrentQuestion.FunFact
 
-		@if (GameManager.isCorrectAnswer)
-		{	
-			<div class="funfact-div">
-			<p style="font-size: 15px; font-family: Arial; color: saddlebrown;"class="funfact">
-						★ @GameManager.CurrentQuestion.FunFact
-
-			</p>
-			</div>
-			<div class="nästafråga-btn-div">
-				<button class="nästa-btn" @onclick="() => Click()">Nästa fråga </button>
-			</div>
-		}
+					</p>
+					</div>
+					<div class="nästafråga-btn-div">
+						<button class="nästa-btn" @onclick="() => Click()">Nästa fråga </button>
+					</div>
+				}
 
 	
+			</div>
+			<div class="sb-box">
+				<table>
+					<p>Dynamic Scoreboard:</p>
+					@foreach (UserModel user in ScoreManager.GetDynamicScoreBoard())
+					{
+						if (user == ScoreManager.CurrentUser)
+						{
+							<tr class="player-row">
+								<th>
+									@(ScoreManager.ScoreBoard.IndexOf(user)+1).
+									@user.Name
+								</th>
+								<th>
+									@user.Score
+								</th>
+							</tr>
+						}
+						else if(user.Name == "")
+						{
+							<tr><th><hr></th></tr>
+						}
+						else
+						{
+							<tr>
+								<th>
+									@(ScoreManager.ScoreBoard.IndexOf(user)+1).
+									@user.Name
+								</th>
+								<th>
+									@user.Score
+								</th>
+							</tr>
+						}
+					}
+				</table>
+			</div>
 		</div>
 
 	 
@@ -143,8 +199,6 @@ else
 	private bool isStarted = false;
 	private string playerName = "";
 
-	private string text = "Hej på dig";
-
 	public string loading = "Loading...";
 
 	private int questionId = 1;
@@ -153,6 +207,7 @@ else
 	{
 		GameManager.Questions = await quizService.GetAllAsync();
 		ScoreManager.ScoreBoard = await scoreService.GetAllUsersAsync();
+		ScoreManager.ScoreBoard.Add(ScoreManager.CurrentUser);
 	}
 
 	public async void Click()
@@ -165,24 +220,45 @@ else
 	public void Restart()
 	{
 		GameManager.ResetQuiz();
-		ScoreManager.ResetPoints();
+		ScoreManager.ResetCurrentUser();
+		playerName = "";
+	}
+	public void Replay()
+	{
+		GameManager.ResetQuiz();
+		ScoreManager.ResetCurrentUser();
+		if (!ScoreManager.ScoreBoard.Contains(ScoreManager.CurrentUser))
+		{
+			ScoreManager.ScoreBoard.Add(ScoreManager.CurrentUser);
+		}
+		playerName = "";
 	}
 
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
 	{
-		if (isCorrect)
+		if (!GameManager.isCorrectAnswer)
 		{
-			GameManager.isCorrectAnswer = true;
-			ScoreManager.Add();
-		}
-		else
-		{
-			ScoreManager.ReduceCurrentPoints();
-			await JSRuntime.InvokeVoidAsync("quizFunctions.changeButtonText", btnRef);
+			if (isCorrect)
+			{
+				GameManager.isCorrectAnswer = true;
+				ScoreManager.Add();
+			}
+			else
+			{
+				ScoreManager.ReduceCurrentQuestionPoints();
+				await JSRuntime.InvokeVoidAsync("quizFunctions.changeButtonText", btnRef);
+			}
 		}
 	}	
 	private async void SubmitScore()
 	{
-		await scoreService.AddUserScore(playerName);
+		if (!await scoreService.AddUserScore(playerName))
+		{
+			//Kör JS om ej submit är valid
+		}
+		else
+		{
+			await JSRuntime.InvokeVoidAsync("quizFunctions.removeSparaKnapp");
+		}
 	}
 }

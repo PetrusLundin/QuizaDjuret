@@ -28,14 +28,32 @@ namespace QuizaDjuret.Client.Services
 
 		public async Task<bool> AddUserScore(string playerName)
 		{
-			UserModel user = new()
+			if (IsPlayerNameValid(playerName))
 			{
-				Name = playerName,
-				Score = ScoreManager.Score
-			};
-			var response = await httpClient.PostAsJsonAsync<UserModel>("api/score", user);
 
-			if (response.IsSuccessStatusCode)
+				UserModel userToSave = new()
+				{
+					Name = playerName,
+					Score = ScoreManager.CurrentUser.Score,
+				};
+				ScoreManager.ScoreBoard.Add(userToSave);
+				ScoreManager.ScoreBoard.Remove(ScoreManager.CurrentUser);
+				ScoreManager.SortScoreboard();
+
+				var response = await httpClient.PostAsJsonAsync<UserModel>("api/score", userToSave);
+
+				if (response.IsSuccessStatusCode)
+				{
+					return true;
+				}
+				return true;
+			}
+			return false;
+		}
+
+		private bool IsPlayerNameValid(string playerName)
+		{
+			if (playerName.Length >= 3)
 			{
 				return true;
 			}
