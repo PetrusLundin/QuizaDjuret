@@ -22,13 +22,14 @@ else
 {
 	@if (GameManager.CurrentQuestionNumber == 0)
 	{
-		<style>
-			body{
-				background-image: url('../images/djur.jpg');
-				background-size: cover;
-			}
-		</style>
-
+		
+			<style>
+				body {
+					background-image: url('../images/djur1.jpg');
+					background-size: cover;
+				}
+			</style>
+		
 
 
 			<div class="main-box">
@@ -37,11 +38,9 @@ else
 
 			<h1 style="margin-bottom: 40px; margin-top: 30px;">Välkommen till QuizaDjuret</h1>
 			<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
-			<p>🏆 Rätt svar på första försöket ger: 100 poäng</p>
-			<p>🏆 Rätt svar på andra försöket ger: 50 poäng</p>
-			<p>🏆 Rätt svar på tredje försöket ger: 0 poäng</p>
-			<p>🔍 Tryck på knappen "ledtråd" för att få en ledtråd till frågan</p>
-			<p>🔍 Tryck på knappen "börja om" för att börja om quizet från början</p>
+			<p>🏆 För varje rätt svar får du poäng som du kan se i höger kolumn</p>
+			<p>💡 Tryck på knappen "🔍" för att få en ledtråd till frågan</p>
+			<p>💡 Tryck på knappen "Starta om quiz" för att börja om quizet från början</p>
 
 
 			<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
@@ -53,7 +52,7 @@ else
 		</div>
 
 	}
-	else if (GameManager.CurrentQuestionNumber == 3)
+	else if (GameManager.CurrentQuestionNumber == 5)
 	{
 		<p>Highscore-sidan</p>
 		<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..."/>
@@ -77,7 +76,7 @@ else
 					}
 					else
 					{
-						<tr>
+						<tr class="other-players-row">
 							<th>
 								@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
 								@user.Name
@@ -95,25 +94,52 @@ else
 	else
 
 	{
-		<style>
-			body {
-				background-image: url('../images/92.jpg');
-				background-size: cover;
-				
-			}
-		</style>
+		@if (GameManager.CurrentQuestionNumber == 1)
+		{
+			<style>
+				body {
+					background-image: url('../images/bondgård.jpg');
+					background-size: cover;
+				}
+			</style>
+		}
+		else if (GameManager.CurrentQuestionNumber == 2)
+		{
+			<style>
+				body {
+					background-image: url('../images/skog.jpg');
+					background-size: cover;
+				}
+			</style>
+		}
+		else if (GameManager.CurrentQuestionNumber == 3)
+		{
+			<style>
+				body {
+					background-image: url('../images/savann.jpg');
+					background-size: cover;
+				}
+			</style>
+		}
+		else
+		{
+			<style>
+				body {
+					background-image: url('../images/djungel.jpg');
+					background-size: cover;
+				}
+			</style>
+		}
 
-		<div>
-			<h2>@ScoreManager.CurrentUser.Score p</h2>
-		</div>
+
+		
+			
 		<div class="main-layout">
 			
 			<div class="main-box-frågor">
 
 				<div class="rubrik-box">
-					<div class="startaOm-div">
-						<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()">» Starta om Quizet «</button>
-					</div>
+					
 					<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
 
 				</div>
@@ -137,7 +163,7 @@ else
 					<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
 					<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
 					<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
-					<button style="padding: 5px; border: none; background-color: transparent; font-size: 20px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" @onclick="() => ShowHint() ">★ Ledtråd ★</button>
+						<button style="padding: 5px; border: none; background-color: transparent; font-size: 40px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" @onclick="() => ShowHint() ">🔎</button>
 				</div>
 			</div>
 			@if (IsHintVisible)
@@ -160,9 +186,13 @@ else
 
 	
 			</div>
+			<div class="höger-kolumn">
 			<div class="sb-box">
-				<table>
-					<p>Dynamic Scoreboard:</p>
+                <table>
+					<p class="p-sb">Dina poäng:</p>
+                    <h2 class="poäng-h2">@ScoreManager.CurrentUser.Score p</h2>
+					<hr>
+                    <p class="p-sb">Poängtavla</p>
 					@foreach (UserModel user in ScoreManager.GetDynamicScoreBoard())
 					{
 						if (user == ScoreManager.CurrentUser)
@@ -179,23 +209,29 @@ else
 						}
 						else if(user.Name == "")
 						{
-							<tr><th><hr></th></tr>
+								<tr class="other-players-row"><th><hr></th></tr>
 						}
 						else
 						{
-							<tr>
-								<th>
+								<tr class="other-players-row">
+									<th >
 									@(ScoreManager.ScoreBoard.IndexOf(user)+1).
 									@user.Name
 								</th>
 								<th>
 									@user.Score
+									
 								</th>
 							</tr>
 						}
 					}
 				</table>
-			</div>
+               
+            </div>
+            <div class="startaOm-div">
+                <button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Restart()"> Starta om Quizet </button>
+                </div>
+            </div>
 		</div>
 
 	 

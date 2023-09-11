@@ -25,6 +25,7 @@ h1 {
     justify-content: center;
     font-family: 'Cherry Bomb One', cursive;
     margin-bottom: 20px;
+    color: #61300F;
 }
 
 h2 {
@@ -32,7 +33,7 @@ h2 {
     display: flex;
     justify-content: center;
     font-family: 'Cherry Bomb One', cursive;
-    color: #778428;
+    color: #156E2F;
 }
 
 h3 {
@@ -58,7 +59,7 @@ p {
     height: 680px;
     width: 1100px;
     background: rgb(255, 255, 255, 0.95);
-    border-radius: 30px;
+    
     padding: 30px;
     display: grid;
     align-items: start;
@@ -91,7 +92,7 @@ button {
 
 .main-box-frågor {
     height: 650px;
-    width: 900px;
+    width: 1000px;
     background: rgb(255, 255, 255, 0.8);
     border-radius: 30px;
     padding: 30px;
@@ -103,11 +104,12 @@ button {
 }
 
 .djur-img {
-    height: 350px;
-    width: 350px;
+    height: 370px;
+    width: 370px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.9);
-   /* border: double 3px yellow;*/
+    box-shadow: 0 0 15px rgba(0,0,0, 0.8);
+    /* border: double 3px yellow;*/
+    border: 3px solid darkorange;
 }
 
 .fråge-box {
@@ -118,17 +120,18 @@ button {
 
 .fråga {
     background: rgb(255, 255, 255, 0.95);
-    /*border: 2px solid white;*/
     border-radius: 10px;
     font-family: 'Bubblegum Sans', cursive;
-    border: solid 2px lightgray;
+    border: solid 3px lightgray;
     box-shadow: 0 0 15px rgba(0,0,0, 0.2);
     width: 300px;
+    color: black;
 }
 
-.fråga:hover{
-    background-color: orange;
-}
+    .fråga:hover {
+        background-color: #FFCD85;
+        border: 2px solid gray;
+    }
 
 svarsalternativ-box{
 
@@ -171,21 +174,22 @@ svarsalternativ-box{
 }
 
 .startaOm-btn {
-    margin-bottom: 5px;
+    margin-top: 10px;
     display: flex;
     align-items: end;
-    background: rgb(255, 255, 255, 0.4);
+    background: rgb(255, 255, 255, 0.9);
     padding: 10px;
     font-family: Arial;
-    height: 30px;
+    height: 40px;
     font-size: 15px;
-    font-weight:bolder;
-   
-    color: indianred;
+    font-weight: bolder;
+    color: #961217;
     align-items: center;
-    border: solid 3px lightgray;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.3);
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    width: 220px;
+    border: 4px dotted red;
+    justify-content: center;
 }
 
 .startaOm-div {
@@ -211,8 +215,63 @@ svarsalternativ-box{
 
 .sb-box {
     background: white;
+    height: 500px;
+    width: 220px;
+    margin-left: 10px;
+    background: rgb(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    font-family: Arial;
+  
+    
+}
+
+.p-sb {
+    font-family: 'Bubblegum Sans', cursive;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    color: black;
+    margin: 20px 0px 10px 0px;
+    
+
+
 }
 
 .player-row {
-    background-color: green;
+    background-color: darkorange;
+    width: 220px;
+    border-radius: 20px;
+
 }
+
+.other-players-row {
+    background-color: lightgray;
+    width: 220px;
+    border-radius: 20px;
+    
+}
+table {
+    width: 220px;
+  
+}
+
+hr{
+    width: 220px;
+}
+
+th {
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+    /*margin-bottom: 30px;*/
+   
+}
+
+tr {
+
+}
+.poäng-h2{
+    color: darkorange;
+}
+
