@@ -11,7 +11,7 @@ window.quizFunctions = {
     removeSparaKnapp: function () {
         var knappen = document.getElementById('spara-btn');
         var input = document.getElementById('playerName-input')
-        knappen.remove();
-        input.remove();
+        knappen.style.visibility = "hidden";
+        input.style.visibility = "hidden";
     },
 };
