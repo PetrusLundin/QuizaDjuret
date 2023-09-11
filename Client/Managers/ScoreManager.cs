@@ -1,33 +1,83 @@
-﻿namespace QuizaDjuret.Client.Managers
+﻿using QuizaDjuret.Shared;
+
+namespace QuizaDjuret.Client.Managers
 {
 	public static class ScoreManager
 	{
-		static public int Score { get; set; }
-		static public int CurrentPoints { get; set; }
+		static public UserModel CurrentUser { get; set; } = new() { Name = "DU", Score = 0 };
+		static public int CurrentQuestionPoints { get; set; }
 		static public int WinStreak { get; set; }
-
+		static public List<UserModel> ScoreBoard { get; set; } = new();
 		static public void Add()
 		{
 			WinStreak++;
 			if (WinStreak >= 3)
 			{
-				CurrentPoints += 500;
+				CurrentQuestionPoints += 50;
 			}
-			Score += CurrentPoints;
+			CurrentUser.Score += CurrentQuestionPoints;
+			SortScoreboard();
 		}
 		static public void RestoreCurrentPoints()
 		{
-			CurrentPoints = 100;
+			CurrentQuestionPoints = 100;
 		}
-		static public void ReduceCurrentPoints()
+		static public void ReduceCurrentQuestionPoints()
 		{
 			WinStreak = 0;
-			CurrentPoints /= 2;
+			CurrentQuestionPoints /= 2;
 		}
 
-		static public void ResetPoints()
+		static public void ResetCurrentUser()
 		{
-			Score = 0;
+			CurrentUser.Name = "DU";
+			CurrentUser.Score = 0;
+		}
+
+		static public void SortScoreboard()
+		{
+			ScoreBoard.Sort((x, y) => y.Score.CompareTo(x.Score));
+		}
+
+		static public List<UserModel> GetDynamicScoreBoard()
+		{
+			List<UserModel> dynamicList = new();
+			int userIndex = ScoreBoard.IndexOf(CurrentUser);
+			if (ScoreBoard.Count <= 10)
+			{
+				dynamicList = ScoreBoard.GetRange(0, ScoreBoard.Count);
+			}
+			else if (userIndex < 11)
+			{
+				dynamicList = ScoreBoard.GetRange(0, 11);
+			}
+			else
+			{
+				dynamicList = ScoreBoard.GetRange(0, 3);
+				dynamicList.Add(new()
+				{
+					Name = "",
+					Score = 0,
+				});
+				dynamicList.Add(ScoreBoard[userIndex - 3]);
+				dynamicList.Add(ScoreBoard[userIndex - 2]);
+				dynamicList.Add(ScoreBoard[userIndex - 1]);
+				dynamicList.Add(ScoreBoard[userIndex]);
+				if (ScoreBoard.Count - (userIndex + 1) > 0)
+				{
+					dynamicList.Add(ScoreBoard[userIndex + 1]);
+				}
+				if (ScoreBoard.Count - (userIndex + 1) > 1)
+				{
+					dynamicList.Add(ScoreBoard[userIndex + 2]);
+				}
+				if (ScoreBoard.Count - (userIndex + 1) > 2)
+				{
+					dynamicList.Add(ScoreBoard[userIndex + 3]);
+				}
+			}
+
+			return dynamicList;
 		}
 	}
 }

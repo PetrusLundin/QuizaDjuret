@@ -4,9 +4,14 @@ window.quizFunctions = {
     },
     resetButtonText: function () {
         var eles = document.getElementsByClassName('red-text');
-        console.log(eles);
         Array.from(eles).forEach(function (element) {
             element.classList.remove('red-text');
         });
-    }
+    },
+    removeSparaKnapp: function () {
+        var knappen = document.getElementById('spara-btn');
+        var input = document.getElementById('playerName-input')
+        knappen.remove();
+        input.remove();
+    },
 };

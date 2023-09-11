@@ -21,7 +21,7 @@ namespace QuizaDjuret.Client.Services
 				var quiz = JsonConvert.DeserializeObject<List<QuestionModel>>(json);
 				return quiz;
 			}
-			return null;
+			return new List<QuestionModel>();
 		}
 	}
 }
