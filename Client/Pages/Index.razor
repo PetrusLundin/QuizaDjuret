@@ -11,8 +11,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Almarai&family=Bubblegum+Sans&family=Caveat&family=Cherry+Bomb+One&family=Gochi+Hand&family=Ysabeau+SC:wght@600;700&display=swap" rel="stylesheet">
 
-
 </head>
+
+
 @if(GameManager.Questions.Count == 0)
 {
 	<h1>LOADING...</h1>
@@ -117,20 +118,32 @@ else
 
 				</div>
 
-			
-				<div class="fråge-box">
+			<div class="fråge-box">
 
-					<div class="bild-column">
-						<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>
-					</div>
-					<div class="fråge-column">
-						<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
-						<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
-						<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
-						<p style="padding: 5px; border: none; background-color: transparent; /*font-family: Arial;*/ font-size: 20px; /*text-decoration: underline;*/ font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga">★ Ledtråd ★</p>
-					</div>
+				<div class="bild-column">
+
+					@if (GameManager.CurrentQuestion.DifficultyLevel == 3)
+					{
+						<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
+							<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
+						</audio>
+					}
+					else
+					{
+					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>					
+					}
 				</div>
-			
+				<div class="fråge-column">
+					<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
+					<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
+					<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
+					<button style="padding: 5px; border: none; background-color: transparent; font-size: 20px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" @onclick="() => ShowHint() ">★ Ledtråd ★</button>
+				</div>
+			</div>
+			@if (IsHintVisible)
+			{
+				<p style="max-width: 840px; overflow-wrap:anywhere; align-content: center; padding: 20px;">@GameManager.CurrentQuestion.Hint</p>
+			}		
 
 				@if (GameManager.isCorrectAnswer)
 				{	
@@ -187,6 +200,7 @@ else
 
 	 
 	}
+	
 }
 
 
@@ -198,10 +212,11 @@ else
 	private ElementReference answer3;
 	private bool isStarted = false;
 	private string playerName = "";
-
 	public string loading = "Loading...";
 
 	private int questionId = 1;
+
+	private bool IsHintVisible = false;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -212,6 +227,7 @@ else
 
 	public async void Click()
 	{
+		IsHintVisible = false;
 		GameManager.isCorrectAnswer = false;
 		GameManager.NextQuestion();
 		await JSRuntime.InvokeVoidAsync("quizFunctions.resetButtonText");
@@ -219,6 +235,7 @@ else
 
 	public void Restart()
 	{
+		IsHintVisible = false;
 		GameManager.ResetQuiz();
 		ScoreManager.ResetCurrentUser();
 		playerName = "";
@@ -233,7 +250,7 @@ else
 		}
 		playerName = "";
 	}
-
+	
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
 	{
 		if (!GameManager.isCorrectAnswer)
@@ -260,5 +277,10 @@ else
 		{
 			await JSRuntime.InvokeVoidAsync("quizFunctions.removeSparaKnapp");
 		}
+	}	
+
+	private void ShowHint()
+	{
+		IsHintVisible = true;
 	}
 }

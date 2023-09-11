@@ -1,4 +1,6 @@
-﻿using QuizaDjuret.Shared;
+using Microsoft.AspNetCore.Components;
+using Microsoft.Identity.Client;
+using QuizaDjuret.Shared;
 
 namespace QuizaDjuret.Client.Managers
 {
