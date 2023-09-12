@@ -139,9 +139,15 @@ button {
 
 
 .nästafråga-btn-div {
-    display: flex;
-    justify-content: end;
-   
+    position: absolute;
+    left: 0;
+    right: 20%;
+    bottom: 0;
+    text-align: center;
+    /*padding-bottom: 50px;*/
+
+    /*display: flex;*/
+    /*justify-content: end;*/
 }
 
 .bild-column {
