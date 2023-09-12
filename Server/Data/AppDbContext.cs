@@ -367,7 +367,7 @@ namespace QuizaDjuret.Server.Data
 					Text = "En stor gräsätande fågel som inte kan flyga",
 					CorrectAnswerId = 103,
 					Hint = "Finns i Afrika och är känd för sin långa hals",
-					FunFact = "Strutsar ögon är faktiskt större än deras hjärna!",
+					FunFact = "Strutsarnas ögon är faktiskt större än deras hjärna!",
 					MediaURL = "",
 					DifficultyLevel = 4
 				},
