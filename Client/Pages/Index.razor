@@ -58,7 +58,7 @@ else
 		</div>
 
 	}
-	else if (GameManager.CurrentQuestionNumber == @*5*@ 41)
+	else if (GameManager.CurrentQuestionNumber == 3 @* 41 *@)
 	{
 		<p>Highscore-sidan</p>
 		<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..."/>
@@ -181,8 +181,7 @@ else
 											<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
 											<p class="funfact-hint-p" >
 										★ @GameManager.CurrentQuestion.FunFact*
-@* 												Geparder är de snabbaste landdjuren i världen, men de har faktiskt ett mycket blygsamt temperament och kan ibland förlora sina byten till mer aggressiva rovdjur.
- *@									</p>
+ 									</p>
 								</div>
 
 							}

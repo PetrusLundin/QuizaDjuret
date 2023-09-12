@@ -253,11 +253,9 @@ button {
 }
 
 #döljHint{
-    display:flex;
-    justify-content: end;
-    width:10px;
-    height: 10px;
-    margin: 10px;
+    position: absolute;
+    top: 395px;
+    left: 800px;
 }
 
 .red-text {
@@ -273,8 +271,6 @@ button {
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.5);
     font-family: Arial;
-  
-    
 }
 
 .p-sb {
@@ -284,27 +280,21 @@ button {
     width: 170px;
     color: black;
     margin: 20px 0px 10px 0px;
-    
-
-
 }
 
 .player-row {
     background-color: darkorange;
     width: 220px;
     border-radius: 20px;
-
 }
 
 .other-players-row {
     background-color: lightgray;
     width: 220px;
     border-radius: 20px;
-    
 }
 table {
     width: 220px;
-  
 }
 
 hr{
@@ -315,14 +305,15 @@ th {
     padding: 5px;
     border-radius: 20px;
     font-size: 15px;
-    /*margin-bottom: 30px;*/
+    margin-top: 30px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
     margin-top: 20px;
 }
 
-tr {
-
+tr{
+    padding: 15px;
 }
+
 .poäng-h2{
     color: darkorange;
 }
