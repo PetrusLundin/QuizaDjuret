@@ -259,11 +259,13 @@ button {
 }
 
 .red-text {
-    color: red;
+    /*color: red;*/
+    background-color: red;
 }
 
-.green-text{
-    color: green;
+.green-text {
+    /*color: green;*/
+    background-color: green;
 }
 
 .sb-box {
