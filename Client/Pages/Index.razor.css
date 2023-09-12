@@ -274,6 +274,20 @@ button {
     background-color: green;
 }
 
+.red-text:hover {
+    background-color:red;
+}
+.red-text:focus {
+    background-color: red;
+}
+.green-text:hover {
+    background-color: green;
+}
+
+.green-text:focus {
+    background-color: green;
+}
+
 .sb-box {
     background: white;
     /*height: 500px;*/
