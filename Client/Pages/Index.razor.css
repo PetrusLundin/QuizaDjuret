@@ -262,6 +262,10 @@ button {
     color: red;
 }
 
+.green-text{
+    color: green;
+}
+
 .sb-box {
     background: white;
     height: 500px;
