@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.Identity.Client;
 using QuizaDjuret.Shared;
 
 namespace QuizaDjuret.Client.Managers
@@ -15,9 +13,12 @@ namespace QuizaDjuret.Client.Managers
 		public static void NextQuestion()
 		{
 			CurrentQuestionNumber++;
-			CurrentQuestion = Questions[CurrentQuestionNumber - 1];
-			var rng = new Random();
-			CurrentQuestion.Answers = CurrentQuestion.Answers.OrderBy(a => rng.Next()).ToList();
+			if (CurrentQuestionNumber <= 40)
+			{
+				CurrentQuestion = Questions[CurrentQuestionNumber - 1];
+				var rng = new Random();
+				CurrentQuestion.Answers = CurrentQuestion.Answers.OrderBy(a => rng.Next()).ToList();
+			}
 			ScoreManager.RestoreCurrentPoints();
 			ScoreManager.SortScoreboard();
 		}
