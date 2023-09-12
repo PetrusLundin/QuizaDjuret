@@ -100,7 +100,7 @@ else
 	else
 
 	{
-		@if (GameManager.CurrentQuestionNumber == 1)
+		@if (GameManager.CurrentQuestion.DifficultyLevel == 1)
 		{
 			<style>
 				body {
@@ -109,7 +109,7 @@ else
 				}
 			</style>
 		}
-		else if (GameManager.CurrentQuestionNumber == 2)
+		else if (GameManager.CurrentQuestion.DifficultyLevel == 2)
 		{
 			<style>
 				body {
@@ -118,7 +118,7 @@ else
 				}
 			</style>
 		}
-		else if (GameManager.CurrentQuestionNumber == 3)
+		else if (GameManager.CurrentQuestion.DifficultyLevel == 3)
 		{
 			<style>
 				body {
@@ -145,8 +145,15 @@ else
 			<div class="main-box-frågor">
 
 				<div class="rubrik-box">
-					
-					<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
+					@if(GameManager.CurrentQuestion.DifficultyLevel == 4)
+					{
+						<h1>Gissa Djuret:</h1>
+						}
+						else
+						{
+							<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
+							
+						}
 
 				</div>
 
@@ -158,9 +165,13 @@ else
 					{
 						<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
 							<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
-						</audio>
-					}
-					else
+								</audio>
+							}
+							else if (GameManager.CurrentQuestion.DifficultyLevel == 4)
+							{
+								<p>@GameManager.CurrentQuestion.Text.</p>
+							}
+							else
 					{
 					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>					
 					}

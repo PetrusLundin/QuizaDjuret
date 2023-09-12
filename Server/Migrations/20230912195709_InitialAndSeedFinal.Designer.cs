@@ -11,8 +11,8 @@ using QuizaDjuret.Server.Data;
 namespace QuizaDjuret.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230906093310_TotalSeed")]
-    partial class TotalSeed
+    [Migration("20230912195709_InitialAndSeedFinal")]
+    partial class InitialAndSeedFinal
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -220,7 +220,7 @@ namespace QuizaDjuret.Server.Migrations
                         new
                         {
                             AnswerId = 25,
-                            IsCorrect = true,
+                            IsCorrect = false,
                             QuestionId = 9,
                             Text = "Känguru"
                         },
@@ -234,7 +234,7 @@ namespace QuizaDjuret.Server.Migrations
                         new
                         {
                             AnswerId = 27,
-                            IsCorrect = false,
+                            IsCorrect = true,
                             QuestionId = 9,
                             Text = "Koala"
                         },
@@ -931,80 +931,80 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 1,
                             CorrectAnswerId = 1,
                             DifficultyLevel = 1,
-                            FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
-                            Hint = "Vanligt husdjur och männikans bästavän",
-                            MediaURL = "https://i.imgur.com/nMVJSnF.jpeg",
-                            Text = "Vad är detta för djur?"
+                            FunFact = "Hundar är en av de äldsta tamdjursarterna och har funnits som människans följeslagare i över 15 000 år.",
+                            Hint = "Vanligt husdjur och människans bästavän",
+                            MediaURL = "https://i.imgur.com/E1yr3A4.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 2,
                             CorrectAnswerId = 4,
                             DifficultyLevel = 1,
-                            FunFact = "Giraffer sover bara i korta stunder och står upp",
+                            FunFact = "Giraffer har faktiskt samma antal halskotor som människor, det vill säga sju, men varje halskota är enormt stor och kan vara upp till 2,5 meter lång!",
                             Hint = "Har en av de längsta nackarna i djurriket",
                             MediaURL = "https://i.imgur.com/HTwzNY0.jpg",
-                            Text = "Vad är detta för djur?"
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 3,
                             CorrectAnswerId = 7,
                             DifficultyLevel = 1,
-                            FunFact = "Känguruer kan hoppa mycket långa sträckor och är extremt snabba",
+                            FunFact = "Kängurur kan inte hoppa bakåt på grund av deras stora svansar, så om de försöker gå bakåt kommer de snubbla istället!",
                             Hint = "Har en karakteristisk pung för att bära sina ungar i",
-                            MediaURL = "https://i.imgur.com/LRrt7dB.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/yowTeLd.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 4,
                             CorrectAnswerId = 10,
                             DifficultyLevel = 1,
-                            FunFact = "Lejonets rytande kan hörs på flera kilometers avstånd",
+                            FunFact = "Lejon har en imponerande man som inte bara gör dem majestätiska utan också skyddar deras hals mot attacker från andra djur.",
                             Hint = "Känd för att vara 'kungen av djungeln'",
-                            MediaURL = "https://i.imgur.com/3YTx841.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/qYLjY7V.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 5,
                             CorrectAnswerId = 13,
                             DifficultyLevel = 1,
-                            FunFact = "Pandor är kända för sin söta och knubbiga utseende",
+                            FunFact = "Pandors avtryck i snön kan vara så lika en människas fotspår att det har lett till myter om \"människo-pandor\" i Kina!",
                             Hint = "Lever i Kina och äter mestadels bambu",
-                            MediaURL = "https://i.imgur.com/vVxD2Vr.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/3AhigqN.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 6,
                             CorrectAnswerId = 16,
                             DifficultyLevel = 1,
-                            FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
+                            FunFact = "Delfiner har faktiskt namn och svarar på sina egna namn när de kallas, precis som husdjur!",
                             Hint = "Lever i haven och är utmärkta simmare",
-                            MediaURL = "https://i.imgur.com/dihW170.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/sCZLvlk.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 7,
                             CorrectAnswerId = 19,
                             DifficultyLevel = 1,
-                            FunFact = "Örnar har en utmärkt syn och kan se byten från hög höjd",
+                            FunFact = "En örn kan ha en vingspann på upp till 2,5 meter, vilket är större än de flesta människors höjd!",
                             Hint = "Symbol för styrka och frihet",
                             MediaURL = "https://i.imgur.com/KJdADuA.jpg",
-                            Text = "Vad är detta för djur?"
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 8,
                             CorrectAnswerId = 22,
                             DifficultyLevel = 1,
-                            FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
-                            Hint = "Även om de är kraftiga simmare, så lever de mestadels på land",
-                            MediaURL = "https://i.imgur.com/Usfrgma.jpg",
-                            Text = "Vad är detta för djur?"
+                            FunFact = "Flodhästar simmar väldigt sällan, de rör sig i stället genom att studsande gå längs botten av floder och sjöar med fötterna!",
+                            Hint = "Lever nära vatten och har en kompakt kroppsform med korta ben",
+                            MediaURL = "https://i.imgur.com/YCm4pG8.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
@@ -1013,98 +1013,98 @@ namespace QuizaDjuret.Server.Migrations
                             DifficultyLevel = 1,
                             FunFact = "Koalor sover upp till 20 timmar per dyng",
                             Hint = "Lever på en diet som främst består av eukalyptusblad",
-                            MediaURL = "https://i.imgur.com/9PzgFus.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/54Ef30u.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 10,
                             CorrectAnswerId = 28,
                             DifficultyLevel = 1,
-                            FunFact = "Strutsar är de största och tyngsta fåglarna på jorden",
+                            FunFact = "Strutsar kan sticka huvudet i sanden när de känner sig hotade i tron om att de är gömda",
                             Hint = "Finns i Afrika och är känd för sin långa hals",
-                            MediaURL = "https://i.imgur.com/REFAZzh.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/K6ZkhNV.jpg",
+                            Text = "Gissa djuret"
                         },
                         new
                         {
                             QuestionId = 11,
                             CorrectAnswerId = 31,
                             DifficultyLevel = 2,
-                            FunFact = "En del myror kan lyfta objekt som är mycket tyngre än de själva",
-                            Hint = "Känd för sitt arbete att samla mat",
+                            FunFact = "Myror kan bli \"lata\" ibland och skaffa sig husdjur, som bladlöss, för att mjölka dem på honungsdagg, vilket sparar myrornas egna ansträngningar!",
+                            Hint = "Känd för sitt slitsamma arbete att samla mat",
                             MediaURL = "https://i.imgur.com/qSCH06v.png",
-                            Text = "Vad är detta för djur?"
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 12,
                             CorrectAnswerId = 34,
                             DifficultyLevel = 2,
-                            FunFact = "Sälar är skickliga simmare och dykare",
+                            FunFact = "Sälar kan ha powernaps under vattnet som varar i upp till 15 minuter utan att behöva komma upp till ytan för att andas.",
                             Hint = "Lever ofta i närheten av kusten och äter fisk",
-                            MediaURL = "https://i.imgur.com/bRlhcaM.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/A31vC3i.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 13,
                             CorrectAnswerId = 37,
                             DifficultyLevel = 2,
-                            FunFact = "Tranor är kända för sina graciösa danser under parningssäsongen",
+                            FunFact = "När tranor flyger formar de ett V-liknande mönster, tranan längst fram styr vägen framåt",
                             Hint = "Lever ofta i våtmarker och har ett karakteristiskt trumpetande ljud",
-                            MediaURL = "https://i.imgur.com/pWr4Xxu.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/hugB42z.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 14,
                             CorrectAnswerId = 40,
                             DifficultyLevel = 2,
-                            FunFact = "Hamstrar har kindpåsar där de lagra mat",
+                            FunFact = "Hamstrar har kindpåsar som de kan lagra mat i, och de kan fylla dessa påsar med mat så mycket som dubbel sin kroppsvikt!",
                             Hint = "Kan vara hårig eller naken, beroende på ras",
-                            MediaURL = "https://i.imgur.com/tWHofmn.png",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/9tB3vyX.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 15,
                             CorrectAnswerId = 43,
                             DifficultyLevel = 2,
-                            FunFact = "Geparder är de snabbaste landdjuren på jorden",
+                            FunFact = "Geparder är de snabbaste landdjuren i världen, men de har faktiskt ett mycket blygsamt temperament och kan ibland förlora sina byten till mer aggressiva rovdjur.",
                             Hint = "Lever i Afrika och är en skicklig jägare",
-                            MediaURL = "https://i.imgur.com/X7kpZ0P.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/R8l5ZXt.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 16,
                             CorrectAnswerId = 46,
                             DifficultyLevel = 2,
-                            FunFact = "Råttor är mycket intelligenta och kan lösa komplexa problem",
+                            FunFact = "Råttor har utmärkt nattsyn och kan se i totalt mörker, men de lider av färgblindhet och ser världen i svartvitt.",
                             Hint = "Kan vara grå, brun eller svart",
-                            MediaURL = "https://i.imgur.com/vyesMf1.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/LjvmNvY.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 17,
                             CorrectAnswerId = 49,
                             DifficultyLevel = 2,
-                            FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
+                            FunFact = "Papergojor har en fantastisk förmåga att efterlikna ljud, och vissa arter kan låta som allt från fågelkvitter till surrande insekter.",
                             Hint = "Kan vara röd, blå, grön eller gul",
-                            MediaURL = "https://i.imgur.com/nO4aFC3.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/JnNOgpJ.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 18,
                             CorrectAnswerId = 52,
                             DifficultyLevel = 2,
-                            FunFact = "Bin är viktiga pollinatörer för många växter",
+                            FunFact = "Bina har faktiskt en liten \"mustasch\" under sina huvuden som hjälper dem att känna av blommornas form och färg när de samlar nektar!",
                             Hint = "Gör honung och bor i bikupor",
-                            MediaURL = "https://i.imgur.com/tfhdJ40.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/c7qukSG.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
@@ -1113,125 +1113,125 @@ namespace QuizaDjuret.Server.Migrations
                             DifficultyLevel = 2,
                             FunFact = "Orangutanger delar omkring 97 % av sin DNA med människor",
                             Hint = "Lever i regnskogen och gillar bananer",
-                            MediaURL = "https://i.imgur.com/EPK88mg.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/USujWHm.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 20,
                             CorrectAnswerId = 58,
                             DifficultyLevel = 2,
-                            FunFact = "Groddjur genomgår en förvandling från simmande grodyngel till groda",
+                            FunFact = "Vissa grodor har en unik förmåga att ändra färg beroende på sin omgivning, och de kan till och med bli blåa när de är nervösa!",
                             Hint = "Har en karakteristisk sång under natten",
-                            MediaURL = "https://i.imgur.com/TY9PKPZ.jpg",
-                            Text = "Vad är detta för djur?"
+                            MediaURL = "https://i.imgur.com/V6sg2vK.jpg",
+                            Text = "Gissa del av djuret"
                         },
                         new
                         {
                             QuestionId = 21,
                             CorrectAnswerId = 61,
                             DifficultyLevel = 3,
-                            FunFact = "Sälar är skickliga simmare och dykare",
+                            FunFact = "Sälar kallas ibland för \"vattenhundar\" eftersom de kan vara lika lekfulla och nyfikna som hundar när de simmar i vattnet.",
                             Hint = "Lever ofta i närheten av kusten och äter fisk",
                             MediaURL = "Säl.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 22,
                             CorrectAnswerId = 64,
                             DifficultyLevel = 3,
-                            FunFact = "Lejonets rytande kan höras på flera kilometers avstånd",
+                            FunFact = "Lejon kan vara riktigt lata och sova upp till 20 timmar om dagen, vilket gör dem till några av de mest avslappnade stora kattdjuren på savannen!",
                             Hint = "Känd för att vara 'kungen av djungeln'",
                             MediaURL = "Lejon.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 23,
                             CorrectAnswerId = 67,
                             DifficultyLevel = 3,
-                            FunFact = "Delfiner kommunicerar med varandra genom att använda olika ljud och klickar",
+                            FunFact = "Delfiner älskar lek och humor så mycket att de ibland skapar sina egna \"vattenringar\" och sedan leka med dem som om de vore leksaker!",
                             Hint = "Lever i havet och är en utmärkt simmare",
                             MediaURL = "Delfin.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 24,
                             CorrectAnswerId = 70,
                             DifficultyLevel = 3,
-                            FunFact = "Hästar har en utmärkt förmåga att kommunicera med kroppsspråk",
+                            FunFact = "Hästar kan inte kräkas, vilket betyder att de måste vara försiktiga med vad de äter eftersom de inte kan bli av med oönskad mat på samma sätt som människor.",
                             Hint = "Ofta används för ridning och dragarbete",
                             MediaURL = "Häst.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 25,
                             CorrectAnswerId = 73,
                             DifficultyLevel = 3,
-                            FunFact = "Hundar är kända för att vara utmärkta simmare och kan simma flera kilometer i öppet vatten",
+                            FunFact = "Hundar kan känna av människors känslor och är faktiskt kapabla att skilja på olika humör i människors ansiktsuttryck.",
                             Hint = "Vanligt husdjur och människans bästavän",
                             MediaURL = "Hund.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 26,
                             CorrectAnswerId = 76,
                             DifficultyLevel = 3,
-                            FunFact = "Katter kan hoppa flera gånger sin egen kroppslängd i en enda hopp",
+                            FunFact = "Katter kan göra upp till 100 olika ljud, medan hundar bara kan göra omkring 10.",
                             Hint = "Är känd för att jaga möss och andra smådjur",
                             MediaURL = "Katt.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 27,
                             CorrectAnswerId = 79,
                             DifficultyLevel = 3,
-                            FunFact = "Örnar har en utmärkt syn och kan se byten från hög höjd",
+                            FunFact = "Örnar har så bra syn att om du skulle ta en tidning och hålla den upp i luften, skulle en örn kunna läsa rubrikerna från en halv mils avstånd!",
                             Hint = "Symbol för styrka och frihet",
                             MediaURL = "Örn.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 28,
                             CorrectAnswerId = 82,
                             DifficultyLevel = 3,
-                            FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
+                            FunFact = "Papergojor har faktiskt funnits i över 2 000 år och användes ursprungligen i Kina för att skicka meddelanden inom militären.",
                             Hint = "Kan vara röd, blå, grön eller gul",
                             MediaURL = "Papegoja.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 29,
                             CorrectAnswerId = 85,
                             DifficultyLevel = 3,
-                            FunFact = "Tranor är kända för sina graciösa danser under parningssäsongen",
+                            FunFact = "Tranor är kända för sina melodiska och uttrycksfulla sånger, och de använder dessa sånger för att prata med varandra.",
                             Hint = "Lever ofta i våtmarker och har ett karakteristiskt trumpetande ljud",
                             MediaURL = "Trana.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 30,
                             CorrectAnswerId = 88,
                             DifficultyLevel = 3,
-                            FunFact = "Hamstrar har kindpåsar där de lagra mat",
+                            FunFact = "Hamstrar är kända för sin imponerande uppsättning tänder, och deras framtänder växer hela livet.",
                             Hint = "Kan vara hårig eller naken, beroende på ras",
                             MediaURL = "Hamster.mp3",
-                            Text = "Vilket djur gör detta ljud?"
+                            Text = "Gissa ljudet"
                         },
                         new
                         {
                             QuestionId = 31,
                             CorrectAnswerId = 91,
                             DifficultyLevel = 4,
-                            FunFact = "Giraffer sover bara i korta stunder och står upp",
+                            FunFact = "Giraffer har det högsta blodtrycken bland alla landlevande djur, vilket hjälper dem att pumpa blod upp genom sin långa hals och vidare till hjärnan",
                             Hint = "Har en av de längsta nackarna i djurriket",
                             MediaURL = "",
                             Text = "Ett långhalsat djur med fläckig päls"
@@ -1241,7 +1241,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 32,
                             CorrectAnswerId = 94,
                             DifficultyLevel = 4,
-                            FunFact = "Känguruer kan hoppa mycket långa sträckor och är extremt snabba",
+                            FunFact = "Känguruer är kända för sin \"kängurupåse\" där de bär sina ungar, men de kan faktiskt kontrollera musklerna i påsen för att öppna och stänga den vid behov.",
                             Hint = "Har en karakteristisk pung för att bära sina ungar i",
                             MediaURL = "",
                             Text = "Ett pungdjur från Australien som hoppar på sina bakben"
@@ -1251,7 +1251,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 33,
                             CorrectAnswerId = 97,
                             DifficultyLevel = 4,
-                            FunFact = "Pandor är kända för sin söta och knubbiga utseende",
+                            FunFact = "Pandor äter upp till 40 kilo bambu per dag.",
                             Hint = "Lever i Kina och äter mestadels bambu",
                             MediaURL = "",
                             Text = "En björnart med svartvita markeringar"
@@ -1261,7 +1261,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 34,
                             CorrectAnswerId = 100,
                             DifficultyLevel = 4,
-                            FunFact = "Flodhästar är kända för sina massiva käkar och tänder",
+                            FunFact = "Flodhästar är att de har en förmåga att \"svettas\" en rödaktig vätska som fungerar som ett naturligt solskydd.",
                             Hint = "Även om de är kraftiga simmare, befinner de sig oftast på land",
                             MediaURL = "",
                             Text = "Ett stort, tungt djur som lever i vattnet"
@@ -1271,7 +1271,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 35,
                             CorrectAnswerId = 103,
                             DifficultyLevel = 4,
-                            FunFact = "Strutsar är de största och tyngsta fåglarna på jorden",
+                            FunFact = "Strutsarnas ögon är faktiskt större än deras hjärna!",
                             Hint = "Finns i Afrika och är känd för sin långa hals",
                             MediaURL = "",
                             Text = "En stor gräsätande fågel som inte kan flyga"
@@ -1281,7 +1281,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 36,
                             CorrectAnswerId = 106,
                             DifficultyLevel = 4,
-                            FunFact = "Myror kan lyfta objekt som är mycket tyngre än de själva",
+                            FunFact = "Myror är så starka i förhållande till sin storlek att, om de var lika stora som människor skulle de kunna lyfta bilar!",
                             Hint = "Känd för sitt arbete att samla mat",
                             MediaURL = "",
                             Text = "En liten insekt som ofta arbetar i kolonier"
@@ -1291,7 +1291,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 37,
                             CorrectAnswerId = 109,
                             DifficultyLevel = 4,
-                            FunFact = "Sälar är skickliga simmare och dykare",
+                            FunFact = "Sälar har utvecklat en speciell förmåga att hålla andan under vatten och kan göra det i upp till två timmar i sträck när de dyker efter föda!",
                             Hint = "Lever ofta i närheten av kusten och äter fisk",
                             MediaURL = "",
                             Text = "Ett marint däggdjur med kraftiga morrhår"
@@ -1301,7 +1301,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 38,
                             CorrectAnswerId = 112,
                             DifficultyLevel = 4,
-                            FunFact = "Hamstrar har kindpåsar där de lagra mat",
+                            FunFact = "Hamstrar kan springa upp till 13 kilometer på en natt i sina hjul, vilket gör dem till små maratonlöpare!",
                             Hint = "Kan vara hårig eller naken, beroende på ras",
                             MediaURL = "",
                             Text = "En liten gnagare som ofta ses i burar som husdjur"
@@ -1311,7 +1311,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 39,
                             CorrectAnswerId = 115,
                             DifficultyLevel = 4,
-                            FunFact = "Råttor är mycket intelligenta och kan lösa komplexa problem",
+                            FunFact = "Råttor är extremt sociala djur och kan bli ensamma och deprimerade om de inte har sällskap av andra råttor.",
                             Hint = "Kan vara grå, brun eller svart",
                             MediaURL = "",
                             Text = "Ett snabbt och smidigt djur som ofta förekommer i städer"
@@ -1321,7 +1321,7 @@ namespace QuizaDjuret.Server.Migrations
                             QuestionId = 40,
                             CorrectAnswerId = 118,
                             DifficultyLevel = 4,
-                            FunFact = "Papegojor kan ha ett mycket brett ordförråd och förstå enkla meningar",
+                            FunFact = "Papergojor kan nå imponerande höjder och har rekord på över 30 000 meter, vilket är högre än de flesta flygplan flyger!",
                             Hint = "Kan vara röd, blå, grön eller gul",
                             MediaURL = "",
                             Text = "En färgglad fågel som ofta kan härma mänskliga ljud"

@@ -12,12 +12,16 @@ namespace QuizaDjuret.Client.Managers
 
 		public static void NextQuestion()
 		{
-			CurrentQuestionNumber++;
+			CurrentQuestionNumber += 5;
 			if (CurrentQuestionNumber <= 40)
 			{
 				CurrentQuestion = Questions[CurrentQuestionNumber - 1];
 				var rng = new Random();
 				CurrentQuestion.Answers = CurrentQuestion.Answers.OrderBy(a => rng.Next()).ToList();
+			}
+			else
+			{
+				CurrentQuestionNumber = 41;
 			}
 			ScoreManager.RestoreCurrentPoints();
 			ScoreManager.SortScoreboard();
