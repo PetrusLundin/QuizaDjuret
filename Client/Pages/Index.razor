@@ -342,6 +342,7 @@ else
 			if (isCorrect)
 			{
 				GameManager.isCorrectAnswer = true;
+				await JSRuntime.InvokeVoidAsync("quizFunctions.correctAnswerText", btnRef);
 				ScoreManager.Add();
 			}
 			else
