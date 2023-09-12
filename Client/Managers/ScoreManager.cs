@@ -75,6 +75,8 @@ namespace QuizaDjuret.Client.Managers
 				{
 					dynamicList.Add(ScoreBoard[userIndex + 3]);
 				}
+				//TODO clone list to add meddallionsss
+
 			}
 
 			return dynamicList;

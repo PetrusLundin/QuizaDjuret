@@ -266,8 +266,8 @@ button {
 
 .sb-box {
     background: white;
-    height: 500px;
-    width: 220px;
+    /*height: 500px;*/
+    /*width: 220px;*/
     margin-left: 10px;
     background: rgb(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -302,13 +302,25 @@ button {
     border-radius: 20px;
     
 }
+
+.sb-separator-line {
+    padding: 0px;
+    margin: 2px;
+    border-radius: 0px;
+}
+
 table {
     width: 220px;
-  
+    border-collapse: separate;
+    border-spacing: 0px 5px;
 }
 
 hr{
     width: 220px;
+}
+
+td {
+    padding-top: 10px;
 }
 
 th {
@@ -317,7 +329,7 @@ th {
     font-size: 15px;
     /*margin-bottom: 30px;*/
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 tr {
