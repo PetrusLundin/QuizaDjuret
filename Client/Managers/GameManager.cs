@@ -12,7 +12,7 @@ namespace QuizaDjuret.Client.Managers
 
 		public static void NextQuestion()
 		{
-			CurrentQuestionNumber += 5;
+			CurrentQuestionNumber += 2;
 			if (CurrentQuestionNumber <= 40)
 			{
 				CurrentQuestion = Questions[CurrentQuestionNumber - 1];

@@ -362,3 +362,20 @@ tr{
     color: darkorange;
 }
 
+.progress-tracker{
+    border: dashed;
+}
+
+.star {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.star.answered {
+    background-color: #FFD700;
+}
+
