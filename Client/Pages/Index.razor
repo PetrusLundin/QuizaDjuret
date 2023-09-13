@@ -164,99 +164,96 @@ else
 					}
 				</div>
 
-			<div class="main-box-frågor">
+				<div class="main-box-frågor">
 
-				<div class="rubrik-box">
+					<div class="rubrik-box">
 					@if(GameManager.CurrentQuestion.DifficultyLevel == 4)
 					{
 						<h1>Gissa Djuret:</h1>
+					}
+					else
+					{
+						<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
+							
+					}
+
+				</div>
+
+				<div class="fråge-box">
+
+					<div class="bild-column">
+
+						@if (GameManager.CurrentQuestion.DifficultyLevel == 3)
+						{
+						<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
+						<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
+						</audio>
+						}
+						else if (GameManager.CurrentQuestion.DifficultyLevel == 4)
+						{
+							<p>@GameManager.CurrentQuestion.Text.</p>
 						}
 						else
 						{
-							<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
-							
+						<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>					
 						}
-
-				</div>
-
-			<div class="fråge-box">
-
-				<div class="bild-column">
-
-					@if (GameManager.CurrentQuestion.DifficultyLevel == 3)
-					{
-						<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
-							<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
-								</audio>
-							}
-							else if (GameManager.CurrentQuestion.DifficultyLevel == 4)
+					</div>
+					<div class="fråge-column">
+						<div class="fråge-rad">
+							<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
+							<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
+							<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
+						</div>	
+						<div class="funfact-hint-rad">
+							@if (IsHintVisible == false)
 							{
-								<p>@GameManager.CurrentQuestion.Text.</p>
-							}
-							else
-					{
-					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>					
-					}
-				</div>
-				<div class="fråge-column">
-					<div class="fråge-rad">
-						<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
-						<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
-						<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
-                    </div>	
-					<div class="funfact-hint-rad">
-						@if (IsHintVisible == false)
-						{
 							
-							@if (GameManager.isCorrectAnswer)
-							{
-										<div class="funfact-hint-div" style="border: 3px solid #91DB77; ">
-											<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
-											<p class="funfact-hint-p" >
+								@if (GameManager.isCorrectAnswer)
+								{
+								<div class="funfact-hint-div" style="border: 3px solid #91DB77; ">
+									<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
+									<p class="funfact-hint-p" >
 										@GameManager.CurrentQuestion.FunFact*
  									</p>
 								</div>
 
-							}
-							else
-							{
-								<button style="padding: 5px; border: none; background-color: transparent; font-size: 40px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" id="visaHint" @onclick="() => ShowHint() ">🔎</button>
-							}
-						}
-                        else if (IsHintVisible)
-                        {
-							<div>
-							
-								@if (GameManager.isCorrectAnswer)
+								}
+								else
 								{
-											<div class="funfact-hint-div" style="border: 3px solid #91DB77;">
-												<p class="fun-hint-rubrik" id="fun-rubrik" >🌟Bonusfakta🌟</p>
-												<p class="funfact-hint-p" >
-											@GameManager.CurrentQuestion.FunFact
+									<button style="padding: 5px; border: none; background-color: transparent; font-size: 40px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" id="visaHint" @onclick="() => ShowHint() ">🔎</button>
+								}
+							}
+							else if (IsHintVisible)
+							{
+								<div>
+							
+									@if (GameManager.isCorrectAnswer)
+									{
+									<div class="funfact-hint-div" style="border: 3px solid #91DB77;">
+										<p class="fun-hint-rubrik" id="fun-rubrik" >🌟Bonusfakta🌟</p>
+										<p class="funfact-hint-p" >
+										@GameManager.CurrentQuestion.FunFact
 
 										</p>
 									</div>
 									
-								}
-								else{
-											<div class="funfact-hint-div" style=" border: 3px solid #00AEFA">
+									}
+									else
+									{
+									<div class="funfact-hint-div" style=" border: 3px solid #00AEFA">
 												
-                                                    <p style=" display: flex; justify-content:center; "class="fun-hint-rubrik" id="hint-rubrik">hint🔎</p>
+                                        <p style=" display: flex; justify-content:center; "class="fun-hint-rubrik" id="hint-rubrik">hint🔎</p>
 													
 										<p class="funfact-hint-p">@GameManager.CurrentQuestion.Hint</p>
-                                                <button style="padding: 5px; border: none; background-color: transparent;  font-size: 10px;  box-shadow: none; margin-top: 10px;" class="fråga" id="döljHint" @onclick="() => HideHint() ">❌</button>
+										<button style="padding: 5px; border: none; background-color: transparent;  font-size: 10px;  box-shadow: none; margin-top: 10px;" class="fråga" id="döljHint" @onclick="() => HideHint() ">❌</button>
 
-                                            </div>
-                                }
-							</div>
-                        }
+									</div>
+									}
+								</div>
+							}
                         </div>
                     </div>
-			</div>
-				
-
-				
-
+				</div>
 	
 			</div>
             @if (GameManager.isCorrectAnswer)
