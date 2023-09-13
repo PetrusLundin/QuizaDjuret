@@ -26,7 +26,7 @@
 }
 else
 {
-	@if (GameManager.CurrentQuestionNumber == 0)
+	@if (GameManager.CurrentQuestionNumber == 41)
 	{
 		
 			<style>
@@ -58,36 +58,49 @@ else
 		</div>
 
 	}
-	else if (GameManager.CurrentQuestionNumber ==  41)
+	else if (GameManager.CurrentQuestionNumber ==  0)
 	{
-		<p>Highscore-sidan</p>
+		<div>
 		<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..."/>
-		<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
-		<div class="sb-box">
-			<table>
+		<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>		
+			<div>
 				<p>Scoreboard:</p>
+			</div>
+			<div>
+			<table>
+				<thead>
+					<tr class="tableheader">
+						<th>Ranking</th>
+						<th>Namn</th>
+						<th>Poäng</th>
+					</tr>
+				</thead>				
 				@foreach (UserModel user in ScoreManager.ScoreBoard)
 				{
 					if (user == ScoreManager.CurrentUser)
 					{
-						<tr class="player-row">
-							<th>
+						<tr >
+							<th class="col-rk">
 								@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+							</th>
+							<th class="col-nm">								
 								@playerName
 							</th>
-							<th>
+							<th class="col-png">
 								@user.Score
 							</th>
 						</tr>
 					}
 					else
 					{
-						<tr class="other-players-row">
-							<th>
+						<tr>
+							<th class="col-rk">
 								@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+							</th>
+							<th class="col-nm">								
 								@user.Name
 							</th>
-							<th>
+							<th class="col-png">
 								@user.Score
 							</th>
 						</tr>
@@ -96,6 +109,7 @@ else
 			</table>
 		</div>
 		<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
+	</div>
 	}
 	else
 

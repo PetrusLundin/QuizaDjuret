@@ -360,5 +360,22 @@ tr{
 
 .poäng-h2{
     color: darkorange;
+
 }
 
+.col-rk{
+    text-align:start;
+    border-bottom-color: saddlebrown;
+}
+
+.col-nm {
+    border-bottom-color: saddlebrown;
+}
+
+.col-png {
+    text-align: end;
+    border-bottom-color: saddlebrown;
+    border-width: .5rem;
+    border-radius: 2px;
+    border-color: transparent;
+}
