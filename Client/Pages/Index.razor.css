@@ -362,20 +362,38 @@ tr{
     color: darkorange;
 }
 
-.progress-tracker{
-    border: dashed;
+/*Hela tracker boxens utseende*/
+.progress-tracker-box {
+    background: white;
+    background: rgb(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    font-family: Arial;
+    margin-bottom: 5px;
+    height: 75px;
+    /*Bakgrunden bör ändras till en bild med start till vänster, mål till höger*/
+    background-image: url('../images/djungel.jpg');
+    background-position: center;
 }
 
-.star {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: #ddd;
-    border-radius: 50%;
-    margin: 5px;
+/*Stjärnornas utseende, obesvarad fråga:*/
+.progress-step-star {
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
+    /*Stjärna som besvarad fråga:*/
+    .progress-step-star.answered {
+        color: yellow;
+    }
 
-.star.answered {
-    background-color: #FFD700;
+/*Ringarnas utseende, obesvarad fråga:*/
+.progress-step-dot {
+    color: purple;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
+    /*Ring som besvarad fråga:*/
+    .progress-step-dot.answered {
+        color: red;
+    }
 

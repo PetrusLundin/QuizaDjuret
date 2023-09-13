@@ -140,10 +140,27 @@ else
 		<div class="main-layout">
 			<div class="mitten">
 
-				<div class="progress-tracker">
+				@* Hela rutan för progress trackern *@
+				<div class="progress-tracker-box">
 					@for (int i = 1; i <= 20; i++)
 					{
-						<span class="star @(i + 1 <= questionsAnswered ? "answered" : "")"></span>
+						@* Om det är fråga 5, 10, 15 eller 20 så ge det en stjärna *@
+						if (i == 5 || i == 10 || i == 15 || i == 20)
+						{
+							<span class="progress-step-star @(i + 1 <= questionsAnswered ? "answered" : "")">
+								@* Ikonen för stjärnorna: *@
+								☆
+							</span>
+						}
+
+						@* Annars ge det en liten ring istället *@
+						else
+						{
+							<span class="progress-step-dot @(i + 1 <= questionsAnswered ? "answered" : "")">
+								@* Ikonen för vanlig ring: *@
+								o
+							</span>
+						}
 					}
 				</div>
 
