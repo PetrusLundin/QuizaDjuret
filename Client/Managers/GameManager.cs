@@ -12,9 +12,17 @@ namespace QuizaDjuret.Client.Managers
 		public static int CurrentQuestionNumber { get; set; } = 0;
 		public static QuestionModel? CurrentQuestion { get; set; }
 		public static bool isCorrectAnswer { get; set; } = false;
+		public static int RandomZoom { get; set; } = 1;
+
+		public static void RollRandomZoom()
+		{
+			Random rng = new();
+			RandomZoom = rng.Next(1, 4);
+		}
 
 		public static void NextQuestion()
 		{
+			RollRandomZoom();
 			CurrentQuestionNumber++;
 
 			if (CurrentQuestionNumber <= QuestionsPerLevel)

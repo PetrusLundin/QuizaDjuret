@@ -106,13 +106,41 @@ button {
     margin: 0px;
 }
 
+.djur-img-container {
+    height: 390px;
+    width: 390px;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.8);
+    border: 4px solid #FFCD85 /*#FF985A*/;
+}
+
+.djur-img-zoom {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.9);
+}
+
+.topleft {
+    transform-origin: top left;
+}
+.topright {
+    transform-origin: top right;
+}
+.bottomleft {
+    transform-origin: bottom left;
+}
+.bottomright {
+    transform-origin: bottom right;
+}
+
 .djur-img {
     height: 390px;
     width: 390px;
-    border-radius: 0px;
+    /*border-radius: 0px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.8);
+    border: 4px solid #FFCD85*/ /*#FF985A*//*;*/
     /* border: double 3px yellow;*/
-    border: 4px solid #FFCD85 /*#FF985A*/;
 }
 
 .fråge-box {

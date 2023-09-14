@@ -30,6 +30,7 @@ namespace QuizaDjuret.Client.Managers
 
 		static public void ResetCurrentUser()
 		{
+			WinStreak = 0;
 			CurrentUser.Name = "DU";
 			CurrentUser.Score = 0;
 		}
