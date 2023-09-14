@@ -362,3 +362,40 @@ tr{
     color: darkorange;
 }
 
+/*Hela tracker boxens utseende*/
+.progress-tracker-box {
+    display: flex;
+    justify-content: space-evenly;
+    background: white;
+    background: rgb(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    font-family: Arial;
+    margin-bottom: 5px;
+    height: 75px;
+    /*Bakgrunden bör ändras till en bild med start till vänster, mål till höger*/
+    background-image: url('../images/djungel.jpg');
+    background-position: center;
+}
+
+/*Stjärnornas utseende, obesvarad fråga:*/
+.progress-step-star {
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+    /*Stjärna som besvarad fråga:*/
+    .progress-step-star.answered {
+        color: yellow;
+    }
+
+/*Ringarnas utseende, obesvarad fråga:*/
+.progress-step-dot {
+    color: purple;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+    /*Ring som besvarad fråga:*/
+    .progress-step-dot.answered {
+        color: red;
+    }
+
