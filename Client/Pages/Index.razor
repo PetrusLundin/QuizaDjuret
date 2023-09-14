@@ -138,14 +138,16 @@ else
 
 				@* Hela rutan för progress trackern *@
 				<div class="progress-tracker-box">
+					<div class="progress-star-box">
 					@for (int i = 1; i <= GameManager.QuestionsPerLevel*4; i++)
 					{
 						@* Om det är fråga 5, 10, 15 eller 20 så ge det en stjärna *@
 						if (i == GameManager.QuestionsPerLevel || i == GameManager.QuestionsPerLevel * 2 || i == GameManager.QuestionsPerLevel * 3 || i == GameManager.QuestionsPerLevel*4)
 						{
+
 							<span class="progress-step-star @(i + 1 <= questionsAnswered ? "answered" : "")">
 								@* Ikonen för stjärnorna: *@
-								☆
+								☆ 
 							</span>
 						}
 
@@ -154,10 +156,11 @@ else
 						{
 							<span class="progress-step-dot @(i + 1 <= questionsAnswered ? "answered" : "")">
 								@* Ikonen för vanlig ring: *@
-								○
+								✧
 							</span>
 						}
-					}
+                        }
+                    </div>
 				</div>
 
 				<div class="main-box-frågor">
@@ -186,13 +189,20 @@ else
 							}
 							else if (GameManager.CurrentQuestion.DifficultyLevel == 3)
 							{
+								<div class="center-fix"></div>
+								<img class="djur-img" id="level3-sound" src='../images/lyssna.jpg' ;>
+								
 								<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
 								<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
 								</audio>
 							}
 							else if (GameManager.CurrentQuestion.DifficultyLevel == 4)
 							{
-								<p>@GameManager.CurrentQuestion.Text.</p>
+								<div class="djur-img" id="level4-bild">
+									<div class="level4-text">
+										<p class="p-level4">@GameManager.CurrentQuestion.Text.</p>
+									</div>
+								</div>
 							}
 							else
 							{
@@ -263,7 +273,7 @@ else
 											<p style=" display: flex; justify-content:center; "class="fun-hint-rubrik" id="hint-rubrik">hint🔎</p>
 													
 											<p class="funfact-hint-p">@GameManager.CurrentQuestion.Hint</p>
-											<button style="padding: 5px; border: none; background-color: transparent;  font-size: 10px;  box-shadow: none; margin-top: 10px;" class="fråga" id="döljHint" @onclick="() => HideHint() ">❌</button>
+											
 
 										</div>
 										}
