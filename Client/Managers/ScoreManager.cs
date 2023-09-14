@@ -8,13 +8,17 @@ namespace QuizaDjuret.Client.Managers
 		static public int CurrentQuestionPoints { get; set; }
 		static public int WinStreak { get; set; }
 		static public List<UserModel> ScoreBoard { get; set; } = new();
-		static public void Add()
+
+		static public void IncrementWinStreak()
 		{
 			WinStreak++;
 			if (WinStreak >= 3)
 			{
 				CurrentQuestionPoints += 50;
 			}
+		}
+		static public void Add()
+		{
 			CurrentUser.Score += CurrentQuestionPoints;
 			SortScoreboard();
 		}
