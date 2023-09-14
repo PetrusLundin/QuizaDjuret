@@ -56,12 +56,12 @@ p {
 }
 
 .red-text {
-    background-color: #F76164;
+    background-color: #F76164 !important;
     border: 1px solid black;
 }
 
 .green-text {
-    background-color: #91DB77;
+    background-color: #91DB77 !important;
     border: 1px solid black;
 }
 

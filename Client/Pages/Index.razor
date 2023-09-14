@@ -171,14 +171,14 @@ else
 					<div class="rubrik-box">
 						@if(GameManager.CurrentQuestion.DifficultyLevel == 4)
 						{
-							<h1>Gissa Djuret:</h1>
+							<h1>Gissa Djuret: (@ScoreManager.CurrentQuestionPoints p)</h1>
 						}
 						else
 						{
-							<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
+							<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text (@ScoreManager.CurrentQuestionPoints p)</h1>
 							
 						}
-
+						<p>@ScoreManager.WinStreak</p>
 					</div>
 
 
