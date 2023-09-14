@@ -289,7 +289,7 @@ else
 			</div>
 			<div class="höger-kolumn">
 				<div class="sb-box">
-					<table>
+					<table class="sb-table">
 						<p class="p-sb">Dina poäng:</p>
 						<h2 class="poäng-h2">@ScoreManager.CurrentUser.Score p</h2>
 						<hr>
@@ -300,11 +300,18 @@ else
 							{
 								<tr class="player-row">
 									<th>
-										@(ScoreManager.ScoreBoard.IndexOf(user)+1).
-										@user.Name
-									</th>
-									<th>
-										@user.Score
+										<div class="flex">
+
+											<span>
+												@(ScoreManager.ScoreBoard.IndexOf(user)+1).
+												@user.Name
+
+											</span>
+											<span>
+												@user.Score
+											</span>
+										</div>
+
 									</th>
 								</tr>
 							}
@@ -318,12 +325,15 @@ else
 							{
 								<tr class="other-players-row">
 									<th >
-									@(ScoreManager.ScoreBoard.IndexOf(user)+1).
-									@user.Name
-									</th>
-									<th>
-										@user.Score
-									
+										<div class="flex">
+											<span>
+												@(ScoreManager.ScoreBoard.IndexOf(user)+1).
+												@user.Name
+											</span>
+											<span>
+												@user.Score
+											</span>
+										</div>
 									</th>
 								</tr>
 							}
@@ -401,8 +411,8 @@ else
 			if (isCorrect)
 			{
 				GameManager.isCorrectAnswer = true;
-				await JSRuntime.InvokeVoidAsync("quizFunctions.correctAnswerText", btnRef);
 				ScoreManager.Add();
+				await JSRuntime.InvokeVoidAsync("quizFunctions.correctAnswerText", btnRef);
 			}
 			else
 			{
