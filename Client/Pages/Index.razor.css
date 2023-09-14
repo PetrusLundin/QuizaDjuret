@@ -424,9 +424,22 @@ tr{
     font-size: 30px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
-    /*Ring som besvarad fråga:*/
-    .progress-step-dot.answered {
-        color: yellow;
-        text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
-    }
+/*Ring som besvarad fråga:*/
+.progress-step-dot.answered {
+    color: yellow;
+    text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
+}
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex > span {
+    padding-right: 5px;
+}
+
+.sb-table {
+    width: 100%;
+    padding: 5px;
+}
