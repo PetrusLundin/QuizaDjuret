@@ -39,10 +39,15 @@ else
 			<h1 style="margin-bottom: 40px; margin-top: 30px;">Välkommen till QuizaDjuret</h1>
 			<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
 			<p>🏆 För varje rätt svar får du poäng som du kan se i höger kolumn</p>
-			<p>💡 Tryck på knappen "🔍" för att få en ledtråd till frågan</p>
-			<p>💡 Tryck på knappen "Starta om quiz" för att börja om quizet från början</p>
+			<p>💡 Tryck "🔍" för att få en ledtråd</p>
+			<p>💡 Tryck "Starta om quiz" för att börja om</p>
 
 			<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
+			<button @onclick="() => DecreaseQAmount()">-</button>
+			<span>
+				@GameManager.QuestionsPerLevel
+			</span>
+			<button @onclick="() => IncreaseQAmount()">+</button>
 
 		</div>
 		<div class="start-btn-div">
@@ -178,7 +183,7 @@ else
 
 
 					<div class="fråge-box">
-
+						@* Frågans media - baserad på difficultylevel *@
 						<div class="bild-column">
 							@if (GameManager.CurrentQuestion.DifficultyLevel == 1)
 							{
@@ -403,7 +408,7 @@ else
 		}
 		playerName = "";
 	}
-	
+
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
 	{
 		if (!GameManager.isCorrectAnswer)
@@ -441,5 +446,19 @@ else
 	private void HideHint()
 	{
 		IsHintVisible = false;
+	}
+	private void DecreaseQAmount()
+	{
+		if (GameManager.QuestionsPerLevel > 1)
+		{
+			GameManager.QuestionsPerLevel--;
+		}
+	}
+	private void IncreaseQAmount()
+	{
+		if (GameManager.QuestionsPerLevel < 10)
+		{
+			GameManager.QuestionsPerLevel++;
+		}
 	}
 }
