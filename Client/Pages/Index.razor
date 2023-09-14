@@ -180,8 +180,11 @@ else
 					<div class="fråge-box">
 
 						<div class="bild-column">
-
-							@if (GameManager.CurrentQuestion.DifficultyLevel == 3)
+							@if (GameManager.CurrentQuestion.DifficultyLevel == 1)
+							{
+								<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>
+							}
+							else if (GameManager.CurrentQuestion.DifficultyLevel == 3)
 							{
 								<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
 								<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
@@ -193,7 +196,24 @@ else
 							}
 							else
 							{
-								<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>					
+								<div class="djur-img-container">
+									@if (GameManager.RandomZoom == 1)
+									{
+										<img class="djur-img-zoom topleft" src=@GameManager.CurrentQuestion.MediaURL>
+									}
+									else if (GameManager.RandomZoom == 2)
+									{
+										<img class="djur-img-zoom topright" src=@GameManager.CurrentQuestion.MediaURL>
+									}
+									else if (GameManager.RandomZoom == 3)
+									{
+										<img class="djur-img-zoom bottomleft" src=@GameManager.CurrentQuestion.MediaURL>
+									}
+									else
+									{
+										<img class="djur-img-zoom bottomright" src=@GameManager.CurrentQuestion.MediaURL>
+									}
+								</div>
 							}
 						</div>
 						<div class="fråge-column">
