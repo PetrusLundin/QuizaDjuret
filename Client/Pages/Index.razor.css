@@ -363,17 +363,38 @@ tr{
 
 }
 
-.tableheader{
-
+.highscore-table {
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 10px;
 }
 
-.col-rk{
-    text-align:start;
+
+.tableheader {
+    box-shadow: 0px;
+    border-radius: 0px;
+    padding:0px;
+    font-size: 25px;
+    width: 120px;
+    text-align:center;
+}
+
+.col-rk {
+    text-align: start;
     border-bottom-color: saddlebrown;
+    box-shadow: 0px;
+    border-radius: 0px;
+    text-align: center;
+    background-color: transparent;
 }
 
 .col-nm {
     border-bottom-color: saddlebrown;
+    box-shadow: 0px;
+    border-radius: 0px;
+    margin-right: 200px;
+    text-align: center;
+    background-color: transparent;
 }
 
 .col-png {
@@ -382,4 +403,11 @@ tr{
     border-width: .5rem;
     border-radius: 2px;
     border-color: transparent;
+    box-shadow: 0px;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.highscore-div{
+    width:1000px;
 }

@@ -60,19 +60,19 @@ else
 	}
 	else if (GameManager.CurrentQuestionNumber ==  0)
 	{
-		<div>
+		<div class="highscore-div">
 		<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..."/>
 		<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>		
 			<div>
 				<p>Scoreboard:</p>
 			</div>
 			<div>
-			<table>
+			<table class="highscore-table">
 				<thead>
-					<tr class="tableheader">
-						<th>Ranking</th>
-						<th>Namn</th>
-						<th>Poäng</th>
+					<tr>
+							<th class="tableheader">Ranking</th>
+							<th class="tableheader">Namn</th>
+						<th class="tableheader">Poäng</th>
 					</tr>
 				</thead>				
 				@foreach (UserModel user in ScoreManager.ScoreBoard)
