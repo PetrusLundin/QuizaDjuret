@@ -366,8 +366,11 @@ else
 @code
 {
 	private ElementReference answer1;
+	private bool isAnswer1Enabled = true;
 	private ElementReference answer2;
+	private bool isAnswer2Enabled = true;
 	private ElementReference answer3;
+	private bool isAnswer3Enabled = true;
 	private bool isStarted = false;
 	private string playerName = "";
 	public string loading = "Loading...";
@@ -415,16 +418,38 @@ else
 
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
 	{
+		Console.WriteLine(btnRef.Id);
 		if (!GameManager.isCorrectAnswer)
 		{
 			if (isCorrect)
 			{
+				isAnswer1Enabled = true;
+				isAnswer2Enabled = true;
+				isAnswer3Enabled = true;
 				GameManager.isCorrectAnswer = true;
 				ScoreManager.Add();
 				await JSRuntime.InvokeVoidAsync("quizFunctions.correctAnswerText", btnRef);
 			}
 			else
 			{
+				if (btnRef.Id == "2")
+				{
+					if (!isAnswer1Enabled)
+						return;
+					isAnswer1Enabled = false;
+				}
+				else if (btnRef.Id == "3")
+				{
+					if (!isAnswer2Enabled)
+						return;
+					isAnswer2Enabled = false;
+				}
+				else if (btnRef.Id == "4")
+				{
+					if (!isAnswer3Enabled)
+						return;
+					isAnswer3Enabled = false;
+				}
 				ScoreManager.ReduceCurrentQuestionPoints();
 				await JSRuntime.InvokeVoidAsync("quizFunctions.changeButtonText", btnRef);
 			}
