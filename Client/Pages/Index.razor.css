@@ -25,7 +25,7 @@ h1 {
     justify-content: center;
     font-family: 'Cherry Bomb One', cursive;
     margin-bottom: 20px;
-    color: #9E4016; /*#61300F;*/
+    color: #9E4016; 
 }
 
 h2 {
@@ -55,6 +55,14 @@ p {
     color: #586219;
 }
 
+button {
+    background: #CBDF50;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    border: none;
+    font-family: 'Bubblegum Sans', cursive;
+}
 .red-text {
     background-color: #F76164 !important;
     border: 1px solid black;
@@ -118,7 +126,6 @@ p {
 
 .sb-box {
     background: white;
-    /*height: 500px;*/
     width: 260px;
     margin-left: 10px;
     background: rgb(255, 255, 255, 0.8);
@@ -212,18 +219,30 @@ tr {
     background: rgb(255, 255, 255, 0.8);
     box-shadow: 0 0 15px rgba(0,0,0, 0.5);
     font-family: Arial;
-    margin-bottom: 5px;
-    height: 75px;
-    /*Bakgrunden bör ändras till en bild med start till vänster, mål till höger*/
+    margin-bottom: 7px;
+    height: 100px;
     background-image: url('../images/progress_bg.jpg');
     background-position: center;
+    border-radius: 10px;
+    background-size: cover;
+    border: 5px solid rgba(255,255,255, 0.8);
+}
+/*Sjärnornas bakgrund*/
+.progress-star-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 992px;
+    height: 35px;
+    background-position: center;
+    background: rgb(255, 255, 255, 0.8);
 }
 
 /*Stjärnornas utseende, obesvarad fråga:*/
 .progress-step-star {
-    color: salmon;
+    color: yellow;
     font-size: 40px;
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em yellow;
 }
 
 /*Stjärna som besvarad fråga:*/
@@ -234,7 +253,7 @@ tr {
 
 /*Ringarnas utseende, obesvarad fråga:*/
 .progress-step-dot {
-    color: salmon;
+    color: yellow;
     font-size: 30px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
@@ -286,16 +305,14 @@ tr {
     overflow: hidden;
     border-radius: 0px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.8);
-    border: 4px solid #FFCD85 /*#FF985A*/;
+    border: 4px solid rgba(255,205,133, 0.5);
 }
 
 .djur-img {
     height: 390px;
     width: 390px;
-    /*border-radius: 0px;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.8);
-    border: 4px solid #FFCD85*/ /*#FF985A*/ /*;*/
-    /* border: double 3px yellow;*/
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    border: 2px solid rgba(255,205,133, 0.5);
 }
 
 .djur-img-zoom {
@@ -342,7 +359,7 @@ tr {
     background: rgb(255, 255, 255, 0.95);
     border-radius: 10px;
     font-family: 'Bubblegum Sans', cursive;
-    border: solid 3px lightgray;
+    border: solid 3px #C3C3C3;
     box-shadow: 0 0 15px rgba(0,0,0, 0.2);
     width: 300px;
     color: black;
@@ -397,23 +414,8 @@ tr {
     left: 800px;
 }
 
-button {
-    background: #CBDF50;
-    border-radius: 20px;
-    padding: 5px;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
-    border: none;
-    font-family: 'Bubblegum Sans', cursive;
-}
-
 .nästafråga-btn-div {
-    /*position: absolute;
-    left: 0;
-    right: 20%;
-    bottom: 0;
-    text-align: center;*/
     padding-bottom: 50px;
-
     display: flex;
     justify-content: end;
 }
@@ -433,7 +435,7 @@ button {
     margin-top: 10px;
     display: flex;
     align-items: end;
-    background: #F76164; /*rgb(255, 255, 255, 0.9);*/
+    background: #F76164; 
     padding: 10px;
     font-family: 'Bubblegum Sans', cursive;
     height: 40px;
@@ -444,7 +446,6 @@ button {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.9);
     width: 260px;
-    /*border: 3px double #3D0709;*/
     justify-content: center;
 }
 
@@ -453,3 +454,52 @@ button {
     justify-content:end;
     margin:0px;
 }
+
+/*Level 3 & 4*/
+audio {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin-top: 5px;
+    height: 20px;
+}
+
+#level3-sound {
+    border: 5px solid rgba(255,205,133, 0.5);
+}
+
+.center-fix {
+    height: 20px;
+    border-bottom: 5px;
+}
+
+#level4-bild {
+    background-image: url('../images/bakgrundlevel4.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+}
+
+.level4-text {
+    border: 3px solid #91DB77;
+    width: 310px;
+    height: 130px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+}
+
+.p-level4 {
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+ 
