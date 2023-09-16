@@ -14,7 +14,7 @@
 </head>
 
 
-@if(GameManager.Questions.Count == 0)
+@if (GameManager.Questions.Count == 0)
 {
 	<h1>LOADING...</h1>
 	<style>
@@ -28,19 +28,19 @@ else
 {
 	@if (GameManager.CurrentQuestionNumber == 41)
 	{
-		
-			<style>
-				body {
-					background-image: url('../images/landingpage.jpg');
-					background-size: cover;
-				}
-			</style>
-		
+
+		<style>
+			body {
+				background-image: url('../images/landingpage.jpg');
+				background-size: cover;
+			}
+		</style>
 
 
-			<div class="main-box">
 
-            
+		<div class="main-box">
+
+
 
 			<h1 style="margin-bottom: 40px; margin-top: 30px;">Välkommen till QuizaDjuret</h1>
 			<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
@@ -50,66 +50,76 @@ else
 
 
 			<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
-	
-	
+
+
 		</div>
 		<div class="start-btn-div">
 			<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
 		</div>
 
 	}
-	else if (GameManager.CurrentQuestionNumber ==  0)
+	else if (GameManager.CurrentQuestionNumber == 0)
 	{
-		<div class="highscore-div">
-		<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..."/>
-		<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>		
+		<style>
+			body {
+				background-image: url('../images/landingpage.jpg');
+				background-size: cover;
+			}
+		</style>
+		<div class="highscore-div">			
 			<div>
 				<p>Scoreboard:</p>
 			</div>
 			<div>
-			<table class="highscore-table">
-				<thead>
-					<tr>
+				<table class="highscore-table">
+					<thead>
+						<tr>
 							<th class="tableheader">Ranking</th>
 							<th class="tableheader">Namn</th>
-						<th class="tableheader">Poäng</th>
-					</tr>
-				</thead>				
-				@foreach (UserModel user in ScoreManager.ScoreBoard)
-				{
-					if (user == ScoreManager.CurrentUser)
-					{
-						<tr>
-							<th class="col-rk">
-								@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
-							</th>
-							<th class="col-nm">								
-								@playerName
-							</th>
-							<th class="col-png">
-								@user.Score
-							</th>
+							<th class="tableheader">Poäng</th>
 						</tr>
-					}
-					else
+					</thead>
+					@foreach (UserModel user in ScoreManager.ScoreBoard)
 					{
-						<tr>
-							<th class="col-rk">
-								@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
-							</th>
-							<th class="col-nm">								
-								@user.Name
-							</th>
-							<th class="col-png">
-								@user.Score
-							</th>
-						</tr>
+						if (user == ScoreManager.CurrentUser)
+						{
+							<tr>
+								<th class="col-rk">
+									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+								</th>
+								<th class="col-nm">
+									@playerName
+								</th>
+								<th class="col-png">
+									@user.Score
+								</th>
+							</tr>
+						}
+						else
+						{
+							<tr>
+								<th class="col-rk">
+									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+								</th>
+								<th class="col-nm">
+									@user.Name
+								</th>
+								<th class="col-png">
+									@user.Score
+								</th>
+							</tr>
+						}
 					}
-				}
-			</table>
+				</table>
+			</div>
+			<div>
+				<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..." />
+				<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
+			</div>
+			<div>
+				<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
+			</div>
 		</div>
-		<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
-	</div>
 	}
 	else
 
@@ -152,33 +162,33 @@ else
 		}
 
 
-		
-			
+
+
 		<div class="main-layout">
 			<div class="mitten">
-			<div class="main-box-frågor">
+				<div class="main-box-frågor">
 
-				<div class="rubrik-box">
-					@if(GameManager.CurrentQuestion.DifficultyLevel == 4)
-					{
-						<h1>Gissa Djuret:</h1>
+					<div class="rubrik-box">
+						@if (GameManager.CurrentQuestion.DifficultyLevel == 4)
+						{
+							<h1>Gissa Djuret:</h1>
 						}
 						else
 						{
 							<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text</h1>
-							
+
 						}
 
-				</div>
+					</div>
 
-			<div class="fråge-box">
+					<div class="fråge-box">
 
-				<div class="bild-column">
+						<div class="bild-column">
 
-					@if (GameManager.CurrentQuestion.DifficultyLevel == 3)
-					{
-						<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
-							<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
+							@if (GameManager.CurrentQuestion.DifficultyLevel == 3)
+							{
+								<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
+									<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
 								</audio>
 							}
 							else if (GameManager.CurrentQuestion.DifficultyLevel == 4)
@@ -186,78 +196,79 @@ else
 								<p>@GameManager.CurrentQuestion.Text.</p>
 							}
 							else
-					{
-					<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>					
-					}
-				</div>
-				<div class="fråge-column">
-					<div class="fråge-rad">
-						<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
-						<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
-						<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
-                    </div>	
-					<div class="funfact-hint-rad">
-						@if (IsHintVisible == false)
-						{
-							
-							@if (GameManager.isCorrectAnswer)
 							{
+								<img class="djur-img" src=@GameManager.CurrentQuestion.MediaURL>
+							}
+						</div>
+						<div class="fråge-column">
+							<div class="fråge-rad">
+								<p @ref="answer1" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
+								<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
+								<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
+							</div>
+							<div class="funfact-hint-rad">
+								@if (IsHintVisible == false)
+								{
+
+									@if (GameManager.isCorrectAnswer)
+									{
 										<div class="funfact-hint-div" style="border: 3px solid #91DB77; ">
 											<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
-											<p class="funfact-hint-p" >
-										@GameManager.CurrentQuestion.FunFact*
- 									</p>
-								</div>
+											<p class="funfact-hint-p">
+												@GameManager.CurrentQuestion.FunFact*
+											</p>
+										</div>
 
-							}
-							else
-							{
-								<button style="padding: 5px; border: none; background-color: transparent; font-size: 40px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" id="visaHint" @onclick="() => ShowHint() ">🔎</button>
-							}
-						}
-                        else if (IsHintVisible)
-                        {
-							<div>
-							
-								@if (GameManager.isCorrectAnswer)
-								{
-											<div class="funfact-hint-div" style="border: 3px solid #91DB77;">
-												<p class="fun-hint-rubrik" id="fun-rubrik" >🌟Bonusfakta🌟</p>
-												<p class="funfact-hint-p" >
-											@GameManager.CurrentQuestion.FunFact
-
-										</p>
-									</div>
-									
+									}
+									else
+									{
+										<button style="padding: 5px; border: none; background-color: transparent; font-size: 40px; font-weight:lighter; color:BLACK; box-shadow: none; margin-top: 30px;" class="fråga" id="visaHint" @onclick="() => ShowHint() ">🔎</button>
+									}
 								}
-								else{
+								else if (IsHintVisible)
+								{
+									<div>
+
+										@if (GameManager.isCorrectAnswer)
+										{
+											<div class="funfact-hint-div" style="border: 3px solid #91DB77;">
+												<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
+												<p class="funfact-hint-p">
+													@GameManager.CurrentQuestion.FunFact
+
+												</p>
+											</div>
+
+										}
+										else
+										{
 											<div class="funfact-hint-div" style=" border: 3px solid #00AEFA">
-												
-                                                    <p style=" display: flex; justify-content:center; "class="fun-hint-rubrik" id="hint-rubrik">hint🔎</p>
-													
-										<p class="funfact-hint-p">@GameManager.CurrentQuestion.Hint</p>
-                                                <button style="padding: 5px; border: none; background-color: transparent;  font-size: 10px;  box-shadow: none; margin-top: 10px;" class="fråga" id="döljHint" @onclick="() => HideHint() ">❌</button>
 
-                                            </div>
-                                }
+												<p style=" display: flex; justify-content:center; " class="fun-hint-rubrik" id="hint-rubrik">hint🔎</p>
+
+												<p class="funfact-hint-p">@GameManager.CurrentQuestion.Hint</p>
+												<button style="padding: 5px; border: none; background-color: transparent;  font-size: 10px;  box-shadow: none; margin-top: 10px;" class="fråga" id="döljHint" @onclick="() => HideHint() ">❌</button>
+
+											</div>
+										}
+									</div>
+								}
 							</div>
-                        }
-                        </div>
-                    </div>
-			</div>
-				
+						</div>
+					</div>
 
-				
 
-	
-			</div>
-            @if (GameManager.isCorrectAnswer)
-            {
 
-                <div class="nästafråga-btn-div">
+
+
+				</div>
+				@if (GameManager.isCorrectAnswer)
+				{
+
+					<div class="nästafråga-btn-div">
 						<button class="nästa-btn" @onclick="() => Click()">★ Nästa fråga ★ </button>
-                </div>
-            }
+					</div>
+				}
 				else
 				{
 					<div class="nästafråga-btn-div">
@@ -266,58 +277,58 @@ else
 				}
 			</div>
 			<div class="höger-kolumn">
-			<div class="sb-box">
-                <table>
-					<p class="p-sb">Dina poäng:</p>
-                    <h2 class="poäng-h2">@ScoreManager.CurrentUser.Score p</h2>
-					<hr>
-                    <p class="p-sb">Poängtavla</p>
-					@foreach (UserModel user in ScoreManager.GetDynamicScoreBoard())
-					{
-						if (user == ScoreManager.CurrentUser)
+				<div class="sb-box">
+					<table>
+						<p class="p-sb">Dina poäng:</p>
+						<h2 class="poäng-h2">@ScoreManager.CurrentUser.Score p</h2>
+						<hr>
+						<p class="p-sb">Poängtavla</p>
+						@foreach (UserModel user in ScoreManager.GetDynamicScoreBoard())
 						{
-							<tr class="player-row">
-								<th>
-									@(ScoreManager.ScoreBoard.IndexOf(user)+1).
-									@user.Name
-								</th>
-								<th>
-									@user.Score
-								</th>
-							</tr>
-						}
-						else if(user.Name == "")
-						{
-							<tr>
-								<hr class="sb-separator-line" />
-							</tr>
-						}
-						else
-						{
+							if (user == ScoreManager.CurrentUser)
+							{
+								<tr class="player-row">
+									<th>
+										@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+										@user.Name
+									</th>
+									<th>
+										@user.Score
+									</th>
+								</tr>
+							}
+							else if (user.Name == "")
+							{
+								<tr>
+									<hr class="sb-separator-line" />
+								</tr>
+							}
+							else
+							{
 								<tr class="other-players-row">
-									<th >
-									@(ScoreManager.ScoreBoard.IndexOf(user)+1).
-									@user.Name
-								</th>
-								<th>
-									@user.Score
-									
-								</th>
-							</tr>
+									<th>
+										@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
+										@user.Name
+									</th>
+									<th>
+										@user.Score
+
+									</th>
+								</tr>
+							}
 						}
-					}
-				</table>
-               
-            </div>
-            <div class="startaOm-div">
-                <button  class="startaOm-btn" @onclick="() => Restart()"> Starta om Quizet </button>
-                </div>
-            </div>
+					</table>
+
+				</div>
+				<div class="startaOm-div">
+					<button class="startaOm-btn" @onclick="() => Restart()"> Starta om Quizet </button>
+				</div>
+			</div>
 		</div>
 
-	 
+
 	}
-	
+
 }
 
 
@@ -367,7 +378,7 @@ else
 		}
 		playerName = "";
 	}
-	
+
 	public async void ClickAnswer(bool isCorrect, ElementReference btnRef)
 	{
 		if (!GameManager.isCorrectAnswer)
@@ -384,7 +395,7 @@ else
 				await JSRuntime.InvokeVoidAsync("quizFunctions.changeButtonText", btnRef);
 			}
 		}
-	}	
+	}
 	private async void SubmitScore()
 	{
 		if (!await scoreService.AddUserScore(playerName))
@@ -395,7 +406,7 @@ else
 		{
 			await JSRuntime.InvokeVoidAsync("quizFunctions.removeSparaKnapp");
 		}
-	}	
+	}
 
 	private void ShowHint()
 	{

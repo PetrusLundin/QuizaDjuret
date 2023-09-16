@@ -364,14 +364,16 @@ tr{
 }
 
 .highscore-table {
-    width: 1000px;
+    width:100%;
     border-collapse: separate;
     border-spacing: 10px;
+    border-radius: 25px;
+    background-color:sandybrown;
 }
 
 
 .tableheader {
-    box-shadow: 0px;
+    box-shadow: none;
     border-radius: 0px;
     padding:0px;
     font-size: 25px;
@@ -382,7 +384,7 @@ tr{
 .col-rk {
     text-align: start;
     border-bottom-color: saddlebrown;
-    box-shadow: 0px;
+    box-shadow:none;
     border-radius: 0px;
     text-align: center;
     background-color: transparent;
@@ -390,7 +392,7 @@ tr{
 
 .col-nm {
     border-bottom-color: saddlebrown;
-    box-shadow: 0px;
+    box-shadow: none;
     border-radius: 0px;
     margin-right: 200px;
     text-align: center;
@@ -403,11 +405,14 @@ tr{
     border-width: .5rem;
     border-radius: 2px;
     border-color: transparent;
-    box-shadow: 0px;
+    box-shadow: none;
     border-radius: 0px;
     text-align: center;
 }
 
 .highscore-div{
-    width:1000px;
+    width:1500px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
 }
