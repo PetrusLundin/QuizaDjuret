@@ -9,7 +9,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-size: cover;
-
+    
 }
 
 .main-layout {
@@ -26,6 +26,7 @@ h1 {
     font-family: 'Cherry Bomb One', cursive;
     margin-bottom: 20px;
     color: #9E4016; /*#61300F;*/
+    text-transform: uppercase !important;
 }
 
 h2 {
@@ -34,6 +35,7 @@ h2 {
     justify-content: center;
     font-family: 'Cherry Bomb One', cursive;
     color: darkorange;
+    text-transform: uppercase !important;
 }
 
 h3 {
@@ -41,6 +43,7 @@ h3 {
     display: flex;
     justify-content: center;
     font-family: 'Caveat', cursive;
+    text-transform: uppercase !important;
 }
 
 p {
@@ -53,6 +56,7 @@ p {
     font-family: 'Gochi Hand', cursive;
     font-weight: bold;
     color: #586219;
+    text-transform: uppercase !important;
 }
 
 .main-box {
@@ -361,4 +365,3 @@ tr{
 .poäng-h2{
     color: darkorange;
 }
-
