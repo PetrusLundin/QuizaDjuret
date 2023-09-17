@@ -126,10 +126,33 @@ button {
     justify-content:center;
 }
 
+.btn-amount-questions-increase {
+   position: absolute;
+   top: 74%;
+   left: 53%;
+   transform: translate(-50%, -50%);
+}
+
+.btn-amount-questions-decrease{
+    position: absolute;
+    top: 74%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.amount-questions{
+    position: absolute;
+    top: 73%;
+    left: 48%;
+    width: 15px;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20%;
+    background-color: #CBDF50;
+}
 /*---------------------------------------------------*/
-
 /*SCOREBOARD PAGE*/
-
 .sb-box {
     background: white;
     width: 260px;

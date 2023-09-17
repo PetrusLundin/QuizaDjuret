@@ -44,11 +44,11 @@ else
 			<p>💡 Tryck "Starta om quiz" för att börja om</p>
 
 			<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
-			<button @onclick="() => DecreaseQAmount()">-</button>
-			<span>
+			<button class="btn-amount-questions-decrease" @onclick="() => DecreaseQAmount()">-</button>
+			<span class="amount-questions">
 				@GameManager.QuestionsPerLevel
 			</span>
-			<button @onclick="() => IncreaseQAmount()">+</button>
+			<button class="btn-amount-questions-increase" @onclick="() => IncreaseQAmount()">+</button>
 
 		</div>
 		<div class="start-btn-div">
