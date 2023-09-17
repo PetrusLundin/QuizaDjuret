@@ -368,7 +368,7 @@ tr{
     border-collapse: separate;
     border-spacing: 10px;
     border-radius: 25px;
-    background-color:sandybrown;
+    border-color:saddlebrown;
 }
 
 
@@ -376,9 +376,28 @@ tr{
     box-shadow: none;
     border-radius: 0px;
     padding:0px;
+    border-bottom-width:0.2rem;
     font-size: 25px;
     width: 120px;
     text-align:center;
+    border-color: saddlebrown;
+}
+
+.borderoo {
+    border-color: saddlebrown;
+    border-bottom-width: 1rem;
+}
+
+.th-highscore {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 35px;
+    margin-top: 0px;
+    box-shadow: none;
+    margin-top: 0px;
+}
+.tr-highscore{
+
 }
 
 .col-rk {
@@ -388,6 +407,7 @@ tr{
     border-radius: 0px;
     text-align: center;
     background-color: transparent;
+    font-size:15px;
 }
 
 .col-nm {
@@ -410,9 +430,32 @@ tr{
     text-align: center;
 }
 
-.highscore-div{
-    width:1500px;
+.highscore-div {
+    width: 1500px;
     background-color: white;
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.4);
+}
+
+.träbit{
+    text-align:start;
+}
+
+.startomdiv-highscore{
+    justify-content:center;
+    
+}
+
+.p-scoreboardtext {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Almarai', sans-serif;
+    margin: 7px;
+    padding: 0px;
+    font-family: 'Gochi Hand', cursive;
+    font-weight: bold;
+    color: #586219;
 }

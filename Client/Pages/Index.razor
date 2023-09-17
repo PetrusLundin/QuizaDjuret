@@ -66,24 +66,23 @@ else
 				background-size: cover;
 			}
 		</style>
-		<div class="highscore-div">			
-			<div>
-				<p>Scoreboard:</p>
-			</div>
+		
+		<div class="highscore-div">
+			<h4 class="p-scoreboardtext">Scoreboard:</h4>
 			<div>
 				<table class="highscore-table">
 					<thead>
-						<tr>
-							<th class="tableheader">Ranking</th>
-							<th class="tableheader">Namn</th>
-							<th class="tableheader">Poäng</th>
+						<tr class="tableheader, borderoo">
+							<th class="th-highscore">Ranking</th>
+							<th class="th-highscore">Namn</th>
+							<th class="th-highscore">Poäng</th>
 						</tr>
 					</thead>
 					@foreach (UserModel user in ScoreManager.ScoreBoard)
 					{
 						if (user == ScoreManager.CurrentUser)
 						{
-							<tr>
+							<tr class="borderoo">
 								<th class="col-rk">
 									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
 								</th>
@@ -97,7 +96,7 @@ else
 						}
 						else
 						{
-							<tr>
+							<tr class="borderoo">
 								<th class="col-rk">
 									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
 								</th>
@@ -116,7 +115,7 @@ else
 				<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..." />
 				<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
 			</div>
-			<div>
+			<div class="startomdiv-highscore">
 				<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
 			</div>
 		</div>
