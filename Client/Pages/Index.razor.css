@@ -67,6 +67,7 @@ button {
     box-shadow: 0 0 15px rgba(0,0,0, 0.5);
     border: none;
     font-family: 'Bubblegum Sans', cursive;
+    text-transform: uppercase !important;
 }
 .red-text {
     background-color: #F76164 !important;
