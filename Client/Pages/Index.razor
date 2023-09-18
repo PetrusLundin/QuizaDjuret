@@ -51,18 +51,17 @@ else
 
 			<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
 
-			<button class="btn-amount-questions-decrease" @onclick="() => DecreaseQAmount()">-</button>
+			@*<button class="btn-amount-questions-decrease" @onclick="() => DecreaseQAmount()">-</button>
 			<span class="amount-questions">
 				@GameManager.QuestionsPerLevel
 			</span>
 			<button class="btn-amount-questions-increase" @onclick="() => IncreaseQAmount()">+</button>
-
+      *@
 
 		</div>
 		<div class="start-btn-div">
 			<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
 		</div>
-
 	}
 
 	@* Ending page scoreboard *@
@@ -239,7 +238,7 @@ else
 							
 
 						}
-						<p>@ScoreManager.WinStreak</p>
+						@*<p>@ScoreManager.WinStreak</p>*@
 					</div>
 
 
