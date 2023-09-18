@@ -1,5 +1,4 @@
 ﻿html {
-   
 }
 
 
@@ -9,7 +8,6 @@ body {
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    
 }
 
 .main-layout {
@@ -27,7 +25,6 @@ h1 {
     margin-bottom: 20px;
     color: #9E4016; /*#61300F;*/
     text-transform: uppercase !important;
-
 }
 
 h2 {
@@ -69,6 +66,7 @@ button {
     font-family: 'Bubblegum Sans', cursive;
     text-transform: uppercase !important;
 }
+
 .red-text {
     background-color: #F76164 !important;
     border: 1px solid black;
@@ -121,26 +119,26 @@ button {
     margin-top: 40px;
 }
 
-.start-btn-div{
+.start-btn-div {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
 .btn-amount-questions-increase {
-   position: absolute;
-   top: 74%;
-   left: 53%;
-   transform: translate(-50%, -50%);
+    position: absolute;
+    top: 74%;
+    left: 53%;
+    transform: translate(-50%, -50%);
 }
 
-.btn-amount-questions-decrease{
+.btn-amount-questions-decrease {
     position: absolute;
     top: 74%;
     left: 44%;
     transform: translate(-50%, -50%);
 }
 
-.amount-questions{
+.amount-questions {
     position: absolute;
     top: 73%;
     left: 48%;
@@ -227,9 +225,9 @@ tr {
     justify-content: space-between;
 }
 
-.flex > span {
-    padding-right: 5px;
-}
+    .flex > span {
+        padding-right: 5px;
+    }
 
 .sb-table {
     width: 100%;
@@ -275,11 +273,11 @@ tr {
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em yellow;
 }
 
-/*Stjärna som besvarad fråga:*/
-.progress-step-star.answered {
-    color: yellow;
-    text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
-}
+    /*Stjärna som besvarad fråga:*/
+    .progress-step-star.answered {
+        color: yellow;
+        text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
+    }
 
 /*Ringarnas utseende, obesvarad fråga:*/
 .progress-step-dot {
@@ -287,11 +285,11 @@ tr {
     font-size: 30px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
-/*Ring som besvarad fråga:*/
-.progress-step-dot.answered {
-    color: yellow;
-    text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
-}
+    /*Ring som besvarad fråga:*/
+    .progress-step-dot.answered {
+        color: yellow;
+        text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
+    }
 
 /*---------------------------------------------------*/
 
@@ -310,7 +308,7 @@ tr {
     margin: 0px;
 }
 
-.rubrik-box{
+.rubrik-box {
     height: 50px;
 }
 
@@ -395,10 +393,10 @@ tr {
     color: black;
 }
 
-.fråga:hover {
-    background-color: #FFCD85;
-    border: 3px solid gray;
-}
+    .fråga:hover {
+        background-color: #FFCD85;
+        border: 3px solid gray;
+    }
 
 .funfact-hint-rad {
     grid-row-start: 2;
@@ -458,14 +456,14 @@ tr {
     margin-top: 20px;
     background-color: #FFCD85;
     border: 5px solid darkorange;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.9);  
+    box-shadow: 0 0 15px rgba(0,0,0, 0.9);
 }
 
 .startaOm-btn {
     margin-top: 10px;
     display: flex;
     align-items: end;
-    background: #F76164; 
+    background: #F76164;
     padding: 10px;
     font-family: 'Bubblegum Sans', cursive;
     height: 40px;
@@ -480,9 +478,9 @@ tr {
 }
 
 .startaOm-div {
-    display:flex;
-    justify-content:end;
-    margin:0px;
+    display: flex;
+    justify-content: end;
+    margin: 0px;
 }
 
 /*Level 3 & 4*/
@@ -549,13 +547,24 @@ audio {
 
 
 .titlediv {
-    width:100%;
+    width: 100%;
     display: flex;
-    justify-content:space-between;    
+    justify-content: space-between;
 }
 
-.flower{
+.highscore-toptextdiv {
+    margin-top: 5rem;
+    height: 20rem;
+}
 
+.highscore-greet {
+    font-size: 80px;
+    color: #484725;
+}
+
+.highscore-rattext {
+    margin-top: 5px;
+    font-size: 50px;
 }
 
 .p-scoreboardtext {
@@ -566,7 +575,8 @@ audio {
     padding: 0px;
     font-family: 'Gochi Hand', cursive;
     font-weight: bold;
-    color: #586219;
+    color: sandybrown;
+    border-bottom: 4px solid #484725;
 }
 
 .table-container {
@@ -575,8 +585,8 @@ audio {
     display: grid;
     width: 100%;
     margin-bottom: 4rem;
-    margin-top: 2rem;
-    background-color:white;
+    background-color: white;
+    margin-top:5rem;
 }
 
 .highscore-table {
@@ -584,7 +594,7 @@ audio {
     width: 100%;
     border-collapse: collapse;
     border-width: 50px;
-    border-color: saddlebrown;    
+    border-color: saddlebrown;
 }
 
 
@@ -593,8 +603,8 @@ audio {
     color: sandybrown;
     position: sticky;
     top: 0;
-    background-color: white;
-    border-bottom:  4px saddlebrown;
+    background-color: #484725   ;
+    border-bottom: 200px saddlebrown;
 }
 
 
@@ -619,13 +629,13 @@ audio {
     border-radius: 0px;
     font-size: 35px;
     box-shadow: none;
-    width:10rem;
+    width: 10rem;
 }
 
 .col-rk {
-    text-align:center;
+    text-align: center;
     width: 2rem;
-    color:saddlebrown;
+    color: saddlebrown;
     border-bottom-width: 2px;
 }
 
@@ -651,32 +661,32 @@ audio {
     border-bottom-width: 2px;
 }
 
-.spar-knapp-div{    
-    display:flex;
-    justify-content:center;
-    height:200px;
+.spar-knapp-div {
+    display: flex;
+    justify-content: center;
+    height: 200px;
 }
 
-.spar-knapp{
+.spar-knapp {
     height: 5rem;
     width: 10rem;
 }
+
 .startomdiv-highscore {
     display: grid;
     justify-content: center;
     align-items: center;
 }
 
-.inputhighscore{
-    border-color:transparent;
+.inputhighscore {
+    border-color: transparent;
     background-color: limegreen;
-    border:none;
-    border-radius:20px;
+    border: none;
+    border-radius: 20px;
     outline: none;
-    color:saddlebrown;
-    text-align:center;
-    margin-bottom:2px;
-        
+    color: saddlebrown;
+    text-align: center;
+    margin-bottom: 2px;
 }
 
 .highscore-startaOm-btn {
