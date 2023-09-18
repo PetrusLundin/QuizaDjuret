@@ -1,5 +1,4 @@
 ﻿html {
-   
 }
 
 
@@ -9,7 +8,6 @@ body {
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    
 }
 
 .main-layout {
@@ -27,7 +25,6 @@ h1 {
     margin-bottom: 20px;
     color: #9E4016; /*#61300F;*/
     text-transform: uppercase !important;
-
 }
 
 h2 {
@@ -69,6 +66,7 @@ button {
     font-family: 'Bubblegum Sans', cursive;
     text-transform: uppercase !important;
 }
+
 .red-text {
     background-color: #F76164 !important;
     border: 1px solid black;
@@ -121,26 +119,26 @@ button {
     margin-top: 40px;
 }
 
-.start-btn-div{
+.start-btn-div {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
 .btn-amount-questions-increase {
-   position: absolute;
-   top: 74%;
-   left: 53%;
-   transform: translate(-50%, -50%);
+    position: absolute;
+    top: 74%;
+    left: 53%;
+    transform: translate(-50%, -50%);
 }
 
-.btn-amount-questions-decrease{
+.btn-amount-questions-decrease {
     position: absolute;
     top: 74%;
     left: 44%;
     transform: translate(-50%, -50%);
 }
 
-.amount-questions{
+.amount-questions {
     position: absolute;
     top: 73%;
     left: 48%;
@@ -221,14 +219,15 @@ tr {
     color: darkorange;
 }
 
+
 .flex {
     display: flex;
     justify-content: space-between;
 }
 
-.flex > span {
-    padding-right: 5px;
-}
+    .flex > span {
+        padding-right: 5px;
+    }
 
 .sb-table {
     width: 100%;
@@ -309,7 +308,7 @@ tr {
     margin: 0px;
 }
 
-.rubrik-box{
+.rubrik-box {
     height: 50px;
 }
 
@@ -394,10 +393,10 @@ tr {
     color: black;
 }
 
-.fråga:hover {
-    background-color: #FFCD85;
-    border: 3px solid gray;
-}
+    .fråga:hover {
+        background-color: #FFCD85;
+        border: 3px solid gray;
+    }
 
 .funfact-hint-rad {
     grid-row-start: 2;
@@ -457,14 +456,14 @@ tr {
     margin-top: 20px;
     background-color: #FFCD85;
     border: 5px solid darkorange;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.9);  
+    box-shadow: 0 0 15px rgba(0,0,0, 0.9);
 }
 
 .startaOm-btn {
     margin-top: 10px;
     display: flex;
     align-items: end;
-    background: #F76164; 
+    background: #F76164;
     padding: 10px;
     font-family: 'Bubblegum Sans', cursive;
     height: 40px;
@@ -479,9 +478,9 @@ tr {
 }
 
 .startaOm-div {
-    display:flex;
-    justify-content:end;
-    margin:0px;
+    display: flex;
+    justify-content: end;
+    margin: 0px;
 }
 
 /*Level 3 & 4*/
@@ -529,4 +528,197 @@ audio {
     color: black;
     font-family: Arial;
     font-size: 20px;
+}
+
+
+
+/*HighScoreSida*/
+
+.highscore-div {
+    width: 1000px;
+    background-color: white;
+    opacity: 93%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.4);
+    font-size: 15px;
+}
+
+
+
+.titlediv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.highscore-toptextdiv {
+    margin-top: 2.5rem;
+    height: 10rem;
+    max-width:600px;
+}
+
+.highscore-greet {
+    font-size: 30px;
+    color: #484725;
+}
+
+.glow-on-hover:hover{
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0,5);
+    opacity: 0.8;
+}
+
+.highscore-rattext {
+    margin-top: 2.5px;
+    font-size: 25px;
+}
+
+.p-scoreboardtext {
+    font-size: 25px;
+    justify-content: center;
+    font-family: 'Almarai', sans-serif;
+    margin-top: 4%;
+    padding: 0px;
+    font-family: 'Gochi Hand', cursive;
+    font-weight: bold;
+    color: sandybrown;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    display: grid;
+    width: 100%;
+    background-color: white;
+}
+
+.highscore-table {
+    font-family: 'Bubblegum Sans', cursive;
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 50px;
+    border-color: saddlebrown;
+}
+
+.tableheader {
+    text-align: center;
+    color: sandybrown;
+    position: sticky;
+    top: 0;
+    background-color: #484725   ;
+    border-bottom: 200px saddlebrown;
+}
+
+.th-rk {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 17.5px;
+    box-shadow: none;
+    width: 5rem;
+}
+
+.th-nm {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 17.5px;
+    box-shadow: none;
+}
+
+.th-png {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 17.5px;
+    box-shadow: none;
+    width: 5rem;
+}
+
+.col-rk {
+    text-align: center;
+    width: 2rem;
+    color: saddlebrown;
+    border-bottom-width: 1px;
+}
+
+.col-nm {
+    width: 2rem;
+    color: saddlebrown;
+    text-align: center;
+    border-bottom-width: 1px;
+}
+
+.col-nm-input {
+    color: saddlebrown;
+    text-align: center;
+    border-bottom-width: 1px;
+    border-radius: 7.5px;
+    width:7rem;
+}
+
+.inputhighscore {
+    border-color: transparent;
+    background-color: #91DB77;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: saddlebrown;
+    text-align: center;
+    margin-bottom: 1px;
+    width:7rem;
+}
+
+.col-png {
+    width: 2rem;
+    color: saddlebrown;
+    text-align: center;
+    border-bottom-width: 1px;
+}
+
+.spar-knapp-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-top: 20px solid #484725;
+}
+
+.spar-knapp {
+    height: 2.5rem;
+    width: 10rem;
+}
+
+.startomdiv-highscore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highscore-startaOm-btn {
+    margin-top: 5px;
+    display: flex;
+    align-items: center; /*rgb(255, 255, 255, 0.9);*/
+    font-size: 25px;
+    padding: 5px;
+    font-family: 'Bubblegum Sans', cursive;
+    height: 6rem;
+
+}
+
+@keyframes smoothtext{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;    
+    }
+}
+
+.fadein{
+    animation: smoothtext 3s ease-in-out;
+}
+
+.fadeinlonger {
+    animation: smoothtext 8s ease-in-out;
 }
