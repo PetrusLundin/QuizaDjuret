@@ -29,7 +29,7 @@ else
 {
 
 	@* Startsida *@
-	@if (GameManager.CurrentQuestionNumber == 0)
+	@if (GameManager.CurrentQuestionNumber == 41)
 	{
 
 		<style>
@@ -66,7 +66,7 @@ else
 	}
 
 	@* Ending page scoreboard *@
-	else if (GameManager.CurrentQuestionNumber ==  41)
+	else if (GameManager.CurrentQuestionNumber ==  0)
 
 	{
 		<style>
@@ -86,14 +86,14 @@ else
 					rrrr
 				</p>
 			</div>
+			<div class="tableheader">
+					<p class="th-rk">Ranking</p>
+					<p class="th-nm">Namn</p>
+					<p class="th-png">Poäng</p>
+				</div>
 			<div class="table-container">
-				<table id="scrollable-table" class="highscore-table">
-					<thead>
-						<tr class="tableheader">
-							<th class="th-rk">Ranking</th>
-							<th class="th-nm">Namn</th>
-							<th class="th-png">Poäng</th>
-						</tr>
+								<table id="scrollable-table" class="highscore-table">
+					<thead>						
 					</thead>
 					@foreach (UserModel user in ScoreManager.GetHighscoreBoard())
 					{
@@ -131,13 +131,13 @@ else
 			</div>
 			<div class="spar-knapp-div">
 				<button class="spar-knapp" id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
-
+			</div>
+			<div class="startomdiv-highscore">
+				<button class="highscore-startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
 			</div>
 		</div>
 
-		<div class="startomdiv-highscore">
-			<button style="font-family: 'Arial'; font-style:italic" class="highscore-startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
-		</div>
+		
 	}
 	@* Quiz-sidor *@
 	else

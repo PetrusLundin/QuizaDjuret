@@ -575,8 +575,8 @@ audio {
     display: grid;
     width: 100%;
     margin-bottom: 4rem;
-    margin-top: 2rem;
     background-color:white;
+    
 }
 
 .highscore-table {
@@ -588,9 +588,12 @@ audio {
 }
 
 
-.tableheader {   
-    text-align:center;
-    color: sandybrown;
+.tableheader {
+    display: flex;
+    text-align: center;
+    align-content: space-evenly;
+    border-bottom-width: 2px;
+    border-bottom-color: saddlebrown;
 }
 
 
@@ -603,6 +606,7 @@ audio {
     width: 10rem;
     border-bottom-width: 2px;
     border-bottom-color: saddlebrown;
+    color: sandybrown;
 }
 
 .th-nm {
@@ -612,6 +616,7 @@ audio {
     box-shadow: none;
     border-bottom-width: 2px;
     border-bottom-color: saddlebrown;
+    color: sandybrown;
 }
 
 .th-png {
@@ -619,9 +624,10 @@ audio {
     border-radius: 0px;
     font-size: 35px;
     box-shadow: none;
-    width:10rem;
+    width: 10rem;
     border-bottom-width: 2px;
     border-bottom-color: saddlebrown;
+    color: sandybrown;
 }
 
 .col-rk {
@@ -643,7 +649,6 @@ audio {
     color: saddlebrown;
     text-align: center;
     border-bottom-width: 2px;
-    background-color:limegreen;
     border-radius: 15px;
 }
 
@@ -664,26 +669,31 @@ audio {
     height: 5rem;
     width: 10rem;
 }
-.startomdiv-highscore{
-    display:grid;
-    justify-content:center;
-    align-items:center;    
+.startomdiv-highscore {
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .inputhighscore{
     border-color:transparent;
-    background-color: transparent;
+    background-color: limegreen;
     border:none;
-    outline:none;
+    border-radius:20px;
+    outline: none;
     color:saddlebrown;
     text-align:center;
+    margin-bottom:2px;
+        
 }
 
 .highscore-startaOm-btn {
     margin-top: 10px;
     display: flex;
-    align-items: end; /*rgb(255, 255, 255, 0.9);*/
+    align-items: center; /*rgb(255, 255, 255, 0.9);*/
+    font-size: 50px;
     padding: 10px;
     font-family: 'Bubblegum Sans', cursive;
     height: 6rem;
+    margin-bottom: 3rem;
 }
