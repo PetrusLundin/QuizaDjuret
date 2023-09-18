@@ -269,28 +269,28 @@ tr {
 
 /*Stjärnornas utseende, obesvarad fråga:*/
 .progress-step-star {
-    color: yellow;
-    font-size: 40px;
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em yellow;
+    color: #B5B5B5;
+    font-size: 45px;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
-/*Stjärna som besvarad fråga:*/
-.progress-step-star.answered {
-    color: yellow;
-    text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
-}
+    /*Stjärna som besvarad fråga:*/
+    .progress-step-star.answered {
+        color: yellow;
+        text-shadow: 2px 2px 3px black, 0 0 1em black, 0 0 0.2em yellow;
+    }
 
 /*Ringarnas utseende, obesvarad fråga:*/
 .progress-step-dot {
-    color: yellow;
+    color: #B5B5B5;
     font-size: 30px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
-/*Ring som besvarad fråga:*/
-.progress-step-dot.answered {
-    color: yellow;
-    text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
-}
+    /*Ring som besvarad fråga:*/
+    .progress-step-dot.answered {
+        color: yellow;
+        text-shadow: 2px 2px 3px black, 0 0 1em black, 0 0 0.2em yellow;
+    }
 
 /*---------------------------------------------------*/
 
