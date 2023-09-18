@@ -66,58 +66,68 @@ else
 				background-size: cover;
 			}
 		</style>
-		
+
 		<div class="highscore-div">
-			<h4 class="p-scoreboardtext">Scoreboard:</h4>
-			<div>
-				<table class="highscore-table">
+			<div class="titlediv">
+				<p class="flower">
+					rrrrr
+				</p>
+				<p class="p-scoreboardtext">Scoreboard</p>
+				<p class="flower">
+					rrrr
+				</p>
+			</div>
+			<div class="table-container">
+				<table id="scrollable-table" class="highscore-table">
 					<thead>
-						<tr class="tableheader borderoo">
-							<th class="th-highscore">Ranking</th>
-							<th class="th-highscore">Namn</th>
-							<th class="th-highscore">Poäng</th>
+						<tr class="tableheader">
+							<th class="th-rk">Ranking</th>
+							<th class="th-nm">Namn</th>
+							<th class="th-png">Poäng</th>
 						</tr>
 					</thead>
-					@foreach (UserModel user in ScoreManager.ScoreBoard)
+					@foreach (UserModel user in ScoreManager.GetHighscoreBoard())
 					{
 						if (user == ScoreManager.CurrentUser)
 						{
-							<tr class="borderoo">
-								<th class="col-rk">
+							<tr>
+								<td class="col-rk">
 									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
-								</th>
-								<th class="col-nm">
-									@playerName
-								</th>
-								<th class="col-png">
+								</td>
+								<td class="col-nm-input">
+									<input class="inputhighscore" maxlength="15" id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="SKRIV HÄR..." />
+								</td>
+								<td class="col-png">
 									@user.Score
-								</th>
+								</td>
 							</tr>
-						}
+							
+						}						
 						else
 						{
-							<tr class="borderoo">
-								<th class="col-rk">
+							<tr>
+								<td class="col-rk">
 									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
-								</th>
-								<th class="col-nm">
+								</td>
+								<td class="col-nm">
 									@user.Name
-								</th>
-								<th class="col-png">
+								</td>
+								<td class="col-png">
 									@user.Score
-								</th>
+								</td>
 							</tr>
 						}
 					}
-				</table>
+				</table>				
 			</div>
-			<div>
-				<input id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="Skriv in ditt namn..." />
-				<button id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
+			<div class="spar-knapp-div">
+				<button class="spar-knapp" id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
+
 			</div>
-			<div class="startomdiv-highscore">
-				<button style="font-family: 'Arial'; font-style:italic" class="startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
-			</div>
+		</div>
+
+		<div class="startomdiv-highscore">
+			<button style="font-family: 'Arial'; font-style:italic" class="highscore-startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
 		</div>
 	}
 	else
@@ -406,6 +416,15 @@ else
 			await JSRuntime.InvokeVoidAsync("quizFunctions.removeSparaKnapp");
 		}
 	}
+
+	
+
+	private async Task ScrollToUser()
+	{
+		await JSRuntime.InvokeVoidAsync("quizFunctions.scrollToUser");
+	}
+
+
 
 	private void ShowHint()
 	{

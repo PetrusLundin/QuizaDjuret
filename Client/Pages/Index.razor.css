@@ -360,102 +360,166 @@ tr{
 
 .poäng-h2{
     color: darkorange;
-
 }
 
-.highscore-table {
-    width:100%;
-    border-collapse: separate;
-    border-spacing: 10px;
-    border-radius: 25px;
-    border-color:saddlebrown;
-}
-
-
-.tableheader {
-    box-shadow: none;
-    border-radius: 0px;
-    padding:0px;
-    border-bottom-width:0.2rem;
-    font-size: 25px;
-    width: 120px;
-    text-align:center;
-    border-color: saddlebrown;
-}
-
-.borderoo {
-    border-color: saddlebrown;
-    border-bottom-width: 1rem;
-}
-
-.th-highscore {
-    padding: 0px;
-    border-radius: 0px;
-    font-size: 35px;
-    margin-top: 0px;
-    box-shadow: none;
-    margin-top: 0px;
-}
-.tr-highscore{
-
-}
-
-.col-rk {
-    text-align: start;
-    border-bottom-color: saddlebrown;
-    box-shadow:none;
-    border-radius: 0px;
-    text-align: center;
-    background-color: transparent;
-    font-size:15px;
-}
-
-.col-nm {
-    border-bottom-color: saddlebrown;
-    box-shadow: none;
-    border-radius: 0px;
-    margin-right: 200px;
-    text-align: center;
-    background-color: transparent;
-}
-
-.col-png {
-    text-align: end;
-    border-bottom-color: saddlebrown;
-    border-width: .5rem;
-    border-radius: 2px;
-    border-color: transparent;
-    box-shadow: none;
-    border-radius: 0px;
-    text-align: center;
-}
 
 .highscore-div {
-    width: 1500px;
+    width: 2000px;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
+    font-size: 30px;
 }
 
-.träbit{
-    text-align:start;
+
+
+.titlediv {
+    width:100%;
+    display: flex;
+    justify-content:space-between;    
 }
 
-.startomdiv-highscore{
-    justify-content:center;
-    
+.flower{
+
 }
 
 .p-scoreboardtext {
     font-size: 50px;
-    display: flex;
     justify-content: center;
     font-family: 'Almarai', sans-serif;
-    margin: 7px;
+    margin-top: 4%;
     padding: 0px;
     font-family: 'Gochi Hand', cursive;
     font-weight: bold;
     color: #586219;
+}
+
+.table-container {
+    max-height: 800px;
+    overflow-y: auto;
+    display: grid;
+    width: 100%;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    background-color:white;
+}
+
+.highscore-table {
+    font-family: 'Bubblegum Sans', cursive;
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 50px;
+    border-color: saddlebrown;    
+}
+
+
+.tableheader {   
+    text-align:center;
+    color: sandybrown;
+}
+
+
+
+.th-rk {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 35px;
+    box-shadow: none;
+    width: 10rem;
+    border-bottom-width: 2px;
+    border-bottom-color: saddlebrown;
+}
+
+.th-nm {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 35px;
+    box-shadow: none;
+    border-bottom-width: 2px;
+    border-bottom-color: saddlebrown;
+}
+
+.th-png {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 35px;
+    box-shadow: none;
+    width:10rem;
+    border-bottom-width: 2px;
+    border-bottom-color: saddlebrown;
+}
+
+.col-rk {
+    text-align:center;
+    width: 2rem;
+    color:saddlebrown;
+    border-bottom-width: 2px;
+}
+
+.col-nm {
+    width: 2rem;
+    color: saddlebrown;
+    text-align: center;
+    border-bottom-width: 2px;
+}
+
+.col-nm-input {
+    width: 2rem;
+    color: saddlebrown;
+    text-align: center;
+    border-bottom-width: 2px;
+    background-color:limegreen;
+    border-radius: 15px;
+}
+
+.col-png {
+    width: 2rem;
+    color: saddlebrown;
+    text-align: center;
+    border-bottom-width: 2px;
+}
+
+.spar-knapp-div{    
+    display:flex;
+    justify-content:center;
+    height:200px;
+}
+
+.spar-knapp{
+    height: 5rem;
+    width: 10rem;
+}
+.startomdiv-highscore{
+    display:grid;
+    justify-content:center;
+    align-items:center;    
+}
+
+.inputhighscore{
+    border-color:transparent;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    color:saddlebrown;
+    text-align:center;
+}
+
+.highscore-startaOm-btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: end; /*rgb(255, 255, 255, 0.9);*/
+    padding: 10px;
+    font-family: 'Bubblegum Sans', cursive;
+    height: 6rem;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.9);
+    width: 260px;
+    /*border: 3px double #3D0709;*/
+    justify-content: center;
 }

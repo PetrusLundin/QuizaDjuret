@@ -37,6 +37,13 @@ namespace QuizaDjuret.Client.Managers
 		static public void SortScoreboard()
 		{
 			ScoreBoard.Sort((x, y) => y.Score.CompareTo(x.Score));
+			
+		}
+
+		static public void SortHighscore()
+		{
+			ScoreBoard = ScoreBoard.OrderByDescending(p => p.Score).ThenByDescending(p => p.UserId).ToList();
+
 		}
 
 		static public List<UserModel> GetDynamicScoreBoard()
@@ -80,6 +87,14 @@ namespace QuizaDjuret.Client.Managers
 			}
 
 			return dynamicList;
+		}
+
+		static public List<UserModel> GetHighscoreBoard()
+		{
+			SortHighscore();
+			return ScoreBoard;
+
+		
 		}
 	}
 }
