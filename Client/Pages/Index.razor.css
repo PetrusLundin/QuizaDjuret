@@ -614,7 +614,7 @@ audio {
     border-radius: 0px;
     font-size: 17.5px;
     box-shadow: none;
-    width: 10rem;
+    width: 5rem;
 }
 
 .th-nm {
@@ -627,9 +627,9 @@ audio {
 .th-png {
     padding: 0px;
     border-radius: 0px;
-    font-size: 35px;
+    font-size: 17.5px;
     box-shadow: none;
-    width: 10rem;
+    width: 5rem;
 }
 
 .col-rk {
@@ -647,11 +647,23 @@ audio {
 }
 
 .col-nm-input {
-    width: 2rem;
     color: saddlebrown;
     text-align: center;
     border-bottom-width: 1px;
     border-radius: 7.5px;
+    width:5rem;
+}
+
+.inputhighscore {
+    border-color: transparent;
+    background-color: limegreen;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: saddlebrown;
+    text-align: center;
+    margin-bottom: 1px;
+    width:5rem;
 }
 
 .col-png {
@@ -676,17 +688,6 @@ audio {
     display: grid;
     justify-content: center;
     align-items: center;
-}
-
-.inputhighscore {
-    border-color: transparent;
-    background-color: limegreen;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    color: saddlebrown;
-    text-align: center;
-    margin-bottom: 1px;
 }
 
 .highscore-startaOm-btn {
