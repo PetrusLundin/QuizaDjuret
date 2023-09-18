@@ -535,13 +535,13 @@ audio {
 /*HighScoreSida*/
 
 .highscore-div {
-    width: 2000px;
+    width: 1000px;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
-    font-size: 30px;
+    font-size: 15px;
 }
 
 
@@ -553,22 +553,22 @@ audio {
 }
 
 .highscore-toptextdiv {
-    margin-top: 5rem;
-    height: 20rem;
+    margin-top: 2.5rem;
+    height: 10rem;
 }
 
 .highscore-greet {
-    font-size: 80px;
+    font-size: 40px;
     color: #484725;
 }
 
 .highscore-rattext {
-    margin-top: 5px;
-    font-size: 50px;
+    margin-top: 2.5px;
+    font-size: 25px;
 }
 
 .p-scoreboardtext {
-    font-size: 50px;
+    font-size: 25px;
     justify-content: center;
     font-family: 'Almarai', sans-serif;
     margin-top: 4%;
@@ -580,13 +580,13 @@ audio {
 }
 
 .table-container {
-    max-height: 800px;
+    max-height: 400px;
     overflow-y: auto;
     display: grid;
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     background-color: white;
-    margin-top:5rem;
+    margin-top:1.5rem;
 }
 
 .highscore-table {
@@ -612,7 +612,7 @@ audio {
 .th-rk {
     padding: 0px;
     border-radius: 0px;
-    font-size: 35px;
+    font-size: 17.5px;
     box-shadow: none;
     width: 10rem;
 }
@@ -620,7 +620,7 @@ audio {
 .th-nm {
     padding: 0px;
     border-radius: 0px;
-    font-size: 35px;
+    font-size: 17.5px;
     box-shadow: none;
 }
 
@@ -636,39 +636,39 @@ audio {
     text-align: center;
     width: 2rem;
     color: saddlebrown;
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
 }
 
 .col-nm {
     width: 2rem;
     color: saddlebrown;
     text-align: center;
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
 }
 
 .col-nm-input {
     width: 2rem;
     color: saddlebrown;
     text-align: center;
-    border-bottom-width: 2px;
-    border-radius: 15px;
+    border-bottom-width: 1px;
+    border-radius: 7.5px;
 }
 
 .col-png {
     width: 2rem;
     color: saddlebrown;
     text-align: center;
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
 }
 
 .spar-knapp-div {
     display: flex;
     justify-content: center;
-    height: 200px;
+    height: 70px;
 }
 
 .spar-knapp {
-    height: 5rem;
+    height: 2.5rem;
     width: 10rem;
 }
 
@@ -682,19 +682,19 @@ audio {
     border-color: transparent;
     background-color: limegreen;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
     color: saddlebrown;
     text-align: center;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .highscore-startaOm-btn {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     align-items: center; /*rgb(255, 255, 255, 0.9);*/
-    font-size: 50px;
-    padding: 10px;
+    font-size: 25px;
+    padding: 5px;
     font-family: 'Bubblegum Sans', cursive;
     height: 6rem;
     margin-bottom: 3rem;
