@@ -537,6 +537,7 @@ audio {
 .highscore-div {
     width: 1000px;
     background-color: white;
+    opacity: 93%;
     display: grid;
     grid-template-columns: 1fr;
     border-radius: 10px;
@@ -555,11 +556,18 @@ audio {
 .highscore-toptextdiv {
     margin-top: 2.5rem;
     height: 10rem;
+    max-width:600px;
 }
 
 .highscore-greet {
-    font-size: 40px;
+    font-size: 30px;
     color: #484725;
+}
+
+.glow-on-hover:hover{
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0,5);
+    opacity: 0.8;
 }
 
 .highscore-rattext {
@@ -576,7 +584,6 @@ audio {
     font-family: 'Gochi Hand', cursive;
     font-weight: bold;
     color: sandybrown;
-    border-bottom: 4px solid #484725;
 }
 
 .table-container {
@@ -584,9 +591,7 @@ audio {
     overflow-y: auto;
     display: grid;
     width: 100%;
-    margin-bottom: 1rem;
     background-color: white;
-    margin-top:1.5rem;
 }
 
 .highscore-table {
@@ -651,19 +656,19 @@ audio {
     text-align: center;
     border-bottom-width: 1px;
     border-radius: 7.5px;
-    width:5rem;
+    width:7rem;
 }
 
 .inputhighscore {
     border-color: transparent;
-    background-color: limegreen;
+    background-color: #91DB77;
     border: none;
     border-radius: 10px;
     outline: none;
     color: saddlebrown;
     text-align: center;
     margin-bottom: 1px;
-    width:5rem;
+    width:7rem;
 }
 
 .col-png {
@@ -676,7 +681,9 @@ audio {
 .spar-knapp-div {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 70px;
+    border-top: 20px solid #484725;
 }
 
 .spar-knapp {
@@ -685,8 +692,8 @@ audio {
 }
 
 .startomdiv-highscore {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -698,5 +705,23 @@ audio {
     padding: 5px;
     font-family: 'Bubblegum Sans', cursive;
     height: 6rem;
-    margin-bottom: 3rem;
+
+}
+
+@keyframes smoothtext{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;    
+    }
+}
+
+.fadein{
+    animation: smoothtext 3s ease-in-out;
+}
+
+.fadeinlonger {
+    animation: smoothtext 8s ease-in-out;
 }

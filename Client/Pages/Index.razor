@@ -29,7 +29,7 @@ else
 {
 
 	@* Startsida *@
-	@if (GameManager.CurrentQuestionNumber == 41)
+	@if (GameManager.CurrentQuestionNumber == 0)
 	{
 
 		<style>
@@ -66,7 +66,7 @@ else
 	}
 
 	@* Ending page scoreboard *@
-	else if (GameManager.CurrentQuestionNumber ==  0)
+	else if (GameManager.CurrentQuestionNumber ==  41)
 
 	{
 		<style>
@@ -82,14 +82,14 @@ else
 					@((MarkupString)SvgMananger.solrosTopLeft)
 					</p>
 				<div class="highscore-toptextdiv">
-					<p class="highscore-greet">FANTASTISKT! DU KOM I MÅL! ( ͡° ͜ʖ ͡°) </p>
+					<p class="highscore-greet fadein">FANTASTISKT! DU KOM I MÅL!!!! ( ͡° ͜ʖ ͡°) </p>
 					@if(ScoreManager.CurrentUser.Score > 2000)
 					{
-						<p class="highscore-rattext">ÖVER 2000! BRA JOBBAT!!!</p>
+						<p class="highscore-rattext fadeinlonger">ÖVER 2000! BRA JOBBAT!!!</p>
 					}
 					else
 					{
-						<p class="highscore-rattext">MEN BÄTTRE KAN DU!!</p>
+						<p class="highscore-rattext fadeinlonger">MEN BÄTTRE KAN DU!!</p>
 					}
 					<p class="p-scoreboardtext">★ Scoreboard ★ </p>
 				</div>
@@ -115,7 +115,7 @@ else
 									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
 								</td>
 								<td class="col-nm-input">
-									<input class="inputhighscore"  maxlength="15" id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="SKRIV HÄR..." />
+									<input class="inputhighscore" autofocus  maxlength="15" id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="SKRIV HÄR..." />
 								</td>
 								<td class="col-png">
 									@user.Score
@@ -138,13 +138,15 @@ else
 							</tr>
 						}
 					}
-				</table>				
+				</table>	
 			</div>
 			<div class="spar-knapp-div">
-				<button class="spar-knapp" id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
+				<button class="spar-knapp glow-on-hover" id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
 			</div>
 			<div class="startomdiv-highscore">
-				<button class="highscore-startaOm-btn" @onclick="() => Replay()">» Spela Igen «</button>
+			<p>@((MarkupString)SvgMananger.björn)</p>
+				<button class="highscore-startaOm-btn glow-on-hover" @onclick="() => Replay()">» Spela Igen «</button>
+				<p>@((MarkupString)SvgMananger.giraff)</p>
 			</div>
 		</div>
 
@@ -152,7 +154,7 @@ else
 	}
 	@* Quiz-sidor *@
 	else
-
+	
 	{
 		@* Bakgrunder ändras här pga difficulty level *@
 		@if (GameManager.CurrentQuestion.DifficultyLevel == 1)
@@ -536,13 +538,6 @@ else
 		{
 			await JSRuntime.InvokeVoidAsync("quizFunctions.removeSparaKnapp");
 		}
-	}
-
-	
-
-	private async Task ScrollToUser()
-	{
-		await JSRuntime.InvokeVoidAsync("quizFunctions.scrollToUser");
 	}
 
 
