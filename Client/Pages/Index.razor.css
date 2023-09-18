@@ -575,8 +575,8 @@ audio {
     display: grid;
     width: 100%;
     margin-bottom: 4rem;
+    margin-top: 2rem;
     background-color:white;
-    
 }
 
 .highscore-table {
@@ -589,11 +589,12 @@ audio {
 
 
 .tableheader {
-    display: flex;
     text-align: center;
-    align-content: space-evenly;
-    border-bottom-width: 2px;
-    border-bottom-color: saddlebrown;
+    color: sandybrown;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom:  4px saddlebrown;
 }
 
 
@@ -604,9 +605,6 @@ audio {
     font-size: 35px;
     box-shadow: none;
     width: 10rem;
-    border-bottom-width: 2px;
-    border-bottom-color: saddlebrown;
-    color: sandybrown;
 }
 
 .th-nm {
@@ -614,9 +612,6 @@ audio {
     border-radius: 0px;
     font-size: 35px;
     box-shadow: none;
-    border-bottom-width: 2px;
-    border-bottom-color: saddlebrown;
-    color: sandybrown;
 }
 
 .th-png {
@@ -624,10 +619,7 @@ audio {
     border-radius: 0px;
     font-size: 35px;
     box-shadow: none;
-    width: 10rem;
-    border-bottom-width: 2px;
-    border-bottom-color: saddlebrown;
-    color: sandybrown;
+    width:10rem;
 }
 
 .col-rk {
