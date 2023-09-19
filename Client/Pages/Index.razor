@@ -14,7 +14,7 @@
 
 
 @* Loading-page *@
-@if(GameManager.Questions.Count == 0)
+@if (GameManager.Questions.Count == 0)
 
 {
 	<h1>LOADING...</h1>
@@ -42,30 +42,38 @@ else
 
 
 		<div class="main-box">
-      <h1 style="margin-bottom: 40px; margin-top: 30px; font-size: 60px;">Välkommen till QuizaDjuret</h1>
+			<div class="welcome-greet">
+				<h1 style="margin-bottom: 40px; margin-top: 30px; font-size: 60px;">Välkommen till QuizaDjuret</h1>
 
-			<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
-			<p>🏆 För varje rätt svar får du poäng som du kan se i höger kolumn</p>
-			<p>💡 Tryck "🔍" för att få en ledtråd</p>
-			<p>💡 Tryck "Starta om quiz" för att börja om</p>
+				<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
+				<p>🏆 För varje rätt svar får du poäng som du kan se i höger kolumn</p>
+				<p>💡 Tryck "🔍" för att få en ledtråd</p>
+				<p>💡 Tryck "Starta om quiz" för att börja om</p>
+				<p>💡 Tryck på  +  och  -  för att bestämma antal frågor på varje nivå</p>
+			</div>
 
-			<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
+			<div class=config-wrapper>
+				<div class="amount-questions-div bg-size-cover" style=" background-image: url('../images/brädaaa.png')">
 
-			@*<button class="btn-amount-questions-decrease" @onclick="() => DecreaseQAmount()">-</button>
-			<span class="amount-questions">
-				@GameManager.QuestionsPerLevel
-			</span>
-			<button class="btn-amount-questions-increase" @onclick="() => IncreaseQAmount()">+</button>
-      *@
+					<button class="btn-amount-questions-decrease glow-on-hover" @onclick="() => DecreaseQAmount()">-</button>
+					<span class="amount-questions">
+						@GameManager.QuestionsPerLevel
+					</span>
+					<button class="btn-amount-questions-increase glow-on-hover" @onclick="() => IncreaseQAmount()">+</button>
+				</div>
+			</div>
+
+
+
 
 		</div>
 		<div class="start-btn-div">
-			<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
+			<button class="start-btn glow-on-hover" @onclick="() => Click()">Starta Quizet</button>
 		</div>
 	}
 
 	@* Ending page scoreboard *@
-	else if (GameManager.CurrentQuestionNumber ==  41)
+	else if (GameManager.CurrentQuestionNumber == 41)
 
 	{
 		<style>
@@ -79,10 +87,10 @@ else
 			<div class="titlediv">
 				<p class="flower">
 					@((MarkupString)SvgMananger.solrosTopLeft)
-					</p>
+				</p>
 				<div class="highscore-toptextdiv">
 					<p class="highscore-greet fadein">FANTASTISKT! DU KOM I MÅL!!!! ( ͡° ͜ʖ ͡°) </p>
-					@if(ScoreManager.CurrentUser.Score > 2000)
+					@if (ScoreManager.CurrentUser.Score > 2000)
 					{
 						<p class="highscore-rattext fadeinlonger">ÖVER 2000! BRA JOBBAT!!!</p>
 					}
@@ -94,7 +102,7 @@ else
 				</div>
 				<p class="flower">
 					@((MarkupString)SvgMananger.solrosTopRight)
-					</p>
+				</p>
 			</div>
 			<div class="table-container">
 				<table id="scrollable-table" class="highscore-table">
@@ -114,14 +122,14 @@ else
 									@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
 								</td>
 								<td class="col-nm-input">
-									<input class="inputhighscore" autofocus  maxlength="15" id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="SKRIV HÄR..." />
+									<input class="inputhighscore" autofocus maxlength="15" id="playerName-input" @oninput="(e) => { playerName = e.Value.ToString(); }" placeholder="SKRIV HÄR..." />
 								</td>
 								<td class="col-png">
 									@user.Score
 								</td>
 							</tr>
-							
-						}						
+
+						}
 						else
 						{
 							<tr>
@@ -137,23 +145,23 @@ else
 							</tr>
 						}
 					}
-				</table>	
+				</table>
 			</div>
 			<div class="spar-knapp-div">
 				<button class="spar-knapp glow-on-hover" id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
 			</div>
 			<div class="startomdiv-highscore">
-			<p>@((MarkupString)SvgMananger.björn)</p>
+				<p>@((MarkupString)SvgMananger.björn)</p>
 				<button class="highscore-startaOm-btn glow-on-hover" @onclick="() => Replay()">» Spela Igen «</button>
 				<p>@((MarkupString)SvgMananger.giraff)</p>
 			</div>
 		</div>
 
-		
+
 	}
 	@* Quiz-sidor *@
 	else
-	
+
 	{
 		@* Bakgrunder ändras här pga difficulty level *@
 		@if (GameManager.CurrentQuestion.DifficultyLevel == 1)
@@ -193,7 +201,7 @@ else
 			</style>
 		}
 
-		
+
 
 		<div class="main-layout">
 			<div class="mitten">
@@ -201,10 +209,10 @@ else
 				@* Hela rutan för progress trackern *@
 				<div class="progress-tracker-box">
 					<div class="progress-star-box">
-						@for (int i = 1; i <= GameManager.QuestionsPerLevel*4; i++)
+						@for (int i = 1; i <= GameManager.QuestionsPerLevel * 4; i++)
 						{
 							@* Om det är fråga 5, 10, 15 eller 20 så ge det en stjärna *@
-							if (i == GameManager.QuestionsPerLevel || i == GameManager.QuestionsPerLevel * 2 || i == GameManager.QuestionsPerLevel * 3 || i == GameManager.QuestionsPerLevel*4)
+							if (i == GameManager.QuestionsPerLevel || i == GameManager.QuestionsPerLevel * 2 || i == GameManager.QuestionsPerLevel * 3 || i == GameManager.QuestionsPerLevel * 4)
 							{
 								<span class="progress-step-star @(i + 1 <= questionsAnswered ? "answered" : "")">
 									@* Ikonen för stjärnorna: *@
@@ -228,14 +236,14 @@ else
 
 					@* Rubrik baserad på difficultylevel *@
 					<div class="rubrik-box">
-						@if(GameManager.CurrentQuestion.DifficultyLevel == 4)
+						@if (GameManager.CurrentQuestion.DifficultyLevel == 4)
 						{
 							<h1>Gissa Djuret: (@ScoreManager.CurrentQuestionPoints p)</h1>
 						}
 						else
 						{
 							<h1 style="margin-bottom: 15px; margin-top: 10px; font-size: 60px;">@GameManager.CurrentQuestion.Text (@ScoreManager.CurrentQuestionPoints p)</h1>
-							
+
 
 						}
 						@*<p>@ScoreManager.WinStreak</p>*@
@@ -255,7 +263,7 @@ else
 								<div class="fejk-div"></div>
 								<img class="djur-img" id="level3-sound" src="../images/lyssna.jpg" ;>
 								<audio controls autoplay @key="@GameManager.CurrentQuestion.QuestionId">
-								<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
+									<source src="/AnimalSounds/@GameManager.CurrentQuestion.MediaURL" />
 
 								</audio>
 							}
@@ -293,22 +301,22 @@ else
 						</div>
 						<div class="fråge-column">
 							<div class="fråge-rad">
-					<p @ref="answer1" style="padding: 5px;"class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
+								<p @ref="answer1" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[0].IsCorrect, answer1)">@GameManager.CurrentQuestion.Answers[0].Text</p>
 								<p @ref="answer2" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[1].IsCorrect, answer2)">@GameManager.CurrentQuestion.Answers[1].Text</p>
 								<p @ref="answer3" style="padding: 5px;" class="fråga" @onclick="() => ClickAnswer(GameManager.CurrentQuestion.Answers[2].IsCorrect, answer3)">@GameManager.CurrentQuestion.Answers[2].Text</p>
-							</div>	
+							</div>
 							<div class="funfact-hint-rad">
 								@if (IsHintVisible == false)
 								{
-							
+
 									@if (GameManager.isCorrectAnswer)
 									{
-									<div class="funfact-hint-div" style="border: 3px solid #91DB77; ">
-										<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
-										<p class="funfact-hint-p" >
-											@GameManager.CurrentQuestion.FunFact*
- 										</p>
-									</div>
+										<div class="funfact-hint-div" style="border: 3px solid #91DB77; ">
+											<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
+											<p class="funfact-hint-p">
+												@GameManager.CurrentQuestion.FunFact*
+											</p>
+										</div>
 
 
 									}
@@ -321,31 +329,31 @@ else
 								else if (IsHintVisible)
 								{
 									<div>
-							
+
 										@if (GameManager.isCorrectAnswer)
 										{
-										<div class="funfact-hint-div" style="border: 3px solid #91DB77;">
-											<p class="fun-hint-rubrik" id="fun-rubrik" >🌟Bonusfakta🌟</p>
-											<p class="funfact-hint-p" >
-											@GameManager.CurrentQuestion.FunFact
+											<div class="funfact-hint-div" style="border: 3px solid #91DB77;">
+												<p class="fun-hint-rubrik" id="fun-rubrik">🌟Bonusfakta🌟</p>
+												<p class="funfact-hint-p">
+													@GameManager.CurrentQuestion.FunFact
 
-											</p>
-										</div>
-									
+												</p>
+											</div>
+
 										}
 										else
 										{
-										<div class="funfact-hint-div" style=" border: 3px solid #00AEFA">
-											<p style=" display: flex; justify-content:center; "class="fun-hint-rubrik" id="hint-rubrik">hint🔎</p>	
-											<p class="funfact-hint-p">@GameManager.CurrentQuestion.Hint</p>
-										</div>
+											<div class="funfact-hint-div" style=" border: 3px solid #00AEFA">
+												<p style=" display: flex; justify-content:center; " class="fun-hint-rubrik" id="hint-rubrik">hint🔎</p>
+												<p class="funfact-hint-p">@GameManager.CurrentQuestion.Hint</p>
+											</div>
 										}
 									</div>
 								}
 							</div>
 						</div>
 					</div>
-	
+
 				</div>
 				@if (GameManager.isCorrectAnswer)
 				{
@@ -379,7 +387,7 @@ else
 										<div class="flex">
 
 											<span>
-												@(ScoreManager.ScoreBoard.IndexOf(user)+1).
+												@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
 												@user.Name
 
 											</span>
@@ -391,7 +399,7 @@ else
 									</th>
 								</tr>
 							}
-							else if(user.Name == "")
+							else if (user.Name == "")
 
 							{
 								<tr>
@@ -402,10 +410,10 @@ else
 							{
 								<tr class="other-players-row">
 
-									<th >
+									<th>
 										<div class="flex">
 											<span>
-												@(ScoreManager.ScoreBoard.IndexOf(user)+1).
+												@(ScoreManager.ScoreBoard.IndexOf(user) + 1).
 												@user.Name
 											</span>
 											<span>
@@ -419,10 +427,10 @@ else
 						}
 					</table>
 
-               
+
 				</div>
 				<div class="startaOm-div">
-					<button  class="startaOm-btn" @onclick="() => Restart()"> Starta om Quizet </button>
+					<button class="startaOm-btn" @onclick="() => Restart()"> Starta om Quizet </button>
 
 				</div>
 			</div>
