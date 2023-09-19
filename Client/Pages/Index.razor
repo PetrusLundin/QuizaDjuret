@@ -55,11 +55,11 @@ else
 			<div class=config-wrapper>
 				<div class="amount-questions-div bg-size-cover" style=" background-image: url('../images/brädaaa.png')">
 
-					<button class="btn-amount-questions-decrease" @onclick="() => DecreaseQAmount()">-</button>
+					<button class="btn-amount-questions-decrease glow-on-hover" @onclick="() => DecreaseQAmount()">-</button>
 					<span class="amount-questions">
 						@GameManager.QuestionsPerLevel
 					</span>
-					<button class="btn-amount-questions-increase" @onclick="() => IncreaseQAmount()">+</button>
+					<button class="btn-amount-questions-increase glow-on-hover" @onclick="() => IncreaseQAmount()">+</button>
 				</div>
 			</div>
 
@@ -68,7 +68,7 @@ else
 
 		</div>
 		<div class="start-btn-div">
-			<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
+			<button class="start-btn glow-on-hover" @onclick="() => Click()">Starta Quizet</button>
 		</div>
 	}
 
