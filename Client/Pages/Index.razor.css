@@ -38,8 +38,6 @@ h2 {
 
 h3 {
     font-size: 35px;
-    display: flex;
-    justify-content: center;
     font-family: 'Caveat', cursive;
     text-transform: uppercase !important;
 }
@@ -100,14 +98,41 @@ button {
 /*STARTSIDA*/
 .main-box {
     height: 680px;
-    width: 1100px;
     background: rgb(255, 255, 255, 0.95);
     padding: 30px;
     display: grid;
-    align-items: start;
+    grid-template-columns: 1fr;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0, 0.5);
-    margin: 0px;
+}
+
+.test{
+    display:grid;
+    justify-content:center;
+}
+
+.amount-questions-div {
+    display: flex;
+    justify-content: center;
+    border: 5px solid red;
+    font-family: 'Bubblegum Sans';
+}
+
+.btn-amount-questions-increase {
+    margin-left: 5px;
+}
+
+.btn-amount-questions-decrease {
+    margin-right: 5px;
+}
+
+.amount-questions {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #CBDF50;
 }
 
 .start-btn {
@@ -122,32 +147,6 @@ button {
 .start-btn-div {
     display: flex;
     justify-content: center;
-}
-
-.btn-amount-questions-increase {
-    position: absolute;
-    top: 74%;
-    left: 53%;
-    transform: translate(-50%, -50%);
-}
-
-.btn-amount-questions-decrease {
-    position: absolute;
-    top: 74%;
-    left: 44%;
-    transform: translate(-50%, -50%);
-}
-
-.amount-questions {
-    position: absolute;
-    top: 73%;
-    left: 48%;
-    width: 15px;
-    height: auto;
-    text-align: center;
-    justify-content: center;
-    border-radius: 20%;
-    background-color: #CBDF50;
 }
 /*---------------------------------------------------*/
 /*SCOREBOARD PAGE*/
@@ -556,7 +555,7 @@ audio {
 .highscore-toptextdiv {
     margin-top: 2.5rem;
     height: 10rem;
-    max-width:600px;
+    max-width: 600px;
 }
 
 .highscore-greet {
@@ -564,7 +563,7 @@ audio {
     color: #484725;
 }
 
-.glow-on-hover:hover{
+.glow-on-hover:hover {
     transition: box-shadow 0.5s ease;
     box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0,5);
     opacity: 0.8;
@@ -607,7 +606,7 @@ audio {
     color: sandybrown;
     position: sticky;
     top: 0;
-    background-color: #484725   ;
+    background-color: #484725;
     border-bottom: 200px saddlebrown;
 }
 
@@ -653,7 +652,7 @@ audio {
     text-align: center;
     border-bottom-width: 1px;
     border-radius: 7.5px;
-    width:7rem;
+    width: 7rem;
 }
 
 .inputhighscore {
@@ -665,7 +664,7 @@ audio {
     color: saddlebrown;
     text-align: center;
     margin-bottom: 1px;
-    width:7rem;
+    width: 7rem;
 }
 
 .col-png {
@@ -702,20 +701,19 @@ audio {
     padding: 5px;
     font-family: 'Bubblegum Sans', cursive;
     height: 6rem;
-
 }
 
-@keyframes smoothtext{
-    from{
+@keyframes smoothtext {
+    from {
         opacity: 0;
     }
 
-    to{
-        opacity: 1;    
+    to {
+        opacity: 1;
     }
 }
 
-.fadein{
+.fadein {
     animation: smoothtext 3s ease-in-out;
 }
 
