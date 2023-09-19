@@ -42,7 +42,7 @@ else
 
 
 		<div class="main-box">
-			<div>
+			<div class="welcome-greet">
 				<h1 style="margin-bottom: 40px; margin-top: 30px; font-size: 60px;">Välkommen till QuizaDjuret</h1>
 
 				<h2 style="margin-bottom: 45px;">Hur du spelar Quizet:</h2>
@@ -52,8 +52,8 @@ else
 				<p>💡 Tryck på  +  och  -  för att bestämma antal frågor på varje nivå</p>
 			</div>
 
-			<div class="test">
-				<div class="amount-questions-div">
+			<div class=config-wrapper>
+				<div class="amount-questions-div bg-size-cover" style=" background-image: url('../images/brädaaa.png')">
 
 					<button class="btn-amount-questions-decrease" @onclick="() => DecreaseQAmount()">-</button>
 					<span class="amount-questions">
@@ -61,7 +61,6 @@ else
 					</span>
 					<button class="btn-amount-questions-increase" @onclick="() => IncreaseQAmount()">+</button>
 				</div>
-				<h3 style="margin: 40px;">Lycka till!! 🐛</h3>
 			</div>
 
 

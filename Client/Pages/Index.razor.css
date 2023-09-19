@@ -38,8 +38,12 @@ h2 {
 
 h3 {
     font-size: 35px;
+    display:flex;
+    margin-top: 1rem;
     font-family: 'Caveat', cursive;
     text-transform: uppercase !important;
+    justify-content:center;
+
 }
 
 p {
@@ -97,42 +101,63 @@ button {
 
 /*STARTSIDA*/
 .main-box {
-    height: 680px;
-    background: rgb(255, 255, 255, 0.95);
+    height: 720px;
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
 }
 
-.test{
+.welcome-greet {
+    box-shadow: 0 0 15px rgba(0,0,0, 0.5);
+    border-radius: 10px;
+    background: rgb(255, 255, 255, 0.95);
+    padding: 2rem;
+    height:33rem;
+}
+
+.config-wrapper{
     display:grid;
     justify-content:center;
+    padding-left:1rem;
+    padding-right:1rem;
 }
 
 .amount-questions-div {
     display: flex;
     justify-content: center;
-    border: 5px solid red;
+    align-items: center;
     font-family: 'Bubblegum Sans';
+    height: 12rem;
+}
+
+.bg-size-cover{
+    background-size:cover;
+    width:16rem;
+
 }
 
 .btn-amount-questions-increase {
-    margin-left: 5px;
+    margin-left: 25px;
+    margin-top:35px;
+    background-color: limegreen;
 }
 
 .btn-amount-questions-decrease {
-    margin-right: 5px;
+    margin-right: 25px;
+    margin-top: 35px;
+    background-color: red;
 }
 
 .amount-questions {
     display: grid;
     justify-content: center;
     align-content: center;
+    height: 30px;
     width: 30px;
     border-radius: 100%;
-    background-color: #CBDF50;
+    background-color: transparent;
+    margin-top: 40px;
+    font-size: 3rem;
 }
 
 .start-btn {
