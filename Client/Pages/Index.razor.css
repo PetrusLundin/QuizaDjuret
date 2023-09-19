@@ -640,7 +640,7 @@ button:hover {
     border-radius: 0px;
     font-size: 17.5px;
     box-shadow: none;
-    width: 5rem;
+    width: 15rem;
 }
 
 .th-nm {
@@ -655,29 +655,25 @@ button:hover {
     border-radius: 0px;
     font-size: 17.5px;
     box-shadow: none;
-    width: 5rem;
+    width: 15rem;
 }
 
 .col-rk {
     text-align: center;
-    width: 2rem;
     color: saddlebrown;
     border-bottom-width: 1px;
 }
 
 .col-nm {
-    width: 2rem;
     color: saddlebrown;
     text-align: center;
     border-bottom-width: 1px;
 }
 
 .col-nm-input {
-    color: saddlebrown;
     text-align: center;
     border-bottom-width: 1px;
     border-radius: 7.5px;
-    width: 7rem;
 }
 
 .inputhighscore {
@@ -689,7 +685,6 @@ button:hover {
     color: saddlebrown;
     text-align: center;
     margin-bottom: 1px;
-    width: 7rem;
 }
 
 .col-png {

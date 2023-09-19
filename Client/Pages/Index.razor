@@ -55,11 +55,11 @@ else
 			<div class=config-wrapper>
 				<div class="amount-questions-div bg-size-cover" style=" background-image: url('../images/brädaaa.png')">
 
-					<button class="btn-amount-questions-decrease glow-on-hover" @onclick="() => DecreaseQAmount()">-</button>
+					<button class="btn-amount-questions-decrease " @onclick="() => DecreaseQAmount()">-</button>
 					<span class="amount-questions">
 						@GameManager.QuestionsPerLevel
 					</span>
-					<button class="btn-amount-questions-increase glow-on-hover" @onclick="() => IncreaseQAmount()">+</button>
+					<button class="btn-amount-questions-increase" @onclick="() => IncreaseQAmount()">+</button>
 				</div>
 			</div>
 
@@ -68,7 +68,7 @@ else
 
 		</div>
 		<div class="start-btn-div">
-			<button class="start-btn glow-on-hover" @onclick="() => Click()">Starta Quizet</button>
+			<button class="start-btn" @onclick="() => Click()">Starta Quizet</button>
 		</div>
 	}
 
@@ -89,14 +89,15 @@ else
 					@((MarkupString)SvgMananger.solrosTopLeft)
 				</p>
 				<div class="highscore-toptextdiv">
-					<p class="highscore-greet fadein">FANTASTISKT! DU KOM I MÅL!!!! ( ͡° ͜ʖ ͡°) </p>
+					<p class="highscore-greet fadein">FANTASTISKT! DU KOM I MÅL!!!! </p>
 					@if (ScoreManager.CurrentUser.Score > 2000)
 					{
 						<p class="highscore-rattext fadeinlonger">ÖVER 2000! BRA JOBBAT!!!</p>
 					}
 					else
 					{
-						<p class="highscore-rattext fadeinlonger">MEN BÄTTRE KAN DU!!</p>
+						<p class="highscore-rattext fadeinlonger"> ( ͡° ͜ʖ ͡°) </p>
+						<p class="highscore-rattext fadeinlonger">Hello There.</p>
 					}
 					<p class="p-scoreboardtext">★ Scoreboard ★ </p>
 				</div>
@@ -108,7 +109,7 @@ else
 				<table id="scrollable-table" class="highscore-table">
 					<thead>
 						<tr class="tableheader">
-							<th class="th-rk">Ranking</th>
+							<th class="th-rk">Plats</th>
 							<th class="th-nm">Namn</th>
 							<th class="th-png">Poäng</th>
 						</tr>
@@ -148,7 +149,7 @@ else
 				</table>
 			</div>
 			<div class="spar-knapp-div">
-				<button class="spar-knapp glow-on-hover" id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
+				<button class="spar-knapp" id="spara-btn" @onclick="() => SubmitScore()">Spara</button>
 			</div>
 			<div class="startomdiv-highscore">
 				<p>@((MarkupString)SvgMananger.björn)</p>
